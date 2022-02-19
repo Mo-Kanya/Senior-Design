@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "../build/meta.elf"
+  "../build/meta.elf.pdb"
+  "CMakeFiles/ENGINEER.dir/dev/common/CRC16.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/common/CRC8.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/debug/shell/printf.c.obj"
+  "CMakeFiles/ENGINEER.dir/dev/debug/shell/shell.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_base.c.obj"
+  "CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_base_cmd.c.obj"
+  "CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/air_tank_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/buzzer_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/can_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/chassis_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/dms_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/engineer_elevator_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/engineer_gimbal.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/engineer_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/led.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/referee_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/remote_interpreter.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/robotic_arm_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/interface/sd_card_interface.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/logic/engineer_elevator_logic.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/logic/robotic_arm_logic.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/scheduler/buzzer_scheduler.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_chassis_skd.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_elevator_skd.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_rescue_skd.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/scheduler/robotic_arm_skd.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/inspector_engineer.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/main_engineer.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/settings_engineer.cpp.obj"
+  "CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/user_engineer.cpp.obj"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang ASM C CXX)
+  include(CMakeFiles/ENGINEER.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
