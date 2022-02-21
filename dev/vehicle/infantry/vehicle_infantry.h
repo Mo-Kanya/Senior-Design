@@ -17,12 +17,12 @@
 #define GIMBAL_PITCH_MIN_ANGLE  (-30)  // up range for pitch [degree]
 #define GIMBAL_PITCH_MAX_ANGLE  (10)  //  down range for pitch [degree]
 
-#define GIMBAL_YAW_CAN_CHANNEL      (GimbalIF::can_channel_2)
-#define GIMBAL_PITCH_CAN_CHANNEL    (GimbalIF::can_channel_1)
+#define GIMBAL_YAW_CAN_CHANNEL      (GimbalIF::can_channel_1)
+#define GIMBAL_PITCH_CAN_CHANNEL    (GimbalIF::can_channel_2)
 #define GIMBAL_SUB_PITCH_CAN_CHANNEL (GimbalIF::none_can_channel)
-#define GIMBAL_BULLET_CAN_CHANNEL   (GimbalIF::can_channel_1)
-#define GIMBAL_FW_LEFT_CAN_CHANNEL  (GimbalIF::can_channel_1)
-#define GIMBAL_FW_RIGHT_CAN_CHANNEL (GimbalIF::can_channel_1)
+#define GIMBAL_BULLET_CAN_CHANNEL   (GimbalIF::can_channel_2)
+#define GIMBAL_FW_LEFT_CAN_CHANNEL  (GimbalIF::can_channel_2)
+#define GIMBAL_FW_RIGHT_CAN_CHANNEL (GimbalIF::can_channel_2)
 
 #define GIMBAL_YAW_CAN_ID         1
 #define GIMBAL_PITCH_CAN_ID       2
@@ -53,10 +53,10 @@
   {GIMBAL_FW_LEFT_CAN_CHANNEL,      GIMBAL_FW_LEFT_CAN_ID,      GIMBAL_FW_LEFT_MOTOR_TYPE,      GIMBAL_FW_LEFT_MOTOR_DR}, \
   {GIMBAL_FW_RIGHT_CAN_CHANNEL,     GIMBAL_FW_RIGHT_CAN_ID,     GIMBAL_FW_RIGHT_MOTOR_TYPE,     GIMBAL_FW_RIGHT_MOTOR_DR} }
 
-#define CHASSIS_FR_CHANNEL      (ChassisIF::can_channel_2)
-#define CHASSIS_FL_CHANNEL      (ChassisIF::can_channel_2)
-#define CHASSIS_BL_CHANNEL      (ChassisIF::can_channel_2)
-#define CHASSIS_BR_CHANNEL      (ChassisIF::can_channel_2)
+#define CHASSIS_FR_CHANNEL      (ChassisIF::can_channel_1)
+#define CHASSIS_FL_CHANNEL      (ChassisIF::can_channel_1)
+#define CHASSIS_BL_CHANNEL      (ChassisIF::can_channel_1)
+#define CHASSIS_BR_CHANNEL      (ChassisIF::can_channel_1)
 
 #define CHASSIS_FR_CAN_ID      1
 #define CHASSIS_FL_CAN_ID      2

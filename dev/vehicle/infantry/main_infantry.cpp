@@ -109,10 +109,10 @@ int main() {
     LED::led_on(DEV_BOARD_LED_CAN);  // LED 2 on now
 
     /// Setup SuperCapacitor Port
-    SuperCapacitor::init(&can2, THREAD_SUPERCAP_INIT_PRIO);
+//    SuperCapacitor::init(&can2, THREAD_SUPERCAP_INIT_PRIO);
 
     /// Setup Referee
-    Referee::init();
+//    Referee::init();
 
     /// Complete Period 1
     LED::green_on();  // LED Green on now
@@ -143,10 +143,10 @@ int main() {
 
 
     /// Setup GimbalIF (for Gimbal and Shoot)
-    GimbalIF::init(&can1, &can2, GIMBAL_MOTOR_CONFIG_, GIMBAL_YAW_FRONT_ANGLE_RAW, GIMBAL_PITCH_FRONT_ANGLE_RAW, 0 /* not used */, MotorIFBase::none_can_channel /* not used */);
-    chThdSleepMilliseconds(2000);  // wait for C610 to be online and friction wheel to reset
-    // FIXME: revert for development
-    // InspectorI::startup_check_gimbal_feedback(); // check gimbal motors has continuous feedback. Block for 20 ms
+//    GimbalIF::init(&can1, &can2, GIMBAL_MOTOR_CONFIG_, GIMBAL_YAW_FRONT_ANGLE_RAW, GIMBAL_PITCH_FRONT_ANGLE_RAW, 0 /* not used */, MotorIFBase::none_can_channel /* not used */);
+//    chThdSleepMilliseconds(2000);  // wait for C610 to be online and friction wheel to reset
+//    // FIXME: revert for development
+//    // InspectorI::startup_check_gimbal_feedback(); // check gimbal motors has continuous feedback. Block for 20 ms
     LED::led_on(DEV_BOARD_LED_GIMBAL);  // LED 5 on now
 
 
@@ -164,24 +164,24 @@ int main() {
     /*** ------------ Period 2. Calibration and Start Logic Control Thread ----------- ***/
 
     /// Echo Gimbal Raws and Converted Angles
-    LOG("Gimbal Yaw: %u, %f, Pitch: %u, %f",
-        GimbalIF::feedback[GimbalIF::YAW]->last_angle_raw, GimbalIF::feedback[GimbalIF::YAW]->actual_angle,
-        GimbalIF::feedback[GimbalIF::PITCH]->last_angle_raw, GimbalIF::feedback[GimbalIF::PITCH]->actual_angle);
+//    LOG("Gimbal Yaw: %u, %f, Pitch: %u, %f",
+//        GimbalIF::feedback[GimbalIF::YAW]->last_angle_raw, GimbalIF::feedback[GimbalIF::YAW]->actual_angle,
+//        GimbalIF::feedback[GimbalIF::PITCH]->last_angle_raw, GimbalIF::feedback[GimbalIF::PITCH]->actual_angle);
 
     /// Start SKDs
-    GimbalSKD::start(&ahrs, GIMBAL_ANGLE_INSTALLATION_MATRIX_, GIMBAL_GYRO_INSTALLATION_MATRIX_,
-                     GIMBAL_YAW_INSTALL_DIRECTION, GIMBAL_PITCH_INSTALL_DIRECTION, GIMBAL_SUB_PITCH_INSTALL_DIRECTION, THREAD_GIMBAL_SKD_PRIO, GimbalSKD::ABS_ANGLE_MODE);
-    GimbalSKD::load_pid_params(GIMBAL_PID_YAW_A2V_PARAMS, GIMBAL_PID_YAW_V2I_PARAMS,
-                               GIMBAL_PID_PITCH_A2V_PARAMS, GIMBAL_PID_PITCH_V2I_PARAMS,
-                               {0, 0, 0, 0, 0}/* Not used */, {0, 0, 0, 0, 0}/* Not used */);
-    Shell::addCommands(GimbalSKD::shellCommands);
-    Shell::addFeedbackCallback(GimbalSKD::cmdFeedback);
+//    GimbalSKD::start(&ahrs, GIMBAL_ANGLE_INSTALLATION_MATRIX_, GIMBAL_GYRO_INSTALLATION_MATRIX_,
+//                     GIMBAL_YAW_INSTALL_DIRECTION, GIMBAL_PITCH_INSTALL_DIRECTION, GIMBAL_SUB_PITCH_INSTALL_DIRECTION, THREAD_GIMBAL_SKD_PRIO, GimbalSKD::ABS_ANGLE_MODE);
+//    GimbalSKD::load_pid_params(GIMBAL_PID_YAW_A2V_PARAMS, GIMBAL_PID_YAW_V2I_PARAMS,
+//                               GIMBAL_PID_PITCH_A2V_PARAMS, GIMBAL_PID_PITCH_V2I_PARAMS,
+//                               {0, 0, 0, 0, 0}/* Not used */, {0, 0, 0, 0, 0}/* Not used */);
+//    Shell::addCommands(GimbalSKD::shellCommands);
+//    Shell::addFeedbackCallback(GimbalSKD::cmdFeedback);
 
-    ShootSKD::start(SHOOT_BULLET_INSTALL_DIRECTION, THREAD_SHOOT_SKD_PRIO);
-    ShootSKD::load_pid_params(SHOOT_PID_BULLET_LOADER_A2V_PARAMS, SHOOT_PID_BULLET_LOADER_V2I_PARAMS,
-                              SHOOT_PID_FW_LEFT_V2I_PARAMS, SHOOT_PID_FW_RIGHT_V2I_PARAMS);
-    Shell::addCommands(ShootSKD::shellCommands);
-    Shell::addFeedbackCallback(ShootSKD::cmdFeedback);
+//    ShootSKD::start(SHOOT_BULLET_INSTALL_DIRECTION, THREAD_SHOOT_SKD_PRIO);
+//    ShootSKD::load_pid_params(SHOOT_PID_BULLET_LOADER_A2V_PARAMS, SHOOT_PID_BULLET_LOADER_V2I_PARAMS,
+//                              SHOOT_PID_FW_LEFT_V2I_PARAMS, SHOOT_PID_FW_RIGHT_V2I_PARAMS);
+//    Shell::addCommands(ShootSKD::shellCommands);
+//    Shell::addFeedbackCallback(ShootSKD::cmdFeedback);
 
     ChassisSKD::start(CHASSIS_WHEEL_BASE, CHASSIS_WHEEL_TREAD, CHASSIS_WHEEL_CIRCUMFERENCE, ChassisSKD::POSITIVE,
                       GIMBAL_YAW_INSTALL_DIRECTION, 0, THREAD_CHASSIS_SKD_PRIO);
@@ -190,19 +190,19 @@ int main() {
     Shell::addFeedbackCallback(ChassisSKD::cmdFeedback);
 
     /// Start LGs
-    GimbalLG::init(THREAD_GIMBAL_LG_VISION_PRIO, IDLEPRIO /* not used */, GIMBAL_PITCH_MIN_ANGLE,
-                   GIMBAL_PITCH_MAX_ANGLE, 0, 0);
-    ShootLG::init(SHOOT_DEGREE_PER_BULLET, false, THREAD_SHOOT_LG_STUCK_DETECT_PRIO, THREAD_SHOOT_BULLET_COUNTER_PRIO, THREAD_SHOOT_LG_VISION_PRIO);
+//    GimbalLG::init(THREAD_GIMBAL_LG_VISION_PRIO, IDLEPRIO /* not used */, GIMBAL_PITCH_MIN_ANGLE,
+//                   GIMBAL_PITCH_MAX_ANGLE, 0, 0);
+//    ShootLG::init(SHOOT_DEGREE_PER_BULLET, false, THREAD_SHOOT_LG_STUCK_DETECT_PRIO, THREAD_SHOOT_BULLET_COUNTER_PRIO, THREAD_SHOOT_LG_VISION_PRIO);
     ChassisLG::init(THREAD_CHASSIS_LG_DODGE_PRIO, THREAD_CHASSIS_POWER_SET_PRIO, CHASSIS_DODGE_MODE_THETA, CHASSIS_BIASED_ANGLE, CHASSIS_LOGIC_DODGE_OMEGA2VOLT_PARAMS);
 
     /// Setup Vision
-    VisionIF::init();
-    Vision::start(VISION_BASIC_CONTROL_DELAY, THREAD_VISION_SKD_PRIO);
-    Shell::addFeedbackCallback(Vision::cmd_feedback);
-    Shell::addCommands(Vision::shell_commands);
+//    VisionIF::init();
+//    Vision::start(VISION_BASIC_CONTROL_DELAY, THREAD_VISION_SKD_PRIO);
+//    Shell::addFeedbackCallback(Vision::cmd_feedback);
+//    Shell::addCommands(Vision::shell_commands);
 
-    RefereeUISKD::init(THREAD_REFEREE_SKD_PRIO);
-    RefereeUILG::start(THREAD_REFEREE_LD_PRIO);
+//    RefereeUISKD::init(THREAD_REFEREE_SKD_PRIO);
+//    RefereeUILG::start(THREAD_REFEREE_LD_PRIO);
 
     /// Start Inspector and User Threads
     InspectorI::start_inspection(THREAD_INSPECTOR_PRIO);
