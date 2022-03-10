@@ -15,7 +15,6 @@
 #include "chassis_interface.h"
 #include "gimbal_interface.h"
 
-#include "referee_interface.h"
 
 #if defined(INFANTRY)
 #include "vehicle_infantry.h"
@@ -27,7 +26,7 @@ class InspectorI {
 
 public:
 
-    static void init(CANInterface *can1_, CANInterface *can2_, AbstractAHRS *ahrs_);
+    static void init(CANInterface *can1_, AbstractAHRS *ahrs_);
 
     static void start_inspection(tprio_t thread_prio);
 
@@ -35,10 +34,8 @@ public:
     static void startup_check_mpu();
     static void startup_check_ist();
     static void startup_check_remote();
-    static void startup_check_gimbal_feedback();
     static void startup_check_chassis_feedback();
 
-    static bool gimbal_failure();
     static bool chassis_failure();
     static bool remote_failure();
 
@@ -46,13 +43,10 @@ private:
 
     static AbstractAHRS *ahrs;
     static CANInterface *can1;
-    static CANInterface *can2;
 
-    static bool gimbal_failure_;
     static bool chassis_failure_;
     static bool remote_failure_;
 
-    static bool check_gimbal_failure();
     static bool check_chassis_failure();
     static bool check_remote_data_error();
 

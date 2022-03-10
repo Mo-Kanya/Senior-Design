@@ -72,47 +72,21 @@ CMAKE_BINARY_DIR = /Users/kanya/Projects/Senior-Design/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ca_ahrs_hero.dir/all
-all: CMakeFiles/ca_ahrs_infantry.dir/all
-all: CMakeFiles/pa_sentry_chassis.dir/all
-all: CMakeFiles/pa_skywalker.dir/all
-all: CMakeFiles/pa_hero_shoot.dir/all
-all: CMakeFiles/ut_sensors_sound.dir/all
-all: CMakeFiles/pa_engineer_chassis.dir/all
-all: CMakeFiles/ut_adc.dir/all
-all: CMakeFiles/pa_infantry_shoot.dir/all
-all: CMakeFiles/ut_referee_interface.dir/all
-all: CMakeFiles/pa_hero_gimbal.dir/all
-all: CMakeFiles/ut_sd_card.dir/all
-all: CMakeFiles/ut_auto_robotic_arm.dir/all
-all: CMakeFiles/ut_robotic_arm.dir/all
+all: CMakeFiles/pa_chassis.dir/all
 all: CMakeFiles/ut_can.dir/all
-all: CMakeFiles/ENGINEER.dir/all
-all: CMakeFiles/ut_elevator_interface.dir/all
 all: CMakeFiles/ut_buzzer.dir/all
-all: CMakeFiles/ut_gimbal_interface.dir/all
-all: CMakeFiles/pa_new_gimbal.dir/all
+all: CMakeFiles/INFANTRY_FIVE.dir/all
+all: CMakeFiles/ut_remote_interpreter.dir/all
+all: CMakeFiles/ut_ahrs_ext.dir/all
+all: CMakeFiles/INFANTRY_FOUR.dir/all
+all: CMakeFiles/ut_ahrs.dir/all
 all: CMakeFiles/ut_imu.dir/all
 all: CMakeFiles/ut_ist8310.dir/all
-all: CMakeFiles/ut_blink.dir/all
-all: CMakeFiles/pa_chassis.dir/all
-all: CMakeFiles/HERO.dir/all
-all: CMakeFiles/ChibiOS.dir/all
 all: CMakeFiles/ut_mpu6500.dir/all
-all: CMakeFiles/ut_engineer.dir/all
-all: CMakeFiles/ut_shoot.dir/all
-all: CMakeFiles/pa_gimbal.dir/all
-all: CMakeFiles/ut_ahrs_ext.dir/all
-all: CMakeFiles/AERIAL.dir/all
-all: CMakeFiles/SENTRY.dir/all
-all: CMakeFiles/ut_super_capacitor.dir/all
-all: CMakeFiles/ut_remote_interpreter.dir/all
-all: CMakeFiles/pa_elevator.dir/all
-all: CMakeFiles/INFANTRY_FIVE.dir/all
-all: CMakeFiles/ut_ahrs.dir/all
-all: CMakeFiles/INFANTRY_FOUR.dir/all
-all: CMakeFiles/ut_engineer_gimbal.dir/all
+all: CMakeFiles/ca_ahrs_infantry.dir/all
+all: CMakeFiles/ChibiOS.dir/all
 all: CMakeFiles/INFANTRY_THREE.dir/all
+all: CMakeFiles/ut_blink.dir/all
 all: cmsis/all
 
 .PHONY : all
@@ -123,47 +97,21 @@ preinstall: cmsis/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/ca_ahrs_hero.dir/clean
-clean: CMakeFiles/ca_ahrs_infantry.dir/clean
-clean: CMakeFiles/pa_sentry_chassis.dir/clean
-clean: CMakeFiles/pa_skywalker.dir/clean
-clean: CMakeFiles/pa_hero_shoot.dir/clean
-clean: CMakeFiles/ut_sensors_sound.dir/clean
-clean: CMakeFiles/pa_engineer_chassis.dir/clean
-clean: CMakeFiles/ut_adc.dir/clean
-clean: CMakeFiles/pa_infantry_shoot.dir/clean
-clean: CMakeFiles/ut_referee_interface.dir/clean
-clean: CMakeFiles/pa_hero_gimbal.dir/clean
-clean: CMakeFiles/ut_sd_card.dir/clean
-clean: CMakeFiles/ut_auto_robotic_arm.dir/clean
-clean: CMakeFiles/ut_robotic_arm.dir/clean
+clean: CMakeFiles/pa_chassis.dir/clean
 clean: CMakeFiles/ut_can.dir/clean
-clean: CMakeFiles/ENGINEER.dir/clean
-clean: CMakeFiles/ut_elevator_interface.dir/clean
 clean: CMakeFiles/ut_buzzer.dir/clean
-clean: CMakeFiles/ut_gimbal_interface.dir/clean
-clean: CMakeFiles/pa_new_gimbal.dir/clean
+clean: CMakeFiles/INFANTRY_FIVE.dir/clean
+clean: CMakeFiles/ut_remote_interpreter.dir/clean
+clean: CMakeFiles/ut_ahrs_ext.dir/clean
+clean: CMakeFiles/INFANTRY_FOUR.dir/clean
+clean: CMakeFiles/ut_ahrs.dir/clean
 clean: CMakeFiles/ut_imu.dir/clean
 clean: CMakeFiles/ut_ist8310.dir/clean
-clean: CMakeFiles/ut_blink.dir/clean
-clean: CMakeFiles/pa_chassis.dir/clean
-clean: CMakeFiles/HERO.dir/clean
-clean: CMakeFiles/ChibiOS.dir/clean
 clean: CMakeFiles/ut_mpu6500.dir/clean
-clean: CMakeFiles/ut_engineer.dir/clean
-clean: CMakeFiles/ut_shoot.dir/clean
-clean: CMakeFiles/pa_gimbal.dir/clean
-clean: CMakeFiles/ut_ahrs_ext.dir/clean
-clean: CMakeFiles/AERIAL.dir/clean
-clean: CMakeFiles/SENTRY.dir/clean
-clean: CMakeFiles/ut_super_capacitor.dir/clean
-clean: CMakeFiles/ut_remote_interpreter.dir/clean
-clean: CMakeFiles/pa_elevator.dir/clean
-clean: CMakeFiles/INFANTRY_FIVE.dir/clean
-clean: CMakeFiles/ut_ahrs.dir/clean
-clean: CMakeFiles/INFANTRY_FOUR.dir/clean
-clean: CMakeFiles/ut_engineer_gimbal.dir/clean
+clean: CMakeFiles/ca_ahrs_infantry.dir/clean
+clean: CMakeFiles/ChibiOS.dir/clean
 clean: CMakeFiles/INFANTRY_THREE.dir/clean
+clean: CMakeFiles/ut_blink.dir/clean
 clean: cmsis/clean
 
 .PHONY : clean
@@ -187,396 +135,32 @@ cmsis/clean: cmsis/CMakeFiles/CMSIS_DSP.dir/clean
 .PHONY : cmsis/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ca_ahrs_hero.dir
+# Target rules for target CMakeFiles/pa_chassis.dir
 
 # All Build rule for target.
-CMakeFiles/ca_ahrs_hero.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ca_ahrs_hero.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=42,43 "Built target ca_ahrs_hero"
-.PHONY : CMakeFiles/ca_ahrs_hero.dir/all
+CMakeFiles/pa_chassis.dir/all: CMakeFiles/ChibiOS.dir/all
+CMakeFiles/pa_chassis.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=63,64,65,66 "Built target pa_chassis"
+.PHONY : CMakeFiles/pa_chassis.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ca_ahrs_hero.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ca_ahrs_hero.dir/all
+CMakeFiles/pa_chassis.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_chassis.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ca_ahrs_hero.dir/rule
+.PHONY : CMakeFiles/pa_chassis.dir/rule
 
 # Convenience name for target.
-ca_ahrs_hero: CMakeFiles/ca_ahrs_hero.dir/rule
+pa_chassis: CMakeFiles/pa_chassis.dir/rule
 
-.PHONY : ca_ahrs_hero
-
-# clean rule for target.
-CMakeFiles/ca_ahrs_hero.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/clean
-.PHONY : CMakeFiles/ca_ahrs_hero.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ca_ahrs_infantry.dir
-
-# All Build rule for target.
-CMakeFiles/ca_ahrs_infantry.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ca_ahrs_infantry.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=44,45 "Built target ca_ahrs_infantry"
-.PHONY : CMakeFiles/ca_ahrs_infantry.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ca_ahrs_infantry.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ca_ahrs_infantry.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ca_ahrs_infantry.dir/rule
-
-# Convenience name for target.
-ca_ahrs_infantry: CMakeFiles/ca_ahrs_infantry.dir/rule
-
-.PHONY : ca_ahrs_infantry
+.PHONY : pa_chassis
 
 # clean rule for target.
-CMakeFiles/ca_ahrs_infantry.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/clean
-.PHONY : CMakeFiles/ca_ahrs_infantry.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pa_sentry_chassis.dir
-
-# All Build rule for target.
-CMakeFiles/pa_sentry_chassis.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_sentry_chassis.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=63,64 "Built target pa_sentry_chassis"
-.PHONY : CMakeFiles/pa_sentry_chassis.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pa_sentry_chassis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_sentry_chassis.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_sentry_chassis.dir/rule
-
-# Convenience name for target.
-pa_sentry_chassis: CMakeFiles/pa_sentry_chassis.dir/rule
-
-.PHONY : pa_sentry_chassis
-
-# clean rule for target.
-CMakeFiles/pa_sentry_chassis.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/clean
-.PHONY : CMakeFiles/pa_sentry_chassis.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pa_skywalker.dir
-
-# All Build rule for target.
-CMakeFiles/pa_skywalker.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_skywalker.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=65,66 "Built target pa_skywalker"
-.PHONY : CMakeFiles/pa_skywalker.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pa_skywalker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_skywalker.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_skywalker.dir/rule
-
-# Convenience name for target.
-pa_skywalker: CMakeFiles/pa_skywalker.dir/rule
-
-.PHONY : pa_skywalker
-
-# clean rule for target.
-CMakeFiles/pa_skywalker.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/clean
-.PHONY : CMakeFiles/pa_skywalker.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pa_hero_shoot.dir
-
-# All Build rule for target.
-CMakeFiles/pa_hero_shoot.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_hero_shoot.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=56,57 "Built target pa_hero_shoot"
-.PHONY : CMakeFiles/pa_hero_shoot.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pa_hero_shoot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_hero_shoot.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_hero_shoot.dir/rule
-
-# Convenience name for target.
-pa_hero_shoot: CMakeFiles/pa_hero_shoot.dir/rule
-
-.PHONY : pa_hero_shoot
-
-# clean rule for target.
-CMakeFiles/pa_hero_shoot.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/clean
-.PHONY : CMakeFiles/pa_hero_shoot.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_sensors_sound.dir
-
-# All Build rule for target.
-CMakeFiles/ut_sensors_sound.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_sensors_sound.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=96 "Built target ut_sensors_sound"
-.PHONY : CMakeFiles/ut_sensors_sound.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_sensors_sound.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_sensors_sound.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_sensors_sound.dir/rule
-
-# Convenience name for target.
-ut_sensors_sound: CMakeFiles/ut_sensors_sound.dir/rule
-
-.PHONY : ut_sensors_sound
-
-# clean rule for target.
-CMakeFiles/ut_sensors_sound.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/clean
-.PHONY : CMakeFiles/ut_sensors_sound.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pa_engineer_chassis.dir
-
-# All Build rule for target.
-CMakeFiles/pa_engineer_chassis.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_engineer_chassis.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=49,50 "Built target pa_engineer_chassis"
-.PHONY : CMakeFiles/pa_engineer_chassis.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pa_engineer_chassis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_engineer_chassis.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_engineer_chassis.dir/rule
-
-# Convenience name for target.
-pa_engineer_chassis: CMakeFiles/pa_engineer_chassis.dir/rule
-
-.PHONY : pa_engineer_chassis
-
-# clean rule for target.
-CMakeFiles/pa_engineer_chassis.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/clean
-.PHONY : CMakeFiles/pa_engineer_chassis.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_adc.dir
-
-# All Build rule for target.
-CMakeFiles/ut_adc.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_adc.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=67 "Built target ut_adc"
-.PHONY : CMakeFiles/ut_adc.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_adc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_adc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_adc.dir/rule
-
-# Convenience name for target.
-ut_adc: CMakeFiles/ut_adc.dir/rule
-
-.PHONY : ut_adc
-
-# clean rule for target.
-CMakeFiles/ut_adc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/clean
-.PHONY : CMakeFiles/ut_adc.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pa_infantry_shoot.dir
-
-# All Build rule for target.
-CMakeFiles/pa_infantry_shoot.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_infantry_shoot.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=58,59,60 "Built target pa_infantry_shoot"
-.PHONY : CMakeFiles/pa_infantry_shoot.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pa_infantry_shoot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_infantry_shoot.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_infantry_shoot.dir/rule
-
-# Convenience name for target.
-pa_infantry_shoot: CMakeFiles/pa_infantry_shoot.dir/rule
-
-.PHONY : pa_infantry_shoot
-
-# clean rule for target.
-CMakeFiles/pa_infantry_shoot.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/clean
-.PHONY : CMakeFiles/pa_infantry_shoot.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_referee_interface.dir
-
-# All Build rule for target.
-CMakeFiles/ut_referee_interface.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_referee_interface.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=89,90 "Built target ut_referee_interface"
-.PHONY : CMakeFiles/ut_referee_interface.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_referee_interface.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_referee_interface.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_referee_interface.dir/rule
-
-# Convenience name for target.
-ut_referee_interface: CMakeFiles/ut_referee_interface.dir/rule
-
-.PHONY : ut_referee_interface
-
-# clean rule for target.
-CMakeFiles/ut_referee_interface.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/clean
-.PHONY : CMakeFiles/ut_referee_interface.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pa_hero_gimbal.dir
-
-# All Build rule for target.
-CMakeFiles/pa_hero_gimbal.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_hero_gimbal.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=54,55 "Built target pa_hero_gimbal"
-.PHONY : CMakeFiles/pa_hero_gimbal.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pa_hero_gimbal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_hero_gimbal.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_hero_gimbal.dir/rule
-
-# Convenience name for target.
-pa_hero_gimbal: CMakeFiles/pa_hero_gimbal.dir/rule
-
-.PHONY : pa_hero_gimbal
-
-# clean rule for target.
-CMakeFiles/pa_hero_gimbal.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/clean
-.PHONY : CMakeFiles/pa_hero_gimbal.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_sd_card.dir
-
-# All Build rule for target.
-CMakeFiles/ut_sd_card.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_sd_card.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=94,95 "Built target ut_sd_card"
-.PHONY : CMakeFiles/ut_sd_card.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_sd_card.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_sd_card.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_sd_card.dir/rule
-
-# Convenience name for target.
-ut_sd_card: CMakeFiles/ut_sd_card.dir/rule
-
-.PHONY : ut_sd_card
-
-# clean rule for target.
-CMakeFiles/ut_sd_card.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/clean
-.PHONY : CMakeFiles/ut_sd_card.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_auto_robotic_arm.dir
-
-# All Build rule for target.
-CMakeFiles/ut_auto_robotic_arm.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_auto_robotic_arm.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=72 "Built target ut_auto_robotic_arm"
-.PHONY : CMakeFiles/ut_auto_robotic_arm.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_auto_robotic_arm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_auto_robotic_arm.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_auto_robotic_arm.dir/rule
-
-# Convenience name for target.
-ut_auto_robotic_arm: CMakeFiles/ut_auto_robotic_arm.dir/rule
-
-.PHONY : ut_auto_robotic_arm
-
-# clean rule for target.
-CMakeFiles/ut_auto_robotic_arm.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/clean
-.PHONY : CMakeFiles/ut_auto_robotic_arm.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_robotic_arm.dir
-
-# All Build rule for target.
-CMakeFiles/ut_robotic_arm.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_robotic_arm.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=92,93 "Built target ut_robotic_arm"
-.PHONY : CMakeFiles/ut_robotic_arm.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_robotic_arm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_robotic_arm.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_robotic_arm.dir/rule
-
-# Convenience name for target.
-ut_robotic_arm: CMakeFiles/ut_robotic_arm.dir/rule
-
-.PHONY : ut_robotic_arm
-
-# clean rule for target.
-CMakeFiles/ut_robotic_arm.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/clean
-.PHONY : CMakeFiles/ut_robotic_arm.dir/clean
+CMakeFiles/pa_chassis.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/clean
+.PHONY : CMakeFiles/pa_chassis.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ut_can.dir
@@ -586,12 +170,12 @@ CMakeFiles/ut_can.dir/all: CMakeFiles/ChibiOS.dir/all
 CMakeFiles/ut_can.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=76 "Built target ut_can"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=82,83,84,85 "Built target ut_can"
 .PHONY : CMakeFiles/ut_can.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ut_can.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_can.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ut_can.dir/rule
@@ -607,62 +191,6 @@ CMakeFiles/ut_can.dir/clean:
 .PHONY : CMakeFiles/ut_can.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ENGINEER.dir
-
-# All Build rule for target.
-CMakeFiles/ENGINEER.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ENGINEER.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=17,18,19,20 "Built target ENGINEER"
-.PHONY : CMakeFiles/ENGINEER.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ENGINEER.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 17
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ENGINEER.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ENGINEER.dir/rule
-
-# Convenience name for target.
-ENGINEER: CMakeFiles/ENGINEER.dir/rule
-
-.PHONY : ENGINEER
-
-# clean rule for target.
-CMakeFiles/ENGINEER.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/clean
-.PHONY : CMakeFiles/ENGINEER.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_elevator_interface.dir
-
-# All Build rule for target.
-CMakeFiles/ut_elevator_interface.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_elevator_interface.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=77,78 "Built target ut_elevator_interface"
-.PHONY : CMakeFiles/ut_elevator_interface.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_elevator_interface.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_elevator_interface.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_elevator_interface.dir/rule
-
-# Convenience name for target.
-ut_elevator_interface: CMakeFiles/ut_elevator_interface.dir/rule
-
-.PHONY : ut_elevator_interface
-
-# clean rule for target.
-CMakeFiles/ut_elevator_interface.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/clean
-.PHONY : CMakeFiles/ut_elevator_interface.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/ut_buzzer.dir
 
 # All Build rule for target.
@@ -670,12 +198,12 @@ CMakeFiles/ut_buzzer.dir/all: CMakeFiles/ChibiOS.dir/all
 CMakeFiles/ut_buzzer.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=74,75 "Built target ut_buzzer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=79,80,81 "Built target ut_buzzer"
 .PHONY : CMakeFiles/ut_buzzer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ut_buzzer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 33
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_buzzer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ut_buzzer.dir/rule
@@ -691,60 +219,144 @@ CMakeFiles/ut_buzzer.dir/clean:
 .PHONY : CMakeFiles/ut_buzzer.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ut_gimbal_interface.dir
+# Target rules for target CMakeFiles/INFANTRY_FIVE.dir
 
 # All Build rule for target.
-CMakeFiles/ut_gimbal_interface.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_gimbal_interface.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=83,84 "Built target ut_gimbal_interface"
-.PHONY : CMakeFiles/ut_gimbal_interface.dir/all
+CMakeFiles/INFANTRY_FIVE.dir/all: CMakeFiles/ChibiOS.dir/all
+CMakeFiles/INFANTRY_FIVE.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=31,32,33,34,35,36,37,38,39 "Built target INFANTRY_FIVE"
+.PHONY : CMakeFiles/INFANTRY_FIVE.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ut_gimbal_interface.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_gimbal_interface.dir/all
+CMakeFiles/INFANTRY_FIVE.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 39
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/INFANTRY_FIVE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_gimbal_interface.dir/rule
+.PHONY : CMakeFiles/INFANTRY_FIVE.dir/rule
 
 # Convenience name for target.
-ut_gimbal_interface: CMakeFiles/ut_gimbal_interface.dir/rule
+INFANTRY_FIVE: CMakeFiles/INFANTRY_FIVE.dir/rule
 
-.PHONY : ut_gimbal_interface
+.PHONY : INFANTRY_FIVE
 
 # clean rule for target.
-CMakeFiles/ut_gimbal_interface.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/clean
-.PHONY : CMakeFiles/ut_gimbal_interface.dir/clean
+CMakeFiles/INFANTRY_FIVE.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/clean
+.PHONY : CMakeFiles/INFANTRY_FIVE.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/pa_new_gimbal.dir
+# Target rules for target CMakeFiles/ut_remote_interpreter.dir
 
 # All Build rule for target.
-CMakeFiles/pa_new_gimbal.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_new_gimbal.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=61,62 "Built target pa_new_gimbal"
-.PHONY : CMakeFiles/pa_new_gimbal.dir/all
+CMakeFiles/ut_remote_interpreter.dir/all: CMakeFiles/ChibiOS.dir/all
+CMakeFiles/ut_remote_interpreter.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=97,98,99,100 "Built target ut_remote_interpreter"
+.PHONY : CMakeFiles/ut_remote_interpreter.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pa_new_gimbal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_new_gimbal.dir/all
+CMakeFiles/ut_remote_interpreter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_remote_interpreter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_new_gimbal.dir/rule
+.PHONY : CMakeFiles/ut_remote_interpreter.dir/rule
 
 # Convenience name for target.
-pa_new_gimbal: CMakeFiles/pa_new_gimbal.dir/rule
+ut_remote_interpreter: CMakeFiles/ut_remote_interpreter.dir/rule
 
-.PHONY : pa_new_gimbal
+.PHONY : ut_remote_interpreter
 
 # clean rule for target.
-CMakeFiles/pa_new_gimbal.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/clean
-.PHONY : CMakeFiles/pa_new_gimbal.dir/clean
+CMakeFiles/ut_remote_interpreter.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/clean
+.PHONY : CMakeFiles/ut_remote_interpreter.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ut_ahrs_ext.dir
+
+# All Build rule for target.
+CMakeFiles/ut_ahrs_ext.dir/all: CMakeFiles/ChibiOS.dir/all
+CMakeFiles/ut_ahrs_ext.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=72,73,74,75 "Built target ut_ahrs_ext"
+.PHONY : CMakeFiles/ut_ahrs_ext.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ut_ahrs_ext.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_ahrs_ext.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/ut_ahrs_ext.dir/rule
+
+# Convenience name for target.
+ut_ahrs_ext: CMakeFiles/ut_ahrs_ext.dir/rule
+
+.PHONY : ut_ahrs_ext
+
+# clean rule for target.
+CMakeFiles/ut_ahrs_ext.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/clean
+.PHONY : CMakeFiles/ut_ahrs_ext.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/INFANTRY_FOUR.dir
+
+# All Build rule for target.
+CMakeFiles/INFANTRY_FOUR.dir/all: CMakeFiles/ChibiOS.dir/all
+CMakeFiles/INFANTRY_FOUR.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=40,41,42,43,44,45,46,47,48 "Built target INFANTRY_FOUR"
+.PHONY : CMakeFiles/INFANTRY_FOUR.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/INFANTRY_FOUR.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 39
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/INFANTRY_FOUR.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/INFANTRY_FOUR.dir/rule
+
+# Convenience name for target.
+INFANTRY_FOUR: CMakeFiles/INFANTRY_FOUR.dir/rule
+
+.PHONY : INFANTRY_FOUR
+
+# clean rule for target.
+CMakeFiles/INFANTRY_FOUR.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/clean
+.PHONY : CMakeFiles/INFANTRY_FOUR.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ut_ahrs.dir
+
+# All Build rule for target.
+CMakeFiles/ut_ahrs.dir/all: CMakeFiles/ChibiOS.dir/all
+CMakeFiles/ut_ahrs.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=67,68,69,70,71 "Built target ut_ahrs"
+.PHONY : CMakeFiles/ut_ahrs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ut_ahrs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 35
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_ahrs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/ut_ahrs.dir/rule
+
+# Convenience name for target.
+ut_ahrs: CMakeFiles/ut_ahrs.dir/rule
+
+.PHONY : ut_ahrs
+
+# clean rule for target.
+CMakeFiles/ut_ahrs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/clean
+.PHONY : CMakeFiles/ut_ahrs.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ut_imu.dir
@@ -754,12 +366,12 @@ CMakeFiles/ut_imu.dir/all: CMakeFiles/ChibiOS.dir/all
 CMakeFiles/ut_imu.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=85 "Built target ut_imu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=86,87,88,89 "Built target ut_imu"
 .PHONY : CMakeFiles/ut_imu.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ut_imu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_imu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ut_imu.dir/rule
@@ -782,12 +394,12 @@ CMakeFiles/ut_ist8310.dir/all: CMakeFiles/ChibiOS.dir/all
 CMakeFiles/ut_ist8310.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=86,87 "Built target ut_ist8310"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=90,91,92 "Built target ut_ist8310"
 .PHONY : CMakeFiles/ut_ist8310.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ut_ist8310.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 33
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_ist8310.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ut_ist8310.dir/rule
@@ -803,117 +415,6 @@ CMakeFiles/ut_ist8310.dir/clean:
 .PHONY : CMakeFiles/ut_ist8310.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ut_blink.dir
-
-# All Build rule for target.
-CMakeFiles/ut_blink.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_blink.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=73 "Built target ut_blink"
-.PHONY : CMakeFiles/ut_blink.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_blink.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_blink.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_blink.dir/rule
-
-# Convenience name for target.
-ut_blink: CMakeFiles/ut_blink.dir/rule
-
-.PHONY : ut_blink
-
-# clean rule for target.
-CMakeFiles/ut_blink.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/clean
-.PHONY : CMakeFiles/ut_blink.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pa_chassis.dir
-
-# All Build rule for target.
-CMakeFiles/pa_chassis.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_chassis.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=46,47 "Built target pa_chassis"
-.PHONY : CMakeFiles/pa_chassis.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pa_chassis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_chassis.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_chassis.dir/rule
-
-# Convenience name for target.
-pa_chassis: CMakeFiles/pa_chassis.dir/rule
-
-.PHONY : pa_chassis
-
-# clean rule for target.
-CMakeFiles/pa_chassis.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/clean
-.PHONY : CMakeFiles/pa_chassis.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/HERO.dir
-
-# All Build rule for target.
-CMakeFiles/HERO.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/HERO.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=21,22,23,24,25 "Built target HERO"
-.PHONY : CMakeFiles/HERO.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/HERO.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 18
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/HERO.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/HERO.dir/rule
-
-# Convenience name for target.
-HERO: CMakeFiles/HERO.dir/rule
-
-.PHONY : HERO
-
-# clean rule for target.
-CMakeFiles/HERO.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/clean
-.PHONY : CMakeFiles/HERO.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ChibiOS.dir
-
-# All Build rule for target.
-CMakeFiles/ChibiOS.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChibiOS.dir/build.make CMakeFiles/ChibiOS.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChibiOS.dir/build.make CMakeFiles/ChibiOS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16 "Built target ChibiOS"
-.PHONY : CMakeFiles/ChibiOS.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ChibiOS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 11
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ChibiOS.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ChibiOS.dir/rule
-
-# Convenience name for target.
-ChibiOS: CMakeFiles/ChibiOS.dir/rule
-
-.PHONY : ChibiOS
-
-# clean rule for target.
-CMakeFiles/ChibiOS.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChibiOS.dir/build.make CMakeFiles/ChibiOS.dir/clean
-.PHONY : CMakeFiles/ChibiOS.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/ut_mpu6500.dir
 
 # All Build rule for target.
@@ -921,12 +422,12 @@ CMakeFiles/ut_mpu6500.dir/all: CMakeFiles/ChibiOS.dir/all
 CMakeFiles/ut_mpu6500.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=88 "Built target ut_mpu6500"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=93,94,95,96 "Built target ut_mpu6500"
 .PHONY : CMakeFiles/ut_mpu6500.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ut_mpu6500.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_mpu6500.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ut_mpu6500.dir/rule
@@ -942,368 +443,59 @@ CMakeFiles/ut_mpu6500.dir/clean:
 .PHONY : CMakeFiles/ut_mpu6500.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ut_engineer.dir
+# Target rules for target CMakeFiles/ca_ahrs_infantry.dir
 
 # All Build rule for target.
-CMakeFiles/ut_engineer.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_engineer.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=79,80 "Built target ut_engineer"
-.PHONY : CMakeFiles/ut_engineer.dir/all
+CMakeFiles/ca_ahrs_infantry.dir/all: CMakeFiles/ChibiOS.dir/all
+CMakeFiles/ca_ahrs_infantry.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=58,59,60,61,62 "Built target ca_ahrs_infantry"
+.PHONY : CMakeFiles/ca_ahrs_infantry.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ut_engineer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_engineer.dir/all
+CMakeFiles/ca_ahrs_infantry.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 35
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ca_ahrs_infantry.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_engineer.dir/rule
+.PHONY : CMakeFiles/ca_ahrs_infantry.dir/rule
 
 # Convenience name for target.
-ut_engineer: CMakeFiles/ut_engineer.dir/rule
+ca_ahrs_infantry: CMakeFiles/ca_ahrs_infantry.dir/rule
 
-.PHONY : ut_engineer
+.PHONY : ca_ahrs_infantry
 
 # clean rule for target.
-CMakeFiles/ut_engineer.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/clean
-.PHONY : CMakeFiles/ut_engineer.dir/clean
+CMakeFiles/ca_ahrs_infantry.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/clean
+.PHONY : CMakeFiles/ca_ahrs_infantry.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ut_shoot.dir
+# Target rules for target CMakeFiles/ChibiOS.dir
 
 # All Build rule for target.
-CMakeFiles/ut_shoot.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_shoot.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=97,98 "Built target ut_shoot"
-.PHONY : CMakeFiles/ut_shoot.dir/all
+CMakeFiles/ChibiOS.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChibiOS.dir/build.make CMakeFiles/ChibiOS.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChibiOS.dir/build.make CMakeFiles/ChibiOS.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target ChibiOS"
+.PHONY : CMakeFiles/ChibiOS.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ut_shoot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_shoot.dir/all
+CMakeFiles/ChibiOS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 27
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ChibiOS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_shoot.dir/rule
+.PHONY : CMakeFiles/ChibiOS.dir/rule
 
 # Convenience name for target.
-ut_shoot: CMakeFiles/ut_shoot.dir/rule
+ChibiOS: CMakeFiles/ChibiOS.dir/rule
 
-.PHONY : ut_shoot
-
-# clean rule for target.
-CMakeFiles/ut_shoot.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/clean
-.PHONY : CMakeFiles/ut_shoot.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pa_gimbal.dir
-
-# All Build rule for target.
-CMakeFiles/pa_gimbal.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_gimbal.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=51,52,53 "Built target pa_gimbal"
-.PHONY : CMakeFiles/pa_gimbal.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pa_gimbal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_gimbal.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_gimbal.dir/rule
-
-# Convenience name for target.
-pa_gimbal: CMakeFiles/pa_gimbal.dir/rule
-
-.PHONY : pa_gimbal
+.PHONY : ChibiOS
 
 # clean rule for target.
-CMakeFiles/pa_gimbal.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/clean
-.PHONY : CMakeFiles/pa_gimbal.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_ahrs_ext.dir
-
-# All Build rule for target.
-CMakeFiles/ut_ahrs_ext.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_ahrs_ext.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=70,71 "Built target ut_ahrs_ext"
-.PHONY : CMakeFiles/ut_ahrs_ext.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_ahrs_ext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_ahrs_ext.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_ahrs_ext.dir/rule
-
-# Convenience name for target.
-ut_ahrs_ext: CMakeFiles/ut_ahrs_ext.dir/rule
-
-.PHONY : ut_ahrs_ext
-
-# clean rule for target.
-CMakeFiles/ut_ahrs_ext.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/clean
-.PHONY : CMakeFiles/ut_ahrs_ext.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/AERIAL.dir
-
-# All Build rule for target.
-CMakeFiles/AERIAL.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/AERIAL.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target AERIAL"
-.PHONY : CMakeFiles/AERIAL.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/AERIAL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/AERIAL.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/AERIAL.dir/rule
-
-# Convenience name for target.
-AERIAL: CMakeFiles/AERIAL.dir/rule
-
-.PHONY : AERIAL
-
-# clean rule for target.
-CMakeFiles/AERIAL.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/clean
-.PHONY : CMakeFiles/AERIAL.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/SENTRY.dir
-
-# All Build rule for target.
-CMakeFiles/SENTRY.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/SENTRY.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=39,40,41 "Built target SENTRY"
-.PHONY : CMakeFiles/SENTRY.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/SENTRY.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SENTRY.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/SENTRY.dir/rule
-
-# Convenience name for target.
-SENTRY: CMakeFiles/SENTRY.dir/rule
-
-.PHONY : SENTRY
-
-# clean rule for target.
-CMakeFiles/SENTRY.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/clean
-.PHONY : CMakeFiles/SENTRY.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_super_capacitor.dir
-
-# All Build rule for target.
-CMakeFiles/ut_super_capacitor.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_super_capacitor.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=99,100 "Built target ut_super_capacitor"
-.PHONY : CMakeFiles/ut_super_capacitor.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_super_capacitor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_super_capacitor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_super_capacitor.dir/rule
-
-# Convenience name for target.
-ut_super_capacitor: CMakeFiles/ut_super_capacitor.dir/rule
-
-.PHONY : ut_super_capacitor
-
-# clean rule for target.
-CMakeFiles/ut_super_capacitor.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/clean
-.PHONY : CMakeFiles/ut_super_capacitor.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_remote_interpreter.dir
-
-# All Build rule for target.
-CMakeFiles/ut_remote_interpreter.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_remote_interpreter.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=91 "Built target ut_remote_interpreter"
-.PHONY : CMakeFiles/ut_remote_interpreter.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_remote_interpreter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_remote_interpreter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_remote_interpreter.dir/rule
-
-# Convenience name for target.
-ut_remote_interpreter: CMakeFiles/ut_remote_interpreter.dir/rule
-
-.PHONY : ut_remote_interpreter
-
-# clean rule for target.
-CMakeFiles/ut_remote_interpreter.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/clean
-.PHONY : CMakeFiles/ut_remote_interpreter.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/pa_elevator.dir
-
-# All Build rule for target.
-CMakeFiles/pa_elevator.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/pa_elevator.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=48 "Built target pa_elevator"
-.PHONY : CMakeFiles/pa_elevator.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/pa_elevator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pa_elevator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/pa_elevator.dir/rule
-
-# Convenience name for target.
-pa_elevator: CMakeFiles/pa_elevator.dir/rule
-
-.PHONY : pa_elevator
-
-# clean rule for target.
-CMakeFiles/pa_elevator.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/clean
-.PHONY : CMakeFiles/pa_elevator.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/INFANTRY_FIVE.dir
-
-# All Build rule for target.
-CMakeFiles/INFANTRY_FIVE.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/INFANTRY_FIVE.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=26,27,28,29 "Built target INFANTRY_FIVE"
-.PHONY : CMakeFiles/INFANTRY_FIVE.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/INFANTRY_FIVE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 17
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/INFANTRY_FIVE.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/INFANTRY_FIVE.dir/rule
-
-# Convenience name for target.
-INFANTRY_FIVE: CMakeFiles/INFANTRY_FIVE.dir/rule
-
-.PHONY : INFANTRY_FIVE
-
-# clean rule for target.
-CMakeFiles/INFANTRY_FIVE.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/clean
-.PHONY : CMakeFiles/INFANTRY_FIVE.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_ahrs.dir
-
-# All Build rule for target.
-CMakeFiles/ut_ahrs.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_ahrs.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=68,69 "Built target ut_ahrs"
-.PHONY : CMakeFiles/ut_ahrs.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_ahrs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_ahrs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_ahrs.dir/rule
-
-# Convenience name for target.
-ut_ahrs: CMakeFiles/ut_ahrs.dir/rule
-
-.PHONY : ut_ahrs
-
-# clean rule for target.
-CMakeFiles/ut_ahrs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/clean
-.PHONY : CMakeFiles/ut_ahrs.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/INFANTRY_FOUR.dir
-
-# All Build rule for target.
-CMakeFiles/INFANTRY_FOUR.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/INFANTRY_FOUR.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=30,31,32,33,34 "Built target INFANTRY_FOUR"
-.PHONY : CMakeFiles/INFANTRY_FOUR.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/INFANTRY_FOUR.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 18
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/INFANTRY_FOUR.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/INFANTRY_FOUR.dir/rule
-
-# Convenience name for target.
-INFANTRY_FOUR: CMakeFiles/INFANTRY_FOUR.dir/rule
-
-.PHONY : INFANTRY_FOUR
-
-# clean rule for target.
-CMakeFiles/INFANTRY_FOUR.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/clean
-.PHONY : CMakeFiles/INFANTRY_FOUR.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ut_engineer_gimbal.dir
-
-# All Build rule for target.
-CMakeFiles/ut_engineer_gimbal.dir/all: CMakeFiles/ChibiOS.dir/all
-CMakeFiles/ut_engineer_gimbal.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=81,82 "Built target ut_engineer_gimbal"
-.PHONY : CMakeFiles/ut_engineer_gimbal.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ut_engineer_gimbal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_engineer_gimbal.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ut_engineer_gimbal.dir/rule
-
-# Convenience name for target.
-ut_engineer_gimbal: CMakeFiles/ut_engineer_gimbal.dir/rule
-
-.PHONY : ut_engineer_gimbal
-
-# clean rule for target.
-CMakeFiles/ut_engineer_gimbal.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/clean
-.PHONY : CMakeFiles/ut_engineer_gimbal.dir/clean
+CMakeFiles/ChibiOS.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChibiOS.dir/build.make CMakeFiles/ChibiOS.dir/clean
+.PHONY : CMakeFiles/ChibiOS.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/INFANTRY_THREE.dir
@@ -1313,12 +505,12 @@ CMakeFiles/INFANTRY_THREE.dir/all: CMakeFiles/ChibiOS.dir/all
 CMakeFiles/INFANTRY_THREE.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=35,36,37,38 "Built target INFANTRY_THREE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=49,50,51,52,53,54,55,56,57 "Built target INFANTRY_THREE"
 .PHONY : CMakeFiles/INFANTRY_THREE.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/INFANTRY_THREE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 39
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/INFANTRY_THREE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/INFANTRY_THREE.dir/rule
@@ -1334,18 +526,46 @@ CMakeFiles/INFANTRY_THREE.dir/clean:
 .PHONY : CMakeFiles/INFANTRY_THREE.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/ut_blink.dir
+
+# All Build rule for target.
+CMakeFiles/ut_blink.dir/all: CMakeFiles/ChibiOS.dir/all
+CMakeFiles/ut_blink.dir/all: cmsis/CMakeFiles/CMSIS_DSP.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=76,77,78 "Built target ut_blink"
+.PHONY : CMakeFiles/ut_blink.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ut_blink.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 33
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ut_blink.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/ut_blink.dir/rule
+
+# Convenience name for target.
+ut_blink: CMakeFiles/ut_blink.dir/rule
+
+.PHONY : ut_blink
+
+# clean rule for target.
+CMakeFiles/ut_blink.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/clean
+.PHONY : CMakeFiles/ut_blink.dir/clean
+
+#=============================================================================
 # Target rules for target cmsis/CMakeFiles/CMSIS_DSP.dir
 
 # All Build rule for target.
 cmsis/CMakeFiles/CMSIS_DSP.dir/all:
 	$(MAKE) $(MAKESILENT) -f cmsis/CMakeFiles/CMSIS_DSP.dir/build.make cmsis/CMakeFiles/CMSIS_DSP.dir/depend
 	$(MAKE) $(MAKESILENT) -f cmsis/CMakeFiles/CMSIS_DSP.dir/build.make cmsis/CMakeFiles/CMSIS_DSP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=4,5 "Built target CMSIS_DSP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target CMSIS_DSP"
 .PHONY : cmsis/CMakeFiles/CMSIS_DSP.dir/all
 
 # Build rule for subdir invocation for target.
 cmsis/CMakeFiles/CMSIS_DSP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmsis/CMakeFiles/CMSIS_DSP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles 0
 .PHONY : cmsis/CMakeFiles/CMSIS_DSP.dir/rule

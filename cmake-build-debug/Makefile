@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /Users/kanya/Projects/Senior-Design/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -96,6 +85,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,186 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ca_ahrs_hero
+# Target rules for targets named pa_chassis
 
 # Build rule for target.
-ca_ahrs_hero: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ca_ahrs_hero
-.PHONY : ca_ahrs_hero
+pa_chassis: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_chassis
+.PHONY : pa_chassis
 
 # fast build rule for target.
-ca_ahrs_hero/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/build
-.PHONY : ca_ahrs_hero/fast
-
-#=============================================================================
-# Target rules for targets named ca_ahrs_infantry
-
-# Build rule for target.
-ca_ahrs_infantry: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ca_ahrs_infantry
-.PHONY : ca_ahrs_infantry
-
-# fast build rule for target.
-ca_ahrs_infantry/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/build
-.PHONY : ca_ahrs_infantry/fast
-
-#=============================================================================
-# Target rules for targets named pa_sentry_chassis
-
-# Build rule for target.
-pa_sentry_chassis: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_sentry_chassis
-.PHONY : pa_sentry_chassis
-
-# fast build rule for target.
-pa_sentry_chassis/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/build
-.PHONY : pa_sentry_chassis/fast
-
-#=============================================================================
-# Target rules for targets named pa_skywalker
-
-# Build rule for target.
-pa_skywalker: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_skywalker
-.PHONY : pa_skywalker
-
-# fast build rule for target.
-pa_skywalker/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/build
-.PHONY : pa_skywalker/fast
-
-#=============================================================================
-# Target rules for targets named pa_hero_shoot
-
-# Build rule for target.
-pa_hero_shoot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_hero_shoot
-.PHONY : pa_hero_shoot
-
-# fast build rule for target.
-pa_hero_shoot/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/build
-.PHONY : pa_hero_shoot/fast
-
-#=============================================================================
-# Target rules for targets named ut_sensors_sound
-
-# Build rule for target.
-ut_sensors_sound: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_sensors_sound
-.PHONY : ut_sensors_sound
-
-# fast build rule for target.
-ut_sensors_sound/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/build
-.PHONY : ut_sensors_sound/fast
-
-#=============================================================================
-# Target rules for targets named pa_engineer_chassis
-
-# Build rule for target.
-pa_engineer_chassis: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_engineer_chassis
-.PHONY : pa_engineer_chassis
-
-# fast build rule for target.
-pa_engineer_chassis/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/build
-.PHONY : pa_engineer_chassis/fast
-
-#=============================================================================
-# Target rules for targets named ut_adc
-
-# Build rule for target.
-ut_adc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_adc
-.PHONY : ut_adc
-
-# fast build rule for target.
-ut_adc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/build
-.PHONY : ut_adc/fast
-
-#=============================================================================
-# Target rules for targets named pa_infantry_shoot
-
-# Build rule for target.
-pa_infantry_shoot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_infantry_shoot
-.PHONY : pa_infantry_shoot
-
-# fast build rule for target.
-pa_infantry_shoot/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/build
-.PHONY : pa_infantry_shoot/fast
-
-#=============================================================================
-# Target rules for targets named ut_referee_interface
-
-# Build rule for target.
-ut_referee_interface: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_referee_interface
-.PHONY : ut_referee_interface
-
-# fast build rule for target.
-ut_referee_interface/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/build
-.PHONY : ut_referee_interface/fast
-
-#=============================================================================
-# Target rules for targets named pa_hero_gimbal
-
-# Build rule for target.
-pa_hero_gimbal: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_hero_gimbal
-.PHONY : pa_hero_gimbal
-
-# fast build rule for target.
-pa_hero_gimbal/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/build
-.PHONY : pa_hero_gimbal/fast
-
-#=============================================================================
-# Target rules for targets named ut_sd_card
-
-# Build rule for target.
-ut_sd_card: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_sd_card
-.PHONY : ut_sd_card
-
-# fast build rule for target.
-ut_sd_card/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/build
-.PHONY : ut_sd_card/fast
-
-#=============================================================================
-# Target rules for targets named ut_auto_robotic_arm
-
-# Build rule for target.
-ut_auto_robotic_arm: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_auto_robotic_arm
-.PHONY : ut_auto_robotic_arm
-
-# fast build rule for target.
-ut_auto_robotic_arm/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/build
-.PHONY : ut_auto_robotic_arm/fast
-
-#=============================================================================
-# Target rules for targets named ut_robotic_arm
-
-# Build rule for target.
-ut_robotic_arm: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_robotic_arm
-.PHONY : ut_robotic_arm
-
-# fast build rule for target.
-ut_robotic_arm/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/build
-.PHONY : ut_robotic_arm/fast
+pa_chassis/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/build
+.PHONY : pa_chassis/fast
 
 #=============================================================================
 # Target rules for targets named ut_can
@@ -325,32 +156,6 @@ ut_can/fast:
 .PHONY : ut_can/fast
 
 #=============================================================================
-# Target rules for targets named ENGINEER
-
-# Build rule for target.
-ENGINEER: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ENGINEER
-.PHONY : ENGINEER
-
-# fast build rule for target.
-ENGINEER/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/build
-.PHONY : ENGINEER/fast
-
-#=============================================================================
-# Target rules for targets named ut_elevator_interface
-
-# Build rule for target.
-ut_elevator_interface: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_elevator_interface
-.PHONY : ut_elevator_interface
-
-# fast build rule for target.
-ut_elevator_interface/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/build
-.PHONY : ut_elevator_interface/fast
-
-#=============================================================================
 # Target rules for targets named ut_buzzer
 
 # Build rule for target.
@@ -364,30 +169,69 @@ ut_buzzer/fast:
 .PHONY : ut_buzzer/fast
 
 #=============================================================================
-# Target rules for targets named ut_gimbal_interface
+# Target rules for targets named INFANTRY_FIVE
 
 # Build rule for target.
-ut_gimbal_interface: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_gimbal_interface
-.PHONY : ut_gimbal_interface
+INFANTRY_FIVE: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INFANTRY_FIVE
+.PHONY : INFANTRY_FIVE
 
 # fast build rule for target.
-ut_gimbal_interface/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/build
-.PHONY : ut_gimbal_interface/fast
+INFANTRY_FIVE/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/build
+.PHONY : INFANTRY_FIVE/fast
 
 #=============================================================================
-# Target rules for targets named pa_new_gimbal
+# Target rules for targets named ut_remote_interpreter
 
 # Build rule for target.
-pa_new_gimbal: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_new_gimbal
-.PHONY : pa_new_gimbal
+ut_remote_interpreter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_remote_interpreter
+.PHONY : ut_remote_interpreter
 
 # fast build rule for target.
-pa_new_gimbal/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/build
-.PHONY : pa_new_gimbal/fast
+ut_remote_interpreter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/build
+.PHONY : ut_remote_interpreter/fast
+
+#=============================================================================
+# Target rules for targets named ut_ahrs_ext
+
+# Build rule for target.
+ut_ahrs_ext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_ahrs_ext
+.PHONY : ut_ahrs_ext
+
+# fast build rule for target.
+ut_ahrs_ext/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/build
+.PHONY : ut_ahrs_ext/fast
+
+#=============================================================================
+# Target rules for targets named INFANTRY_FOUR
+
+# Build rule for target.
+INFANTRY_FOUR: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INFANTRY_FOUR
+.PHONY : INFANTRY_FOUR
+
+# fast build rule for target.
+INFANTRY_FOUR/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/build
+.PHONY : INFANTRY_FOUR/fast
+
+#=============================================================================
+# Target rules for targets named ut_ahrs
+
+# Build rule for target.
+ut_ahrs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_ahrs
+.PHONY : ut_ahrs
+
+# fast build rule for target.
+ut_ahrs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/build
+.PHONY : ut_ahrs/fast
 
 #=============================================================================
 # Target rules for targets named ut_imu
@@ -416,43 +260,30 @@ ut_ist8310/fast:
 .PHONY : ut_ist8310/fast
 
 #=============================================================================
-# Target rules for targets named ut_blink
+# Target rules for targets named ut_mpu6500
 
 # Build rule for target.
-ut_blink: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_blink
-.PHONY : ut_blink
+ut_mpu6500: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_mpu6500
+.PHONY : ut_mpu6500
 
 # fast build rule for target.
-ut_blink/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/build
-.PHONY : ut_blink/fast
+ut_mpu6500/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/build
+.PHONY : ut_mpu6500/fast
 
 #=============================================================================
-# Target rules for targets named pa_chassis
+# Target rules for targets named ca_ahrs_infantry
 
 # Build rule for target.
-pa_chassis: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_chassis
-.PHONY : pa_chassis
+ca_ahrs_infantry: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ca_ahrs_infantry
+.PHONY : ca_ahrs_infantry
 
 # fast build rule for target.
-pa_chassis/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/build
-.PHONY : pa_chassis/fast
-
-#=============================================================================
-# Target rules for targets named HERO
-
-# Build rule for target.
-HERO: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HERO
-.PHONY : HERO
-
-# fast build rule for target.
-HERO/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/build
-.PHONY : HERO/fast
+ca_ahrs_infantry/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/build
+.PHONY : ca_ahrs_infantry/fast
 
 #=============================================================================
 # Target rules for targets named ChibiOS
@@ -468,188 +299,6 @@ ChibiOS/fast:
 .PHONY : ChibiOS/fast
 
 #=============================================================================
-# Target rules for targets named ut_mpu6500
-
-# Build rule for target.
-ut_mpu6500: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_mpu6500
-.PHONY : ut_mpu6500
-
-# fast build rule for target.
-ut_mpu6500/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/build
-.PHONY : ut_mpu6500/fast
-
-#=============================================================================
-# Target rules for targets named ut_engineer
-
-# Build rule for target.
-ut_engineer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_engineer
-.PHONY : ut_engineer
-
-# fast build rule for target.
-ut_engineer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/build
-.PHONY : ut_engineer/fast
-
-#=============================================================================
-# Target rules for targets named ut_shoot
-
-# Build rule for target.
-ut_shoot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_shoot
-.PHONY : ut_shoot
-
-# fast build rule for target.
-ut_shoot/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/build
-.PHONY : ut_shoot/fast
-
-#=============================================================================
-# Target rules for targets named pa_gimbal
-
-# Build rule for target.
-pa_gimbal: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_gimbal
-.PHONY : pa_gimbal
-
-# fast build rule for target.
-pa_gimbal/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/build
-.PHONY : pa_gimbal/fast
-
-#=============================================================================
-# Target rules for targets named ut_ahrs_ext
-
-# Build rule for target.
-ut_ahrs_ext: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_ahrs_ext
-.PHONY : ut_ahrs_ext
-
-# fast build rule for target.
-ut_ahrs_ext/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/build
-.PHONY : ut_ahrs_ext/fast
-
-#=============================================================================
-# Target rules for targets named AERIAL
-
-# Build rule for target.
-AERIAL: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AERIAL
-.PHONY : AERIAL
-
-# fast build rule for target.
-AERIAL/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/build
-.PHONY : AERIAL/fast
-
-#=============================================================================
-# Target rules for targets named SENTRY
-
-# Build rule for target.
-SENTRY: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SENTRY
-.PHONY : SENTRY
-
-# fast build rule for target.
-SENTRY/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/build
-.PHONY : SENTRY/fast
-
-#=============================================================================
-# Target rules for targets named ut_super_capacitor
-
-# Build rule for target.
-ut_super_capacitor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_super_capacitor
-.PHONY : ut_super_capacitor
-
-# fast build rule for target.
-ut_super_capacitor/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/build
-.PHONY : ut_super_capacitor/fast
-
-#=============================================================================
-# Target rules for targets named ut_remote_interpreter
-
-# Build rule for target.
-ut_remote_interpreter: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_remote_interpreter
-.PHONY : ut_remote_interpreter
-
-# fast build rule for target.
-ut_remote_interpreter/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/build
-.PHONY : ut_remote_interpreter/fast
-
-#=============================================================================
-# Target rules for targets named pa_elevator
-
-# Build rule for target.
-pa_elevator: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pa_elevator
-.PHONY : pa_elevator
-
-# fast build rule for target.
-pa_elevator/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/build
-.PHONY : pa_elevator/fast
-
-#=============================================================================
-# Target rules for targets named INFANTRY_FIVE
-
-# Build rule for target.
-INFANTRY_FIVE: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INFANTRY_FIVE
-.PHONY : INFANTRY_FIVE
-
-# fast build rule for target.
-INFANTRY_FIVE/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/build
-.PHONY : INFANTRY_FIVE/fast
-
-#=============================================================================
-# Target rules for targets named ut_ahrs
-
-# Build rule for target.
-ut_ahrs: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_ahrs
-.PHONY : ut_ahrs
-
-# fast build rule for target.
-ut_ahrs/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/build
-.PHONY : ut_ahrs/fast
-
-#=============================================================================
-# Target rules for targets named INFANTRY_FOUR
-
-# Build rule for target.
-INFANTRY_FOUR: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 INFANTRY_FOUR
-.PHONY : INFANTRY_FOUR
-
-# fast build rule for target.
-INFANTRY_FOUR/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/build
-.PHONY : INFANTRY_FOUR/fast
-
-#=============================================================================
-# Target rules for targets named ut_engineer_gimbal
-
-# Build rule for target.
-ut_engineer_gimbal: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_engineer_gimbal
-.PHONY : ut_engineer_gimbal
-
-# fast build rule for target.
-ut_engineer_gimbal/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/build
-.PHONY : ut_engineer_gimbal/fast
-
-#=============================================================================
 # Target rules for targets named INFANTRY_THREE
 
 # Build rule for target.
@@ -661,6 +310,19 @@ INFANTRY_THREE: cmake_check_build_system
 INFANTRY_THREE/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/build
 .PHONY : INFANTRY_THREE/fast
+
+#=============================================================================
+# Target rules for targets named ut_blink
+
+# Build rule for target.
+ut_blink: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ut_blink
+.PHONY : ut_blink
+
+# fast build rule for target.
+ut_blink/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/build
+.PHONY : ut_blink/fast
 
 #=============================================================================
 # Target rules for targets named CMSIS_DSP
@@ -708,22 +370,9 @@ dev/common/CRC16.obj: dev/common/CRC16.cpp.obj
 
 # target to build an object file
 dev/common/CRC16.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/common/CRC16.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/common/CRC16.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/common/CRC16.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/common/CRC16.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/common/CRC16.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/common/CRC16.cpp.obj
 .PHONY : dev/common/CRC16.cpp.obj
 
@@ -733,22 +382,9 @@ dev/common/CRC16.i: dev/common/CRC16.cpp.i
 
 # target to preprocess a source file
 dev/common/CRC16.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/common/CRC16.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/common/CRC16.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/common/CRC16.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/common/CRC16.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/common/CRC16.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/common/CRC16.cpp.i
 .PHONY : dev/common/CRC16.cpp.i
 
@@ -758,22 +394,9 @@ dev/common/CRC16.s: dev/common/CRC16.cpp.s
 
 # target to generate assembly for a file
 dev/common/CRC16.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/common/CRC16.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/common/CRC16.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/common/CRC16.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/common/CRC16.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/common/CRC16.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/common/CRC16.cpp.s
 .PHONY : dev/common/CRC16.cpp.s
 
@@ -783,14 +406,6 @@ dev/common/CRC8.obj: dev/common/CRC8.cpp.obj
 
 # target to build an object file
 dev/common/CRC8.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/common/CRC8.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/common/CRC8.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/common/CRC8.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/common/CRC8.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/common/CRC8.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/common/CRC8.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/common/CRC8.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/common/CRC8.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/common/CRC8.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/common/CRC8.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/common/CRC8.cpp.obj
@@ -802,14 +417,6 @@ dev/common/CRC8.i: dev/common/CRC8.cpp.i
 
 # target to preprocess a source file
 dev/common/CRC8.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/common/CRC8.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/common/CRC8.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/common/CRC8.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/common/CRC8.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/common/CRC8.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/common/CRC8.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/common/CRC8.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/common/CRC8.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/common/CRC8.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/common/CRC8.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/common/CRC8.cpp.i
@@ -821,14 +428,6 @@ dev/common/CRC8.s: dev/common/CRC8.cpp.s
 
 # target to generate assembly for a file
 dev/common/CRC8.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/common/CRC8.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/common/CRC8.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/common/CRC8.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/common/CRC8.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/common/CRC8.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/common/CRC8.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/common/CRC8.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/common/CRC8.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/common/CRC8.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/common/CRC8.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/common/CRC8.cpp.s
@@ -840,7 +439,6 @@ dev/debug/Unit_Tests/ca_ahrs.obj: dev/debug/Unit_Tests/ca_ahrs.cpp.obj
 
 # target to build an object file
 dev/debug/Unit_Tests/ca_ahrs.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/Unit_Tests/ca_ahrs.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/Unit_Tests/ca_ahrs.cpp.obj
 .PHONY : dev/debug/Unit_Tests/ca_ahrs.cpp.obj
 
@@ -850,7 +448,6 @@ dev/debug/Unit_Tests/ca_ahrs.i: dev/debug/Unit_Tests/ca_ahrs.cpp.i
 
 # target to preprocess a source file
 dev/debug/Unit_Tests/ca_ahrs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/Unit_Tests/ca_ahrs.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/Unit_Tests/ca_ahrs.cpp.i
 .PHONY : dev/debug/Unit_Tests/ca_ahrs.cpp.i
 
@@ -860,36 +457,8 @@ dev/debug/Unit_Tests/ca_ahrs.s: dev/debug/Unit_Tests/ca_ahrs.cpp.s
 
 # target to generate assembly for a file
 dev/debug/Unit_Tests/ca_ahrs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/Unit_Tests/ca_ahrs.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/Unit_Tests/ca_ahrs.cpp.s
 .PHONY : dev/debug/Unit_Tests/ca_ahrs.cpp.s
-
-dev/debug/Unit_Tests/ut_adc.obj: dev/debug/Unit_Tests/ut_adc.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_adc.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_adc.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/Unit_Tests/ut_adc.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_adc.cpp.obj
-
-dev/debug/Unit_Tests/ut_adc.i: dev/debug/Unit_Tests/ut_adc.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_adc.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_adc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/Unit_Tests/ut_adc.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_adc.cpp.i
-
-dev/debug/Unit_Tests/ut_adc.s: dev/debug/Unit_Tests/ut_adc.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_adc.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_adc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/Unit_Tests/ut_adc.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_adc.cpp.s
 
 dev/debug/Unit_Tests/ut_ahrs.obj: dev/debug/Unit_Tests/ut_ahrs.cpp.obj
 
@@ -897,8 +466,8 @@ dev/debug/Unit_Tests/ut_ahrs.obj: dev/debug/Unit_Tests/ut_ahrs.cpp.obj
 
 # target to build an object file
 dev/debug/Unit_Tests/ut_ahrs.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/Unit_Tests/ut_ahrs.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/Unit_Tests/ut_ahrs.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/Unit_Tests/ut_ahrs.cpp.obj
 .PHONY : dev/debug/Unit_Tests/ut_ahrs.cpp.obj
 
 dev/debug/Unit_Tests/ut_ahrs.i: dev/debug/Unit_Tests/ut_ahrs.cpp.i
@@ -907,8 +476,8 @@ dev/debug/Unit_Tests/ut_ahrs.i: dev/debug/Unit_Tests/ut_ahrs.cpp.i
 
 # target to preprocess a source file
 dev/debug/Unit_Tests/ut_ahrs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/Unit_Tests/ut_ahrs.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/Unit_Tests/ut_ahrs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/Unit_Tests/ut_ahrs.cpp.i
 .PHONY : dev/debug/Unit_Tests/ut_ahrs.cpp.i
 
 dev/debug/Unit_Tests/ut_ahrs.s: dev/debug/Unit_Tests/ut_ahrs.cpp.s
@@ -917,8 +486,8 @@ dev/debug/Unit_Tests/ut_ahrs.s: dev/debug/Unit_Tests/ut_ahrs.cpp.s
 
 # target to generate assembly for a file
 dev/debug/Unit_Tests/ut_ahrs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/Unit_Tests/ut_ahrs.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/Unit_Tests/ut_ahrs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/Unit_Tests/ut_ahrs.cpp.s
 .PHONY : dev/debug/Unit_Tests/ut_ahrs.cpp.s
 
 dev/debug/Unit_Tests/ut_ahrs_ext.obj: dev/debug/Unit_Tests/ut_ahrs_ext.cpp.obj
@@ -1002,141 +571,6 @@ dev/debug/Unit_Tests/ut_can_interface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/Unit_Tests/ut_can_interface.cpp.s
 .PHONY : dev/debug/Unit_Tests/ut_can_interface.cpp.s
 
-dev/debug/Unit_Tests/ut_elevator_IF.obj: dev/debug/Unit_Tests/ut_elevator_IF.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_elevator_IF.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_elevator_IF.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/Unit_Tests/ut_elevator_IF.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_elevator_IF.cpp.obj
-
-dev/debug/Unit_Tests/ut_elevator_IF.i: dev/debug/Unit_Tests/ut_elevator_IF.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_elevator_IF.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_elevator_IF.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/Unit_Tests/ut_elevator_IF.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_elevator_IF.cpp.i
-
-dev/debug/Unit_Tests/ut_elevator_IF.s: dev/debug/Unit_Tests/ut_elevator_IF.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_elevator_IF.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_elevator_IF.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/Unit_Tests/ut_elevator_IF.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_elevator_IF.cpp.s
-
-dev/debug/Unit_Tests/ut_engineer.obj: dev/debug/Unit_Tests/ut_engineer.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_engineer.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_engineer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/Unit_Tests/ut_engineer.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_engineer.cpp.obj
-
-dev/debug/Unit_Tests/ut_engineer.i: dev/debug/Unit_Tests/ut_engineer.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_engineer.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_engineer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/Unit_Tests/ut_engineer.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_engineer.cpp.i
-
-dev/debug/Unit_Tests/ut_engineer.s: dev/debug/Unit_Tests/ut_engineer.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_engineer.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_engineer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/Unit_Tests/ut_engineer.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_engineer.cpp.s
-
-dev/debug/Unit_Tests/ut_engineer_gimbal.obj: dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_engineer_gimbal.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.obj
-
-dev/debug/Unit_Tests/ut_engineer_gimbal.i: dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_engineer_gimbal.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.i
-
-dev/debug/Unit_Tests/ut_engineer_gimbal.s: dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_engineer_gimbal.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_engineer_gimbal.cpp.s
-
-dev/debug/Unit_Tests/ut_engineer_robotic_arm.obj: dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_engineer_robotic_arm.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.obj
-
-dev/debug/Unit_Tests/ut_engineer_robotic_arm.i: dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_engineer_robotic_arm.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.i
-
-dev/debug/Unit_Tests/ut_engineer_robotic_arm.s: dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_engineer_robotic_arm.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp.s
-
-dev/debug/Unit_Tests/ut_gimbalIF.obj: dev/debug/Unit_Tests/ut_gimbalIF.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_gimbalIF.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_gimbalIF.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/Unit_Tests/ut_gimbalIF.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_gimbalIF.cpp.obj
-
-dev/debug/Unit_Tests/ut_gimbalIF.i: dev/debug/Unit_Tests/ut_gimbalIF.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_gimbalIF.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_gimbalIF.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/Unit_Tests/ut_gimbalIF.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_gimbalIF.cpp.i
-
-dev/debug/Unit_Tests/ut_gimbalIF.s: dev/debug/Unit_Tests/ut_gimbalIF.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_gimbalIF.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_gimbalIF.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/Unit_Tests/ut_gimbalIF.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_gimbalIF.cpp.s
-
 dev/debug/Unit_Tests/ut_ist8310.obj: dev/debug/Unit_Tests/ut_ist8310.cpp.obj
 
 .PHONY : dev/debug/Unit_Tests/ut_ist8310.obj
@@ -1218,33 +652,6 @@ dev/debug/Unit_Tests/ut_mpu6500.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/Unit_Tests/ut_mpu6500.cpp.s
 .PHONY : dev/debug/Unit_Tests/ut_mpu6500.cpp.s
 
-dev/debug/Unit_Tests/ut_refereeIF.obj: dev/debug/Unit_Tests/ut_refereeIF.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_refereeIF.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_refereeIF.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/Unit_Tests/ut_refereeIF.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_refereeIF.cpp.obj
-
-dev/debug/Unit_Tests/ut_refereeIF.i: dev/debug/Unit_Tests/ut_refereeIF.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_refereeIF.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_refereeIF.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/Unit_Tests/ut_refereeIF.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_refereeIF.cpp.i
-
-dev/debug/Unit_Tests/ut_refereeIF.s: dev/debug/Unit_Tests/ut_refereeIF.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_refereeIF.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_refereeIF.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/Unit_Tests/ut_refereeIF.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_refereeIF.cpp.s
-
 dev/debug/Unit_Tests/ut_remoteIF.obj: dev/debug/Unit_Tests/ut_remoteIF.cpp.obj
 
 .PHONY : dev/debug/Unit_Tests/ut_remoteIF.obj
@@ -1271,114 +678,6 @@ dev/debug/Unit_Tests/ut_remoteIF.s: dev/debug/Unit_Tests/ut_remoteIF.cpp.s
 dev/debug/Unit_Tests/ut_remoteIF.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/Unit_Tests/ut_remoteIF.cpp.s
 .PHONY : dev/debug/Unit_Tests/ut_remoteIF.cpp.s
-
-dev/debug/Unit_Tests/ut_sd_card.obj: dev/debug/Unit_Tests/ut_sd_card.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_sd_card.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_sd_card.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/Unit_Tests/ut_sd_card.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_sd_card.cpp.obj
-
-dev/debug/Unit_Tests/ut_sd_card.i: dev/debug/Unit_Tests/ut_sd_card.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_sd_card.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_sd_card.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/Unit_Tests/ut_sd_card.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_sd_card.cpp.i
-
-dev/debug/Unit_Tests/ut_sd_card.s: dev/debug/Unit_Tests/ut_sd_card.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_sd_card.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_sd_card.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/Unit_Tests/ut_sd_card.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_sd_card.cpp.s
-
-dev/debug/Unit_Tests/ut_sensors_sound.obj: dev/debug/Unit_Tests/ut_sensors_sound.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_sensors_sound.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_sensors_sound.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/Unit_Tests/ut_sensors_sound.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_sensors_sound.cpp.obj
-
-dev/debug/Unit_Tests/ut_sensors_sound.i: dev/debug/Unit_Tests/ut_sensors_sound.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_sensors_sound.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_sensors_sound.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/Unit_Tests/ut_sensors_sound.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_sensors_sound.cpp.i
-
-dev/debug/Unit_Tests/ut_sensors_sound.s: dev/debug/Unit_Tests/ut_sensors_sound.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_sensors_sound.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_sensors_sound.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/Unit_Tests/ut_sensors_sound.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_sensors_sound.cpp.s
-
-dev/debug/Unit_Tests/ut_shoot.obj: dev/debug/Unit_Tests/ut_shoot.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_shoot.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_shoot.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/Unit_Tests/ut_shoot.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_shoot.cpp.obj
-
-dev/debug/Unit_Tests/ut_shoot.i: dev/debug/Unit_Tests/ut_shoot.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_shoot.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_shoot.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/Unit_Tests/ut_shoot.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_shoot.cpp.i
-
-dev/debug/Unit_Tests/ut_shoot.s: dev/debug/Unit_Tests/ut_shoot.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_shoot.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_shoot.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/Unit_Tests/ut_shoot.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_shoot.cpp.s
-
-dev/debug/Unit_Tests/ut_super_capacitance.obj: dev/debug/Unit_Tests/ut_super_capacitance.cpp.obj
-
-.PHONY : dev/debug/Unit_Tests/ut_super_capacitance.obj
-
-# target to build an object file
-dev/debug/Unit_Tests/ut_super_capacitance.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/Unit_Tests/ut_super_capacitance.cpp.obj
-.PHONY : dev/debug/Unit_Tests/ut_super_capacitance.cpp.obj
-
-dev/debug/Unit_Tests/ut_super_capacitance.i: dev/debug/Unit_Tests/ut_super_capacitance.cpp.i
-
-.PHONY : dev/debug/Unit_Tests/ut_super_capacitance.i
-
-# target to preprocess a source file
-dev/debug/Unit_Tests/ut_super_capacitance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/Unit_Tests/ut_super_capacitance.cpp.i
-.PHONY : dev/debug/Unit_Tests/ut_super_capacitance.cpp.i
-
-dev/debug/Unit_Tests/ut_super_capacitance.s: dev/debug/Unit_Tests/ut_super_capacitance.cpp.s
-
-.PHONY : dev/debug/Unit_Tests/ut_super_capacitance.s
-
-# target to generate assembly for a file
-dev/debug/Unit_Tests/ut_super_capacitance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/Unit_Tests/ut_super_capacitance.cpp.s
-.PHONY : dev/debug/Unit_Tests/ut_super_capacitance.cpp.s
 
 dev/debug/param_adjusts/pa_chassis.obj: dev/debug/param_adjusts/pa_chassis.cpp.obj
 
@@ -1407,295 +706,26 @@ dev/debug/param_adjusts/pa_chassis.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/param_adjusts/pa_chassis.cpp.s
 .PHONY : dev/debug/param_adjusts/pa_chassis.cpp.s
 
-dev/debug/param_adjusts/pa_engineer_chassis.obj: dev/debug/param_adjusts/pa_engineer_chassis.cpp.obj
-
-.PHONY : dev/debug/param_adjusts/pa_engineer_chassis.obj
-
-# target to build an object file
-dev/debug/param_adjusts/pa_engineer_chassis.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/param_adjusts/pa_engineer_chassis.cpp.obj
-.PHONY : dev/debug/param_adjusts/pa_engineer_chassis.cpp.obj
-
-dev/debug/param_adjusts/pa_engineer_chassis.i: dev/debug/param_adjusts/pa_engineer_chassis.cpp.i
-
-.PHONY : dev/debug/param_adjusts/pa_engineer_chassis.i
-
-# target to preprocess a source file
-dev/debug/param_adjusts/pa_engineer_chassis.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/param_adjusts/pa_engineer_chassis.cpp.i
-.PHONY : dev/debug/param_adjusts/pa_engineer_chassis.cpp.i
-
-dev/debug/param_adjusts/pa_engineer_chassis.s: dev/debug/param_adjusts/pa_engineer_chassis.cpp.s
-
-.PHONY : dev/debug/param_adjusts/pa_engineer_chassis.s
-
-# target to generate assembly for a file
-dev/debug/param_adjusts/pa_engineer_chassis.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/param_adjusts/pa_engineer_chassis.cpp.s
-.PHONY : dev/debug/param_adjusts/pa_engineer_chassis.cpp.s
-
-dev/debug/param_adjusts/pa_engineer_elevator.obj: dev/debug/param_adjusts/pa_engineer_elevator.cpp.obj
-
-.PHONY : dev/debug/param_adjusts/pa_engineer_elevator.obj
-
-# target to build an object file
-dev/debug/param_adjusts/pa_engineer_elevator.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/param_adjusts/pa_engineer_elevator.cpp.obj
-.PHONY : dev/debug/param_adjusts/pa_engineer_elevator.cpp.obj
-
-dev/debug/param_adjusts/pa_engineer_elevator.i: dev/debug/param_adjusts/pa_engineer_elevator.cpp.i
-
-.PHONY : dev/debug/param_adjusts/pa_engineer_elevator.i
-
-# target to preprocess a source file
-dev/debug/param_adjusts/pa_engineer_elevator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/param_adjusts/pa_engineer_elevator.cpp.i
-.PHONY : dev/debug/param_adjusts/pa_engineer_elevator.cpp.i
-
-dev/debug/param_adjusts/pa_engineer_elevator.s: dev/debug/param_adjusts/pa_engineer_elevator.cpp.s
-
-.PHONY : dev/debug/param_adjusts/pa_engineer_elevator.s
-
-# target to generate assembly for a file
-dev/debug/param_adjusts/pa_engineer_elevator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/param_adjusts/pa_engineer_elevator.cpp.s
-.PHONY : dev/debug/param_adjusts/pa_engineer_elevator.cpp.s
-
-dev/debug/param_adjusts/pa_gimbal.obj: dev/debug/param_adjusts/pa_gimbal.cpp.obj
-
-.PHONY : dev/debug/param_adjusts/pa_gimbal.obj
-
-# target to build an object file
-dev/debug/param_adjusts/pa_gimbal.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/param_adjusts/pa_gimbal.cpp.obj
-.PHONY : dev/debug/param_adjusts/pa_gimbal.cpp.obj
-
-dev/debug/param_adjusts/pa_gimbal.i: dev/debug/param_adjusts/pa_gimbal.cpp.i
-
-.PHONY : dev/debug/param_adjusts/pa_gimbal.i
-
-# target to preprocess a source file
-dev/debug/param_adjusts/pa_gimbal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/param_adjusts/pa_gimbal.cpp.i
-.PHONY : dev/debug/param_adjusts/pa_gimbal.cpp.i
-
-dev/debug/param_adjusts/pa_gimbal.s: dev/debug/param_adjusts/pa_gimbal.cpp.s
-
-.PHONY : dev/debug/param_adjusts/pa_gimbal.s
-
-# target to generate assembly for a file
-dev/debug/param_adjusts/pa_gimbal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/param_adjusts/pa_gimbal.cpp.s
-.PHONY : dev/debug/param_adjusts/pa_gimbal.cpp.s
-
-dev/debug/param_adjusts/pa_hero_shoot.obj: dev/debug/param_adjusts/pa_hero_shoot.cpp.obj
-
-.PHONY : dev/debug/param_adjusts/pa_hero_shoot.obj
-
-# target to build an object file
-dev/debug/param_adjusts/pa_hero_shoot.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/param_adjusts/pa_hero_shoot.cpp.obj
-.PHONY : dev/debug/param_adjusts/pa_hero_shoot.cpp.obj
-
-dev/debug/param_adjusts/pa_hero_shoot.i: dev/debug/param_adjusts/pa_hero_shoot.cpp.i
-
-.PHONY : dev/debug/param_adjusts/pa_hero_shoot.i
-
-# target to preprocess a source file
-dev/debug/param_adjusts/pa_hero_shoot.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/param_adjusts/pa_hero_shoot.cpp.i
-.PHONY : dev/debug/param_adjusts/pa_hero_shoot.cpp.i
-
-dev/debug/param_adjusts/pa_hero_shoot.s: dev/debug/param_adjusts/pa_hero_shoot.cpp.s
-
-.PHONY : dev/debug/param_adjusts/pa_hero_shoot.s
-
-# target to generate assembly for a file
-dev/debug/param_adjusts/pa_hero_shoot.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/param_adjusts/pa_hero_shoot.cpp.s
-.PHONY : dev/debug/param_adjusts/pa_hero_shoot.cpp.s
-
-dev/debug/param_adjusts/pa_infantry_shoot.obj: dev/debug/param_adjusts/pa_infantry_shoot.cpp.obj
-
-.PHONY : dev/debug/param_adjusts/pa_infantry_shoot.obj
-
-# target to build an object file
-dev/debug/param_adjusts/pa_infantry_shoot.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/param_adjusts/pa_infantry_shoot.cpp.obj
-.PHONY : dev/debug/param_adjusts/pa_infantry_shoot.cpp.obj
-
-dev/debug/param_adjusts/pa_infantry_shoot.i: dev/debug/param_adjusts/pa_infantry_shoot.cpp.i
-
-.PHONY : dev/debug/param_adjusts/pa_infantry_shoot.i
-
-# target to preprocess a source file
-dev/debug/param_adjusts/pa_infantry_shoot.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/param_adjusts/pa_infantry_shoot.cpp.i
-.PHONY : dev/debug/param_adjusts/pa_infantry_shoot.cpp.i
-
-dev/debug/param_adjusts/pa_infantry_shoot.s: dev/debug/param_adjusts/pa_infantry_shoot.cpp.s
-
-.PHONY : dev/debug/param_adjusts/pa_infantry_shoot.s
-
-# target to generate assembly for a file
-dev/debug/param_adjusts/pa_infantry_shoot.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/param_adjusts/pa_infantry_shoot.cpp.s
-.PHONY : dev/debug/param_adjusts/pa_infantry_shoot.cpp.s
-
-dev/debug/param_adjusts/pa_new_gimbal.obj: dev/debug/param_adjusts/pa_new_gimbal.cpp.obj
-
-.PHONY : dev/debug/param_adjusts/pa_new_gimbal.obj
-
-# target to build an object file
-dev/debug/param_adjusts/pa_new_gimbal.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/param_adjusts/pa_new_gimbal.cpp.obj
-.PHONY : dev/debug/param_adjusts/pa_new_gimbal.cpp.obj
-
-dev/debug/param_adjusts/pa_new_gimbal.i: dev/debug/param_adjusts/pa_new_gimbal.cpp.i
-
-.PHONY : dev/debug/param_adjusts/pa_new_gimbal.i
-
-# target to preprocess a source file
-dev/debug/param_adjusts/pa_new_gimbal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/param_adjusts/pa_new_gimbal.cpp.i
-.PHONY : dev/debug/param_adjusts/pa_new_gimbal.cpp.i
-
-dev/debug/param_adjusts/pa_new_gimbal.s: dev/debug/param_adjusts/pa_new_gimbal.cpp.s
-
-.PHONY : dev/debug/param_adjusts/pa_new_gimbal.s
-
-# target to generate assembly for a file
-dev/debug/param_adjusts/pa_new_gimbal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/param_adjusts/pa_new_gimbal.cpp.s
-.PHONY : dev/debug/param_adjusts/pa_new_gimbal.cpp.s
-
-dev/debug/param_adjusts/pa_sentry_chassis.obj: dev/debug/param_adjusts/pa_sentry_chassis.cpp.obj
-
-.PHONY : dev/debug/param_adjusts/pa_sentry_chassis.obj
-
-# target to build an object file
-dev/debug/param_adjusts/pa_sentry_chassis.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/param_adjusts/pa_sentry_chassis.cpp.obj
-.PHONY : dev/debug/param_adjusts/pa_sentry_chassis.cpp.obj
-
-dev/debug/param_adjusts/pa_sentry_chassis.i: dev/debug/param_adjusts/pa_sentry_chassis.cpp.i
-
-.PHONY : dev/debug/param_adjusts/pa_sentry_chassis.i
-
-# target to preprocess a source file
-dev/debug/param_adjusts/pa_sentry_chassis.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/param_adjusts/pa_sentry_chassis.cpp.i
-.PHONY : dev/debug/param_adjusts/pa_sentry_chassis.cpp.i
-
-dev/debug/param_adjusts/pa_sentry_chassis.s: dev/debug/param_adjusts/pa_sentry_chassis.cpp.s
-
-.PHONY : dev/debug/param_adjusts/pa_sentry_chassis.s
-
-# target to generate assembly for a file
-dev/debug/param_adjusts/pa_sentry_chassis.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/param_adjusts/pa_sentry_chassis.cpp.s
-.PHONY : dev/debug/param_adjusts/pa_sentry_chassis.cpp.s
-
-dev/debug/param_adjusts/pa_skywalker.obj: dev/debug/param_adjusts/pa_skywalker.cpp.obj
-
-.PHONY : dev/debug/param_adjusts/pa_skywalker.obj
-
-# target to build an object file
-dev/debug/param_adjusts/pa_skywalker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/param_adjusts/pa_skywalker.cpp.obj
-.PHONY : dev/debug/param_adjusts/pa_skywalker.cpp.obj
-
-dev/debug/param_adjusts/pa_skywalker.i: dev/debug/param_adjusts/pa_skywalker.cpp.i
-
-.PHONY : dev/debug/param_adjusts/pa_skywalker.i
-
-# target to preprocess a source file
-dev/debug/param_adjusts/pa_skywalker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/param_adjusts/pa_skywalker.cpp.i
-.PHONY : dev/debug/param_adjusts/pa_skywalker.cpp.i
-
-dev/debug/param_adjusts/pa_skywalker.s: dev/debug/param_adjusts/pa_skywalker.cpp.s
-
-.PHONY : dev/debug/param_adjusts/pa_skywalker.s
-
-# target to generate assembly for a file
-dev/debug/param_adjusts/pa_skywalker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/param_adjusts/pa_skywalker.cpp.s
-.PHONY : dev/debug/param_adjusts/pa_skywalker.cpp.s
-
-dev/debug/param_adjusts/pa_user_gimbal.obj: dev/debug/param_adjusts/pa_user_gimbal.cpp.obj
-
-.PHONY : dev/debug/param_adjusts/pa_user_gimbal.obj
-
-# target to build an object file
-dev/debug/param_adjusts/pa_user_gimbal.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/param_adjusts/pa_user_gimbal.cpp.obj
-.PHONY : dev/debug/param_adjusts/pa_user_gimbal.cpp.obj
-
-dev/debug/param_adjusts/pa_user_gimbal.i: dev/debug/param_adjusts/pa_user_gimbal.cpp.i
-
-.PHONY : dev/debug/param_adjusts/pa_user_gimbal.i
-
-# target to preprocess a source file
-dev/debug/param_adjusts/pa_user_gimbal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/param_adjusts/pa_user_gimbal.cpp.i
-.PHONY : dev/debug/param_adjusts/pa_user_gimbal.cpp.i
-
-dev/debug/param_adjusts/pa_user_gimbal.s: dev/debug/param_adjusts/pa_user_gimbal.cpp.s
-
-.PHONY : dev/debug/param_adjusts/pa_user_gimbal.s
-
-# target to generate assembly for a file
-dev/debug/param_adjusts/pa_user_gimbal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/param_adjusts/pa_user_gimbal.cpp.s
-.PHONY : dev/debug/param_adjusts/pa_user_gimbal.cpp.s
-
 dev/debug/shell/printf.obj: dev/debug/shell/printf.c.obj
 
 .PHONY : dev/debug/shell/printf.obj
 
 # target to build an object file
 dev/debug/shell/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/printf.c.obj
 .PHONY : dev/debug/shell/printf.c.obj
 
 dev/debug/shell/printf.i: dev/debug/shell/printf.c.i
@@ -1704,46 +734,20 @@ dev/debug/shell/printf.i: dev/debug/shell/printf.c.i
 
 # target to preprocess a source file
 dev/debug/shell/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/printf.c.i
 .PHONY : dev/debug/shell/printf.c.i
 
 dev/debug/shell/printf.s: dev/debug/shell/printf.c.s
@@ -1752,46 +756,20 @@ dev/debug/shell/printf.s: dev/debug/shell/printf.c.s
 
 # target to generate assembly for a file
 dev/debug/shell/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/printf.c.s
 .PHONY : dev/debug/shell/printf.c.s
 
 dev/debug/shell/shell.obj: dev/debug/shell/shell.cpp.obj
@@ -1800,46 +778,20 @@ dev/debug/shell/shell.obj: dev/debug/shell/shell.cpp.obj
 
 # target to build an object file
 dev/debug/shell/shell.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell.cpp.obj
 .PHONY : dev/debug/shell/shell.cpp.obj
 
 dev/debug/shell/shell.i: dev/debug/shell/shell.cpp.i
@@ -1848,46 +800,20 @@ dev/debug/shell/shell.i: dev/debug/shell/shell.cpp.i
 
 # target to preprocess a source file
 dev/debug/shell/shell.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell.cpp.i
 .PHONY : dev/debug/shell/shell.cpp.i
 
 dev/debug/shell/shell.s: dev/debug/shell/shell.cpp.s
@@ -1896,46 +822,20 @@ dev/debug/shell/shell.s: dev/debug/shell/shell.cpp.s
 
 # target to generate assembly for a file
 dev/debug/shell/shell.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell.cpp.s
 .PHONY : dev/debug/shell/shell.cpp.s
 
 dev/debug/shell/shell_base.obj: dev/debug/shell/shell_base.c.obj
@@ -1944,46 +844,20 @@ dev/debug/shell/shell_base.obj: dev/debug/shell/shell_base.c.obj
 
 # target to build an object file
 dev/debug/shell/shell_base.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell_base.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell_base.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell_base.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell_base.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell_base.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell_base.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell_base.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base.c.obj
 .PHONY : dev/debug/shell/shell_base.c.obj
 
 dev/debug/shell/shell_base.i: dev/debug/shell/shell_base.c.i
@@ -1992,46 +866,20 @@ dev/debug/shell/shell_base.i: dev/debug/shell/shell_base.c.i
 
 # target to preprocess a source file
 dev/debug/shell/shell_base.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell_base.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell_base.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell_base.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell_base.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell_base.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell_base.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell_base.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base.c.i
 .PHONY : dev/debug/shell/shell_base.c.i
 
 dev/debug/shell/shell_base.s: dev/debug/shell/shell_base.c.s
@@ -2040,46 +888,20 @@ dev/debug/shell/shell_base.s: dev/debug/shell/shell_base.c.s
 
 # target to generate assembly for a file
 dev/debug/shell/shell_base.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell_base.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell_base.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell_base.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell_base.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell_base.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell_base.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell_base.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base.c.s
 .PHONY : dev/debug/shell/shell_base.c.s
 
 dev/debug/shell/shell_base_cmd.obj: dev/debug/shell/shell_base_cmd.c.obj
@@ -2088,46 +910,20 @@ dev/debug/shell/shell_base_cmd.obj: dev/debug/shell/shell_base_cmd.c.obj
 
 # target to build an object file
 dev/debug/shell/shell_base_cmd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell_base_cmd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base_cmd.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell_base_cmd.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell_base_cmd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base_cmd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base_cmd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base_cmd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base_cmd.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell_base_cmd.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell_base_cmd.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell_base_cmd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base_cmd.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell_base_cmd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base_cmd.c.obj
 .PHONY : dev/debug/shell/shell_base_cmd.c.obj
 
 dev/debug/shell/shell_base_cmd.i: dev/debug/shell/shell_base_cmd.c.i
@@ -2136,46 +932,20 @@ dev/debug/shell/shell_base_cmd.i: dev/debug/shell/shell_base_cmd.c.i
 
 # target to preprocess a source file
 dev/debug/shell/shell_base_cmd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell_base_cmd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base_cmd.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell_base_cmd.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell_base_cmd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base_cmd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base_cmd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base_cmd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base_cmd.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell_base_cmd.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell_base_cmd.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell_base_cmd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base_cmd.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell_base_cmd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base_cmd.c.i
 .PHONY : dev/debug/shell/shell_base_cmd.c.i
 
 dev/debug/shell/shell_base_cmd.s: dev/debug/shell/shell_base_cmd.c.s
@@ -2184,46 +954,20 @@ dev/debug/shell/shell_base_cmd.s: dev/debug/shell/shell_base_cmd.c.s
 
 # target to generate assembly for a file
 dev/debug/shell/shell_base_cmd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell_base_cmd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base_cmd.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell_base_cmd.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell_base_cmd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base_cmd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base_cmd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base_cmd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base_cmd.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell_base_cmd.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell_base_cmd.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell_base_cmd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_base_cmd.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell_base_cmd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_base_cmd.c.s
 .PHONY : dev/debug/shell/shell_base_cmd.c.s
 
 dev/debug/shell/shell_dbg_cmd.obj: dev/debug/shell/shell_dbg_cmd.cpp.obj
@@ -2232,46 +976,20 @@ dev/debug/shell/shell_dbg_cmd.obj: dev/debug/shell/shell_dbg_cmd.cpp.obj
 
 # target to build an object file
 dev/debug/shell/shell_dbg_cmd.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj
 .PHONY : dev/debug/shell/shell_dbg_cmd.cpp.obj
 
 dev/debug/shell/shell_dbg_cmd.i: dev/debug/shell/shell_dbg_cmd.cpp.i
@@ -2280,46 +998,20 @@ dev/debug/shell/shell_dbg_cmd.i: dev/debug/shell/shell_dbg_cmd.cpp.i
 
 # target to preprocess a source file
 dev/debug/shell/shell_dbg_cmd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_dbg_cmd.cpp.i
 .PHONY : dev/debug/shell/shell_dbg_cmd.cpp.i
 
 dev/debug/shell/shell_dbg_cmd.s: dev/debug/shell/shell_dbg_cmd.cpp.s
@@ -2328,46 +1020,20 @@ dev/debug/shell/shell_dbg_cmd.s: dev/debug/shell/shell_dbg_cmd.cpp.s
 
 # target to generate assembly for a file
 dev/debug/shell/shell_dbg_cmd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/debug/shell/shell_dbg_cmd.cpp.s
 .PHONY : dev/debug/shell/shell_dbg_cmd.cpp.s
 
 dev/interface/ahrs/ahrs.obj: dev/interface/ahrs/ahrs.cpp.obj
@@ -2376,17 +1042,11 @@ dev/interface/ahrs/ahrs.obj: dev/interface/ahrs/ahrs.cpp.obj
 
 # target to build an object file
 dev/interface/ahrs/ahrs.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/ahrs/ahrs.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/ahrs/ahrs.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/ahrs/ahrs.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/ahrs/ahrs.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/ahrs/ahrs.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/ahrs/ahrs.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/ahrs/ahrs.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/ahrs.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/ahrs.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/ahrs/ahrs.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/ahrs/ahrs.cpp.obj
 .PHONY : dev/interface/ahrs/ahrs.cpp.obj
 
@@ -2396,17 +1056,11 @@ dev/interface/ahrs/ahrs.i: dev/interface/ahrs/ahrs.cpp.i
 
 # target to preprocess a source file
 dev/interface/ahrs/ahrs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/ahrs/ahrs.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/ahrs/ahrs.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/ahrs/ahrs.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/ahrs/ahrs.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/ahrs/ahrs.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/ahrs/ahrs.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/ahrs/ahrs.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/ahrs.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/ahrs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/ahrs/ahrs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/ahrs/ahrs.cpp.i
 .PHONY : dev/interface/ahrs/ahrs.cpp.i
 
@@ -2416,17 +1070,11 @@ dev/interface/ahrs/ahrs.s: dev/interface/ahrs/ahrs.cpp.s
 
 # target to generate assembly for a file
 dev/interface/ahrs/ahrs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/ahrs/ahrs.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/ahrs/ahrs.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/ahrs/ahrs.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/ahrs/ahrs.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/ahrs/ahrs.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/ahrs/ahrs.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/ahrs/ahrs.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/ahrs.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/ahrs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/ahrs/ahrs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/ahrs/ahrs.cpp.s
 .PHONY : dev/interface/ahrs/ahrs.cpp.s
 
@@ -2437,7 +1085,6 @@ dev/interface/ahrs/ahrs_ext.obj: dev/interface/ahrs/ahrs_ext.cpp.obj
 # target to build an object file
 dev/interface/ahrs/ahrs_ext.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/ahrs/ahrs_ext.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/ahrs/ahrs_ext.cpp.obj
 .PHONY : dev/interface/ahrs/ahrs_ext.cpp.obj
 
 dev/interface/ahrs/ahrs_ext.i: dev/interface/ahrs/ahrs_ext.cpp.i
@@ -2447,7 +1094,6 @@ dev/interface/ahrs/ahrs_ext.i: dev/interface/ahrs/ahrs_ext.cpp.i
 # target to preprocess a source file
 dev/interface/ahrs/ahrs_ext.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/ahrs/ahrs_ext.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/ahrs/ahrs_ext.cpp.i
 .PHONY : dev/interface/ahrs/ahrs_ext.cpp.i
 
 dev/interface/ahrs/ahrs_ext.s: dev/interface/ahrs/ahrs_ext.cpp.s
@@ -2457,7 +1103,6 @@ dev/interface/ahrs/ahrs_ext.s: dev/interface/ahrs/ahrs_ext.cpp.s
 # target to generate assembly for a file
 dev/interface/ahrs/ahrs_ext.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/ahrs/ahrs_ext.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/ahrs/ahrs_ext.cpp.s
 .PHONY : dev/interface/ahrs/ahrs_ext.cpp.s
 
 dev/interface/ahrs/ahrs_lib_middleware.obj: dev/interface/ahrs/ahrs_lib_middleware.c.obj
@@ -2466,16 +1111,10 @@ dev/interface/ahrs/ahrs_lib_middleware.obj: dev/interface/ahrs/ahrs_lib_middlewa
 
 # target to build an object file
 dev/interface/ahrs/ahrs_lib_middleware.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/ahrs/ahrs_lib_middleware.c.obj
 .PHONY : dev/interface/ahrs/ahrs_lib_middleware.c.obj
 
@@ -2485,16 +1124,10 @@ dev/interface/ahrs/ahrs_lib_middleware.i: dev/interface/ahrs/ahrs_lib_middleware
 
 # target to preprocess a source file
 dev/interface/ahrs/ahrs_lib_middleware.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/ahrs/ahrs_lib_middleware.c.i
 .PHONY : dev/interface/ahrs/ahrs_lib_middleware.c.i
 
@@ -2504,16 +1137,10 @@ dev/interface/ahrs/ahrs_lib_middleware.s: dev/interface/ahrs/ahrs_lib_middleware
 
 # target to generate assembly for a file
 dev/interface/ahrs/ahrs_lib_middleware.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/ahrs/ahrs_lib_middleware.c.s
 .PHONY : dev/interface/ahrs/ahrs_lib_middleware.c.s
 
@@ -2523,19 +1150,13 @@ dev/interface/ahrs/imu_on_board.obj: dev/interface/ahrs/imu_on_board.cpp.obj
 
 # target to build an object file
 dev/interface/ahrs/imu_on_board.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/ahrs/imu_on_board.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/imu_on_board.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/ahrs/imu_on_board.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/ahrs/imu_on_board.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/ahrs/imu_on_board.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/imu_on_board.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/imu_on_board.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/imu_on_board.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/ahrs/imu_on_board.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/interface/ahrs/imu_on_board.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/ahrs/imu_on_board.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/interface/ahrs/imu_on_board.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/ahrs/imu_on_board.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/imu_on_board.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/imu_on_board.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/imu_on_board.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/imu_on_board.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/ahrs/imu_on_board.cpp.obj
 .PHONY : dev/interface/ahrs/imu_on_board.cpp.obj
 
@@ -2545,19 +1166,13 @@ dev/interface/ahrs/imu_on_board.i: dev/interface/ahrs/imu_on_board.cpp.i
 
 # target to preprocess a source file
 dev/interface/ahrs/imu_on_board.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/ahrs/imu_on_board.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/imu_on_board.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/ahrs/imu_on_board.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/ahrs/imu_on_board.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/ahrs/imu_on_board.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/imu_on_board.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/imu_on_board.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/imu_on_board.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/ahrs/imu_on_board.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/interface/ahrs/imu_on_board.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/ahrs/imu_on_board.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/interface/ahrs/imu_on_board.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/ahrs/imu_on_board.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/imu_on_board.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/imu_on_board.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/imu_on_board.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/imu_on_board.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/ahrs/imu_on_board.cpp.i
 .PHONY : dev/interface/ahrs/imu_on_board.cpp.i
 
@@ -2567,48 +1182,15 @@ dev/interface/ahrs/imu_on_board.s: dev/interface/ahrs/imu_on_board.cpp.s
 
 # target to generate assembly for a file
 dev/interface/ahrs/imu_on_board.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/ahrs/imu_on_board.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/imu_on_board.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/ahrs/imu_on_board.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/ahrs/imu_on_board.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/ahrs/imu_on_board.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/imu_on_board.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/imu_on_board.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/imu_on_board.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/ahrs/imu_on_board.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/interface/ahrs/imu_on_board.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/ahrs/imu_on_board.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/interface/ahrs/imu_on_board.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/ahrs/imu_on_board.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/ahrs/imu_on_board.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/ahrs/imu_on_board.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/ahrs/imu_on_board.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/ahrs/imu_on_board.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/ahrs/imu_on_board.cpp.s
 .PHONY : dev/interface/ahrs/imu_on_board.cpp.s
-
-dev/interface/air_tank_interface.obj: dev/interface/air_tank_interface.cpp.obj
-
-.PHONY : dev/interface/air_tank_interface.obj
-
-# target to build an object file
-dev/interface/air_tank_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/air_tank_interface.cpp.obj
-.PHONY : dev/interface/air_tank_interface.cpp.obj
-
-dev/interface/air_tank_interface.i: dev/interface/air_tank_interface.cpp.i
-
-.PHONY : dev/interface/air_tank_interface.i
-
-# target to preprocess a source file
-dev/interface/air_tank_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/air_tank_interface.cpp.i
-.PHONY : dev/interface/air_tank_interface.cpp.i
-
-dev/interface/air_tank_interface.s: dev/interface/air_tank_interface.cpp.s
-
-.PHONY : dev/interface/air_tank_interface.s
-
-# target to generate assembly for a file
-dev/interface/air_tank_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/air_tank_interface.cpp.s
-.PHONY : dev/interface/air_tank_interface.cpp.s
 
 dev/interface/buzzer_interface.obj: dev/interface/buzzer_interface.cpp.obj
 
@@ -2616,46 +1198,20 @@ dev/interface/buzzer_interface.obj: dev/interface/buzzer_interface.cpp.obj
 
 # target to build an object file
 dev/interface/buzzer_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/buzzer_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/buzzer_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/interface/buzzer_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/buzzer_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/buzzer_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/buzzer_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/buzzer_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/buzzer_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/buzzer_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/buzzer_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/buzzer_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/buzzer_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/buzzer_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/buzzer_interface.cpp.obj
 .PHONY : dev/interface/buzzer_interface.cpp.obj
 
 dev/interface/buzzer_interface.i: dev/interface/buzzer_interface.cpp.i
@@ -2664,46 +1220,20 @@ dev/interface/buzzer_interface.i: dev/interface/buzzer_interface.cpp.i
 
 # target to preprocess a source file
 dev/interface/buzzer_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/buzzer_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/buzzer_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/interface/buzzer_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/buzzer_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/buzzer_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/buzzer_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/buzzer_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/buzzer_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/buzzer_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/buzzer_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/buzzer_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/buzzer_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/buzzer_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/buzzer_interface.cpp.i
 .PHONY : dev/interface/buzzer_interface.cpp.i
 
 dev/interface/buzzer_interface.s: dev/interface/buzzer_interface.cpp.s
@@ -2712,46 +1242,20 @@ dev/interface/buzzer_interface.s: dev/interface/buzzer_interface.cpp.s
 
 # target to generate assembly for a file
 dev/interface/buzzer_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/buzzer_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/buzzer_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/interface/buzzer_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/buzzer_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/buzzer_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/buzzer_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/buzzer_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/buzzer_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/buzzer_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/buzzer_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/buzzer_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/buzzer_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/buzzer_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/buzzer_interface.cpp.s
 .PHONY : dev/interface/buzzer_interface.cpp.s
 
 dev/interface/can_interface.obj: dev/interface/can_interface.cpp.obj
@@ -2760,28 +1264,10 @@ dev/interface/can_interface.obj: dev/interface/can_interface.cpp.obj
 
 # target to build an object file
 dev/interface/can_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/can_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/can_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/can_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/can_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/can_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/can_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/can_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/can_interface.cpp.obj
 .PHONY : dev/interface/can_interface.cpp.obj
@@ -2792,28 +1278,10 @@ dev/interface/can_interface.i: dev/interface/can_interface.cpp.i
 
 # target to preprocess a source file
 dev/interface/can_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/can_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/can_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/can_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/can_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/can_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/can_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/can_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/can_interface.cpp.i
 .PHONY : dev/interface/can_interface.cpp.i
@@ -2824,28 +1292,10 @@ dev/interface/can_interface.s: dev/interface/can_interface.cpp.s
 
 # target to generate assembly for a file
 dev/interface/can_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/can_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/can_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/can_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/can_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/can_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/can_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/can_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/can_interface.cpp.s
 .PHONY : dev/interface/can_interface.cpp.s
@@ -2856,10 +1306,7 @@ dev/interface/chassis_interface.obj: dev/interface/chassis_interface.cpp.obj
 
 # target to build an object file
 dev/interface/chassis_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/chassis_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/chassis_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/chassis_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/chassis_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/chassis_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/chassis_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/chassis_interface.cpp.obj
@@ -2871,10 +1318,7 @@ dev/interface/chassis_interface.i: dev/interface/chassis_interface.cpp.i
 
 # target to preprocess a source file
 dev/interface/chassis_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/chassis_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/chassis_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/chassis_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/chassis_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/chassis_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/chassis_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/chassis_interface.cpp.i
@@ -2886,137 +1330,11 @@ dev/interface/chassis_interface.s: dev/interface/chassis_interface.cpp.s
 
 # target to generate assembly for a file
 dev/interface/chassis_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/chassis_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/chassis_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/chassis_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/chassis_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/chassis_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/chassis_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/chassis_interface.cpp.s
 .PHONY : dev/interface/chassis_interface.cpp.s
-
-dev/interface/dms_interface.obj: dev/interface/dms_interface.cpp.obj
-
-.PHONY : dev/interface/dms_interface.obj
-
-# target to build an object file
-dev/interface/dms_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/interface/dms_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/dms_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/dms_interface.cpp.obj
-.PHONY : dev/interface/dms_interface.cpp.obj
-
-dev/interface/dms_interface.i: dev/interface/dms_interface.cpp.i
-
-.PHONY : dev/interface/dms_interface.i
-
-# target to preprocess a source file
-dev/interface/dms_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/interface/dms_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/dms_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/dms_interface.cpp.i
-.PHONY : dev/interface/dms_interface.cpp.i
-
-dev/interface/dms_interface.s: dev/interface/dms_interface.cpp.s
-
-.PHONY : dev/interface/dms_interface.s
-
-# target to generate assembly for a file
-dev/interface/dms_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/interface/dms_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/dms_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/dms_interface.cpp.s
-.PHONY : dev/interface/dms_interface.cpp.s
-
-dev/interface/engineer_elevator_interface.obj: dev/interface/engineer_elevator_interface.cpp.obj
-
-.PHONY : dev/interface/engineer_elevator_interface.obj
-
-# target to build an object file
-dev/interface/engineer_elevator_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/engineer_elevator_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/engineer_elevator_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/engineer_elevator_interface.cpp.obj
-.PHONY : dev/interface/engineer_elevator_interface.cpp.obj
-
-dev/interface/engineer_elevator_interface.i: dev/interface/engineer_elevator_interface.cpp.i
-
-.PHONY : dev/interface/engineer_elevator_interface.i
-
-# target to preprocess a source file
-dev/interface/engineer_elevator_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/engineer_elevator_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/engineer_elevator_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/engineer_elevator_interface.cpp.i
-.PHONY : dev/interface/engineer_elevator_interface.cpp.i
-
-dev/interface/engineer_elevator_interface.s: dev/interface/engineer_elevator_interface.cpp.s
-
-.PHONY : dev/interface/engineer_elevator_interface.s
-
-# target to generate assembly for a file
-dev/interface/engineer_elevator_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/engineer_elevator_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/engineer_elevator_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/engineer_elevator_interface.cpp.s
-.PHONY : dev/interface/engineer_elevator_interface.cpp.s
-
-dev/interface/engineer_gimbal.obj: dev/interface/engineer_gimbal.cpp.obj
-
-.PHONY : dev/interface/engineer_gimbal.obj
-
-# target to build an object file
-dev/interface/engineer_gimbal.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/engineer_gimbal.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/engineer_gimbal.cpp.obj
-.PHONY : dev/interface/engineer_gimbal.cpp.obj
-
-dev/interface/engineer_gimbal.i: dev/interface/engineer_gimbal.cpp.i
-
-.PHONY : dev/interface/engineer_gimbal.i
-
-# target to preprocess a source file
-dev/interface/engineer_gimbal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/engineer_gimbal.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/engineer_gimbal.cpp.i
-.PHONY : dev/interface/engineer_gimbal.cpp.i
-
-dev/interface/engineer_gimbal.s: dev/interface/engineer_gimbal.cpp.s
-
-.PHONY : dev/interface/engineer_gimbal.s
-
-# target to generate assembly for a file
-dev/interface/engineer_gimbal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/engineer_gimbal.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/engineer_gimbal.cpp.s
-.PHONY : dev/interface/engineer_gimbal.cpp.s
-
-dev/interface/engineer_interface.obj: dev/interface/engineer_interface.cpp.obj
-
-.PHONY : dev/interface/engineer_interface.obj
-
-# target to build an object file
-dev/interface/engineer_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/engineer_interface.cpp.obj
-.PHONY : dev/interface/engineer_interface.cpp.obj
-
-dev/interface/engineer_interface.i: dev/interface/engineer_interface.cpp.i
-
-.PHONY : dev/interface/engineer_interface.i
-
-# target to preprocess a source file
-dev/interface/engineer_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/engineer_interface.cpp.i
-.PHONY : dev/interface/engineer_interface.cpp.i
-
-dev/interface/engineer_interface.s: dev/interface/engineer_interface.cpp.s
-
-.PHONY : dev/interface/engineer_interface.s
-
-# target to generate assembly for a file
-dev/interface/engineer_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/engineer_interface.cpp.s
-.PHONY : dev/interface/engineer_interface.cpp.s
 
 dev/interface/gimbal_interface.obj: dev/interface/gimbal_interface.cpp.obj
 
@@ -3024,15 +1342,7 @@ dev/interface/gimbal_interface.obj: dev/interface/gimbal_interface.cpp.obj
 
 # target to build an object file
 dev/interface/gimbal_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/gimbal_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/gimbal_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/gimbal_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/gimbal_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/gimbal_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/gimbal_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/gimbal_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/gimbal_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/gimbal_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/gimbal_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/gimbal_interface.cpp.obj
@@ -3044,15 +1354,7 @@ dev/interface/gimbal_interface.i: dev/interface/gimbal_interface.cpp.i
 
 # target to preprocess a source file
 dev/interface/gimbal_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/gimbal_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/gimbal_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/gimbal_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/gimbal_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/gimbal_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/gimbal_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/gimbal_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/gimbal_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/gimbal_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/gimbal_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/gimbal_interface.cpp.i
@@ -3064,15 +1366,7 @@ dev/interface/gimbal_interface.s: dev/interface/gimbal_interface.cpp.s
 
 # target to generate assembly for a file
 dev/interface/gimbal_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/gimbal_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/gimbal_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/gimbal_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/gimbal_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/gimbal_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/gimbal_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/gimbal_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/gimbal_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/gimbal_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/gimbal_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/gimbal_interface.cpp.s
@@ -3084,46 +1378,20 @@ dev/interface/led.obj: dev/interface/led.cpp.obj
 
 # target to build an object file
 dev/interface/led.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/led.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/led.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/interface/led.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/led.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/led.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/led.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/led.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/led.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/led.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/led.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/led.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/led.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/led.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/led.cpp.obj
 .PHONY : dev/interface/led.cpp.obj
 
 dev/interface/led.i: dev/interface/led.cpp.i
@@ -3132,46 +1400,20 @@ dev/interface/led.i: dev/interface/led.cpp.i
 
 # target to preprocess a source file
 dev/interface/led.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/led.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/led.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/interface/led.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/led.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/led.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/led.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/led.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/led.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/led.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/led.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/led.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/led.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/led.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/led.cpp.i
 .PHONY : dev/interface/led.cpp.i
 
 dev/interface/led.s: dev/interface/led.cpp.s
@@ -3180,128 +1422,21 @@ dev/interface/led.s: dev/interface/led.cpp.s
 
 # target to generate assembly for a file
 dev/interface/led.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/led.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/led.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/interface/led.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/led.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/led.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/led.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/led.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/led.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/interface/led.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/led.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/led.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/led.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/led.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/interface/led.cpp.s
 .PHONY : dev/interface/led.cpp.s
-
-dev/interface/new_sentry_chassis_interface.obj: dev/interface/new_sentry_chassis_interface.cpp.obj
-
-.PHONY : dev/interface/new_sentry_chassis_interface.obj
-
-# target to build an object file
-dev/interface/new_sentry_chassis_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/new_sentry_chassis_interface.cpp.obj
-.PHONY : dev/interface/new_sentry_chassis_interface.cpp.obj
-
-dev/interface/new_sentry_chassis_interface.i: dev/interface/new_sentry_chassis_interface.cpp.i
-
-.PHONY : dev/interface/new_sentry_chassis_interface.i
-
-# target to preprocess a source file
-dev/interface/new_sentry_chassis_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/new_sentry_chassis_interface.cpp.i
-.PHONY : dev/interface/new_sentry_chassis_interface.cpp.i
-
-dev/interface/new_sentry_chassis_interface.s: dev/interface/new_sentry_chassis_interface.cpp.s
-
-.PHONY : dev/interface/new_sentry_chassis_interface.s
-
-# target to generate assembly for a file
-dev/interface/new_sentry_chassis_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/new_sentry_chassis_interface.cpp.s
-.PHONY : dev/interface/new_sentry_chassis_interface.cpp.s
-
-dev/interface/referee_interface.obj: dev/interface/referee_interface.cpp.obj
-
-.PHONY : dev/interface/referee_interface.obj
-
-# target to build an object file
-dev/interface/referee_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/referee_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/interface/referee_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/referee_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/referee_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/referee_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/referee_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/referee_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/referee_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/referee_interface.cpp.obj
-.PHONY : dev/interface/referee_interface.cpp.obj
-
-dev/interface/referee_interface.i: dev/interface/referee_interface.cpp.i
-
-.PHONY : dev/interface/referee_interface.i
-
-# target to preprocess a source file
-dev/interface/referee_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/referee_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/interface/referee_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/referee_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/referee_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/referee_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/referee_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/referee_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/referee_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/referee_interface.cpp.i
-.PHONY : dev/interface/referee_interface.cpp.i
-
-dev/interface/referee_interface.s: dev/interface/referee_interface.cpp.s
-
-.PHONY : dev/interface/referee_interface.s
-
-# target to generate assembly for a file
-dev/interface/referee_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/referee_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/interface/referee_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/referee_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/referee_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/referee_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/referee_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/referee_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/referee_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/referee_interface.cpp.s
-.PHONY : dev/interface/referee_interface.cpp.s
 
 dev/interface/remote_interpreter.obj: dev/interface/remote_interpreter.cpp.obj
 
@@ -3309,20 +1444,9 @@ dev/interface/remote_interpreter.obj: dev/interface/remote_interpreter.cpp.obj
 
 # target to build an object file
 dev/interface/remote_interpreter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/remote_interpreter.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/remote_interpreter.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/remote_interpreter.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/remote_interpreter.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/remote_interpreter.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/remote_interpreter.cpp.obj
 .PHONY : dev/interface/remote_interpreter.cpp.obj
 
@@ -3332,20 +1456,9 @@ dev/interface/remote_interpreter.i: dev/interface/remote_interpreter.cpp.i
 
 # target to preprocess a source file
 dev/interface/remote_interpreter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/remote_interpreter.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/remote_interpreter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/remote_interpreter.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/remote_interpreter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/remote_interpreter.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/remote_interpreter.cpp.i
 .PHONY : dev/interface/remote_interpreter.cpp.i
 
@@ -3355,55 +1468,11 @@ dev/interface/remote_interpreter.s: dev/interface/remote_interpreter.cpp.s
 
 # target to generate assembly for a file
 dev/interface/remote_interpreter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/remote_interpreter.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/remote_interpreter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/interface/remote_interpreter.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/remote_interpreter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/interface/remote_interpreter.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/remote_interpreter.cpp.s
 .PHONY : dev/interface/remote_interpreter.cpp.s
-
-dev/interface/robotic_arm_interface.obj: dev/interface/robotic_arm_interface.cpp.obj
-
-.PHONY : dev/interface/robotic_arm_interface.obj
-
-# target to build an object file
-dev/interface/robotic_arm_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/robotic_arm_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/robotic_arm_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/robotic_arm_interface.cpp.obj
-.PHONY : dev/interface/robotic_arm_interface.cpp.obj
-
-dev/interface/robotic_arm_interface.i: dev/interface/robotic_arm_interface.cpp.i
-
-.PHONY : dev/interface/robotic_arm_interface.i
-
-# target to preprocess a source file
-dev/interface/robotic_arm_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/robotic_arm_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/robotic_arm_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/robotic_arm_interface.cpp.i
-.PHONY : dev/interface/robotic_arm_interface.cpp.i
-
-dev/interface/robotic_arm_interface.s: dev/interface/robotic_arm_interface.cpp.s
-
-.PHONY : dev/interface/robotic_arm_interface.s
-
-# target to generate assembly for a file
-dev/interface/robotic_arm_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/interface/robotic_arm_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/robotic_arm_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/interface/robotic_arm_interface.cpp.s
-.PHONY : dev/interface/robotic_arm_interface.cpp.s
 
 dev/interface/sd_card_interface.obj: dev/interface/sd_card_interface.cpp.obj
 
@@ -3411,19 +1480,9 @@ dev/interface/sd_card_interface.obj: dev/interface/sd_card_interface.cpp.obj
 
 # target to build an object file
 dev/interface/sd_card_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/sd_card_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/sd_card_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/sd_card_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/sd_card_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/sd_card_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/sd_card_interface.cpp.obj
 .PHONY : dev/interface/sd_card_interface.cpp.obj
 
@@ -3433,19 +1492,9 @@ dev/interface/sd_card_interface.i: dev/interface/sd_card_interface.cpp.i
 
 # target to preprocess a source file
 dev/interface/sd_card_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/sd_card_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/sd_card_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/sd_card_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/sd_card_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/sd_card_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/sd_card_interface.cpp.i
 .PHONY : dev/interface/sd_card_interface.cpp.i
 
@@ -3455,87 +1504,11 @@ dev/interface/sd_card_interface.s: dev/interface/sd_card_interface.cpp.s
 
 # target to generate assembly for a file
 dev/interface/sd_card_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/sd_card_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/interface/sd_card_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/sd_card_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/sd_card_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/interface/sd_card_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/sd_card_interface.cpp.s
 .PHONY : dev/interface/sd_card_interface.cpp.s
-
-dev/interface/sentry_chassis_interface.obj: dev/interface/sentry_chassis_interface.cpp.obj
-
-.PHONY : dev/interface/sentry_chassis_interface.obj
-
-# target to build an object file
-dev/interface/sentry_chassis_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/sentry_chassis_interface.cpp.obj
-.PHONY : dev/interface/sentry_chassis_interface.cpp.obj
-
-dev/interface/sentry_chassis_interface.i: dev/interface/sentry_chassis_interface.cpp.i
-
-.PHONY : dev/interface/sentry_chassis_interface.i
-
-# target to preprocess a source file
-dev/interface/sentry_chassis_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/sentry_chassis_interface.cpp.i
-.PHONY : dev/interface/sentry_chassis_interface.cpp.i
-
-dev/interface/sentry_chassis_interface.s: dev/interface/sentry_chassis_interface.cpp.s
-
-.PHONY : dev/interface/sentry_chassis_interface.s
-
-# target to generate assembly for a file
-dev/interface/sentry_chassis_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/interface/sentry_chassis_interface.cpp.s
-.PHONY : dev/interface/sentry_chassis_interface.cpp.s
-
-dev/interface/super_capacitor_port.obj: dev/interface/super_capacitor_port.cpp.obj
-
-.PHONY : dev/interface/super_capacitor_port.obj
-
-# target to build an object file
-dev/interface/super_capacitor_port.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/super_capacitor_port.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/super_capacitor_port.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/super_capacitor_port.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/super_capacitor_port.cpp.obj
-.PHONY : dev/interface/super_capacitor_port.cpp.obj
-
-dev/interface/super_capacitor_port.i: dev/interface/super_capacitor_port.cpp.i
-
-.PHONY : dev/interface/super_capacitor_port.i
-
-# target to preprocess a source file
-dev/interface/super_capacitor_port.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/super_capacitor_port.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/super_capacitor_port.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/super_capacitor_port.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/super_capacitor_port.cpp.i
-.PHONY : dev/interface/super_capacitor_port.cpp.i
-
-dev/interface/super_capacitor_port.s: dev/interface/super_capacitor_port.cpp.s
-
-.PHONY : dev/interface/super_capacitor_port.s
-
-# target to generate assembly for a file
-dev/interface/super_capacitor_port.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/super_capacitor_port.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/interface/super_capacitor_port.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/super_capacitor_port.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/super_capacitor_port.cpp.s
-.PHONY : dev/interface/super_capacitor_port.cpp.s
 
 dev/interface/vision_interface.obj: dev/interface/vision_interface.cpp.obj
 
@@ -3543,8 +1516,6 @@ dev/interface/vision_interface.obj: dev/interface/vision_interface.cpp.obj
 
 # target to build an object file
 dev/interface/vision_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/vision_interface.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/vision_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/vision_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/vision_interface.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/vision_interface.cpp.obj
@@ -3556,8 +1527,6 @@ dev/interface/vision_interface.i: dev/interface/vision_interface.cpp.i
 
 # target to preprocess a source file
 dev/interface/vision_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/vision_interface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/vision_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/vision_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/vision_interface.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/vision_interface.cpp.i
@@ -3569,8 +1538,6 @@ dev/interface/vision_interface.s: dev/interface/vision_interface.cpp.s
 
 # target to generate assembly for a file
 dev/interface/vision_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/interface/vision_interface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/interface/vision_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/interface/vision_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/interface/vision_interface.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/interface/vision_interface.cpp.s
@@ -3582,7 +1549,6 @@ dev/logic/chassis_logic.obj: dev/logic/chassis_logic.cpp.obj
 
 # target to build an object file
 dev/logic/chassis_logic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/chassis_logic.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/chassis_logic.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/chassis_logic.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/chassis_logic.cpp.obj
@@ -3594,7 +1560,6 @@ dev/logic/chassis_logic.i: dev/logic/chassis_logic.cpp.i
 
 # target to preprocess a source file
 dev/logic/chassis_logic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/chassis_logic.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/chassis_logic.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/chassis_logic.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/chassis_logic.cpp.i
@@ -3606,212 +1571,10 @@ dev/logic/chassis_logic.s: dev/logic/chassis_logic.cpp.s
 
 # target to generate assembly for a file
 dev/logic/chassis_logic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/chassis_logic.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/chassis_logic.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/chassis_logic.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/chassis_logic.cpp.s
 .PHONY : dev/logic/chassis_logic.cpp.s
-
-dev/logic/engineer_elevator_logic.obj: dev/logic/engineer_elevator_logic.cpp.obj
-
-.PHONY : dev/logic/engineer_elevator_logic.obj
-
-# target to build an object file
-dev/logic/engineer_elevator_logic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/logic/engineer_elevator_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/logic/engineer_elevator_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/logic/engineer_elevator_logic.cpp.obj
-.PHONY : dev/logic/engineer_elevator_logic.cpp.obj
-
-dev/logic/engineer_elevator_logic.i: dev/logic/engineer_elevator_logic.cpp.i
-
-.PHONY : dev/logic/engineer_elevator_logic.i
-
-# target to preprocess a source file
-dev/logic/engineer_elevator_logic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/logic/engineer_elevator_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/logic/engineer_elevator_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/logic/engineer_elevator_logic.cpp.i
-.PHONY : dev/logic/engineer_elevator_logic.cpp.i
-
-dev/logic/engineer_elevator_logic.s: dev/logic/engineer_elevator_logic.cpp.s
-
-.PHONY : dev/logic/engineer_elevator_logic.s
-
-# target to generate assembly for a file
-dev/logic/engineer_elevator_logic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/logic/engineer_elevator_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/logic/engineer_elevator_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/logic/engineer_elevator_logic.cpp.s
-.PHONY : dev/logic/engineer_elevator_logic.cpp.s
-
-dev/logic/gimbal_logic.obj: dev/logic/gimbal_logic.cpp.obj
-
-.PHONY : dev/logic/gimbal_logic.obj
-
-# target to build an object file
-dev/logic/gimbal_logic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/gimbal_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/logic/gimbal_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/gimbal_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/gimbal_logic.cpp.obj
-.PHONY : dev/logic/gimbal_logic.cpp.obj
-
-dev/logic/gimbal_logic.i: dev/logic/gimbal_logic.cpp.i
-
-.PHONY : dev/logic/gimbal_logic.i
-
-# target to preprocess a source file
-dev/logic/gimbal_logic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/gimbal_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/logic/gimbal_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/gimbal_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/gimbal_logic.cpp.i
-.PHONY : dev/logic/gimbal_logic.cpp.i
-
-dev/logic/gimbal_logic.s: dev/logic/gimbal_logic.cpp.s
-
-.PHONY : dev/logic/gimbal_logic.s
-
-# target to generate assembly for a file
-dev/logic/gimbal_logic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/gimbal_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/logic/gimbal_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/gimbal_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/gimbal_logic.cpp.s
-.PHONY : dev/logic/gimbal_logic.cpp.s
-
-dev/logic/new_sentry_chassis_logic.obj: dev/logic/new_sentry_chassis_logic.cpp.obj
-
-.PHONY : dev/logic/new_sentry_chassis_logic.obj
-
-# target to build an object file
-dev/logic/new_sentry_chassis_logic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/logic/new_sentry_chassis_logic.cpp.obj
-.PHONY : dev/logic/new_sentry_chassis_logic.cpp.obj
-
-dev/logic/new_sentry_chassis_logic.i: dev/logic/new_sentry_chassis_logic.cpp.i
-
-.PHONY : dev/logic/new_sentry_chassis_logic.i
-
-# target to preprocess a source file
-dev/logic/new_sentry_chassis_logic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/logic/new_sentry_chassis_logic.cpp.i
-.PHONY : dev/logic/new_sentry_chassis_logic.cpp.i
-
-dev/logic/new_sentry_chassis_logic.s: dev/logic/new_sentry_chassis_logic.cpp.s
-
-.PHONY : dev/logic/new_sentry_chassis_logic.s
-
-# target to generate assembly for a file
-dev/logic/new_sentry_chassis_logic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/logic/new_sentry_chassis_logic.cpp.s
-.PHONY : dev/logic/new_sentry_chassis_logic.cpp.s
-
-dev/logic/referee_UI_logic.obj: dev/logic/referee_UI_logic.cpp.obj
-
-.PHONY : dev/logic/referee_UI_logic.obj
-
-# target to build an object file
-dev/logic/referee_UI_logic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/referee_UI_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/referee_UI_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/referee_UI_logic.cpp.obj
-.PHONY : dev/logic/referee_UI_logic.cpp.obj
-
-dev/logic/referee_UI_logic.i: dev/logic/referee_UI_logic.cpp.i
-
-.PHONY : dev/logic/referee_UI_logic.i
-
-# target to preprocess a source file
-dev/logic/referee_UI_logic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/referee_UI_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/referee_UI_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/referee_UI_logic.cpp.i
-.PHONY : dev/logic/referee_UI_logic.cpp.i
-
-dev/logic/referee_UI_logic.s: dev/logic/referee_UI_logic.cpp.s
-
-.PHONY : dev/logic/referee_UI_logic.s
-
-# target to generate assembly for a file
-dev/logic/referee_UI_logic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/referee_UI_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/referee_UI_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/referee_UI_logic.cpp.s
-.PHONY : dev/logic/referee_UI_logic.cpp.s
-
-dev/logic/robotic_arm_logic.obj: dev/logic/robotic_arm_logic.cpp.obj
-
-.PHONY : dev/logic/robotic_arm_logic.obj
-
-# target to build an object file
-dev/logic/robotic_arm_logic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/logic/robotic_arm_logic.cpp.obj
-.PHONY : dev/logic/robotic_arm_logic.cpp.obj
-
-dev/logic/robotic_arm_logic.i: dev/logic/robotic_arm_logic.cpp.i
-
-.PHONY : dev/logic/robotic_arm_logic.i
-
-# target to preprocess a source file
-dev/logic/robotic_arm_logic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/logic/robotic_arm_logic.cpp.i
-.PHONY : dev/logic/robotic_arm_logic.cpp.i
-
-dev/logic/robotic_arm_logic.s: dev/logic/robotic_arm_logic.cpp.s
-
-.PHONY : dev/logic/robotic_arm_logic.s
-
-# target to generate assembly for a file
-dev/logic/robotic_arm_logic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/logic/robotic_arm_logic.cpp.s
-.PHONY : dev/logic/robotic_arm_logic.cpp.s
-
-dev/logic/shoot_logic.obj: dev/logic/shoot_logic.cpp.obj
-
-.PHONY : dev/logic/shoot_logic.obj
-
-# target to build an object file
-dev/logic/shoot_logic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/shoot_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/logic/shoot_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/shoot_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/shoot_logic.cpp.obj
-.PHONY : dev/logic/shoot_logic.cpp.obj
-
-dev/logic/shoot_logic.i: dev/logic/shoot_logic.cpp.i
-
-.PHONY : dev/logic/shoot_logic.i
-
-# target to preprocess a source file
-dev/logic/shoot_logic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/shoot_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/logic/shoot_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/shoot_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/shoot_logic.cpp.i
-.PHONY : dev/logic/shoot_logic.cpp.i
-
-dev/logic/shoot_logic.s: dev/logic/shoot_logic.cpp.s
-
-.PHONY : dev/logic/shoot_logic.s
-
-# target to generate assembly for a file
-dev/logic/shoot_logic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/logic/shoot_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/logic/shoot_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/logic/shoot_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/logic/shoot_logic.cpp.s
-.PHONY : dev/logic/shoot_logic.cpp.s
 
 dev/module/button_monitor.obj: dev/module/button_monitor.cpp.obj
 
@@ -3846,46 +1609,20 @@ dev/scheduler/buzzer_scheduler.obj: dev/scheduler/buzzer_scheduler.cpp.obj
 
 # target to build an object file
 dev/scheduler/buzzer_scheduler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/scheduler/buzzer_scheduler.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/scheduler/buzzer_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/buzzer_scheduler.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/scheduler/buzzer_scheduler.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/scheduler/buzzer_scheduler.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/scheduler/buzzer_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/scheduler/buzzer_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/buzzer_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/scheduler/buzzer_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/buzzer_scheduler.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/scheduler/buzzer_scheduler.cpp.obj
 .PHONY : dev/scheduler/buzzer_scheduler.cpp.obj
 
 dev/scheduler/buzzer_scheduler.i: dev/scheduler/buzzer_scheduler.cpp.i
@@ -3894,46 +1631,20 @@ dev/scheduler/buzzer_scheduler.i: dev/scheduler/buzzer_scheduler.cpp.i
 
 # target to preprocess a source file
 dev/scheduler/buzzer_scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/scheduler/buzzer_scheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/scheduler/buzzer_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/buzzer_scheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/scheduler/buzzer_scheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/scheduler/buzzer_scheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/scheduler/buzzer_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/scheduler/buzzer_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/buzzer_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/scheduler/buzzer_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/buzzer_scheduler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/scheduler/buzzer_scheduler.cpp.i
 .PHONY : dev/scheduler/buzzer_scheduler.cpp.i
 
 dev/scheduler/buzzer_scheduler.s: dev/scheduler/buzzer_scheduler.cpp.s
@@ -3942,46 +1653,20 @@ dev/scheduler/buzzer_scheduler.s: dev/scheduler/buzzer_scheduler.cpp.s
 
 # target to generate assembly for a file
 dev/scheduler/buzzer_scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_hero.dir/build.make CMakeFiles/ca_ahrs_hero.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_skywalker.dir/build.make CMakeFiles/pa_skywalker.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_shoot.dir/build.make CMakeFiles/pa_hero_shoot.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sensors_sound.dir/build.make CMakeFiles/ut_sensors_sound.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_adc.dir/build.make CMakeFiles/ut_adc.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_referee_interface.dir/build.make CMakeFiles/ut_referee_interface.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_sd_card.dir/build.make CMakeFiles/ut_sd_card.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/scheduler/buzzer_scheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_can.dir/build.make CMakeFiles/ut_can.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_elevator_interface.dir/build.make CMakeFiles/ut_elevator_interface.dir/dev/scheduler/buzzer_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_buzzer.dir/build.make CMakeFiles/ut_buzzer.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_gimbal_interface.dir/build.make CMakeFiles/ut_gimbal_interface.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/buzzer_scheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/scheduler/buzzer_scheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/scheduler/buzzer_scheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/scheduler/buzzer_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_imu.dir/build.make CMakeFiles/ut_imu.dir/dev/scheduler/buzzer_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ist8310.dir/build.make CMakeFiles/ut_ist8310.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/buzzer_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_mpu6500.dir/build.make CMakeFiles/ut_mpu6500.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_shoot.dir/build.make CMakeFiles/ut_shoot.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs_ext.dir/build.make CMakeFiles/ut_ahrs_ext.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_super_capacitor.dir/build.make CMakeFiles/ut_super_capacitor.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_remote_interpreter.dir/build.make CMakeFiles/ut_remote_interpreter.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_ahrs.dir/build.make CMakeFiles/ut_ahrs.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer_gimbal.dir/build.make CMakeFiles/ut_engineer_gimbal.dir/dev/scheduler/buzzer_scheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ca_ahrs_infantry.dir/build.make CMakeFiles/ca_ahrs_infantry.dir/dev/scheduler/buzzer_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/buzzer_scheduler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_blink.dir/build.make CMakeFiles/ut_blink.dir/dev/scheduler/buzzer_scheduler.cpp.s
 .PHONY : dev/scheduler/buzzer_scheduler.cpp.s
 
 dev/scheduler/chassis_scheduler.obj: dev/scheduler/chassis_scheduler.cpp.obj
@@ -3991,7 +1676,6 @@ dev/scheduler/chassis_scheduler.obj: dev/scheduler/chassis_scheduler.cpp.obj
 # target to build an object file
 dev/scheduler/chassis_scheduler.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/chassis_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/chassis_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/chassis_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/chassis_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/chassis_scheduler.cpp.obj
@@ -4004,7 +1688,6 @@ dev/scheduler/chassis_scheduler.i: dev/scheduler/chassis_scheduler.cpp.i
 # target to preprocess a source file
 dev/scheduler/chassis_scheduler.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/chassis_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/chassis_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/chassis_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/chassis_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/chassis_scheduler.cpp.i
@@ -4017,104 +1700,10 @@ dev/scheduler/chassis_scheduler.s: dev/scheduler/chassis_scheduler.cpp.s
 # target to generate assembly for a file
 dev/scheduler/chassis_scheduler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/chassis_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/chassis_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/chassis_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/chassis_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/chassis_scheduler.cpp.s
 .PHONY : dev/scheduler/chassis_scheduler.cpp.s
-
-dev/scheduler/engineer_chassis_skd.obj: dev/scheduler/engineer_chassis_skd.cpp.obj
-
-.PHONY : dev/scheduler/engineer_chassis_skd.obj
-
-# target to build an object file
-dev/scheduler/engineer_chassis_skd.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/scheduler/engineer_chassis_skd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_chassis_skd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/engineer_chassis_skd.cpp.obj
-.PHONY : dev/scheduler/engineer_chassis_skd.cpp.obj
-
-dev/scheduler/engineer_chassis_skd.i: dev/scheduler/engineer_chassis_skd.cpp.i
-
-.PHONY : dev/scheduler/engineer_chassis_skd.i
-
-# target to preprocess a source file
-dev/scheduler/engineer_chassis_skd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/scheduler/engineer_chassis_skd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_chassis_skd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/engineer_chassis_skd.cpp.i
-.PHONY : dev/scheduler/engineer_chassis_skd.cpp.i
-
-dev/scheduler/engineer_chassis_skd.s: dev/scheduler/engineer_chassis_skd.cpp.s
-
-.PHONY : dev/scheduler/engineer_chassis_skd.s
-
-# target to generate assembly for a file
-dev/scheduler/engineer_chassis_skd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_engineer_chassis.dir/build.make CMakeFiles/pa_engineer_chassis.dir/dev/scheduler/engineer_chassis_skd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_chassis_skd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/engineer_chassis_skd.cpp.s
-.PHONY : dev/scheduler/engineer_chassis_skd.cpp.s
-
-dev/scheduler/engineer_elevator_skd.obj: dev/scheduler/engineer_elevator_skd.cpp.obj
-
-.PHONY : dev/scheduler/engineer_elevator_skd.obj
-
-# target to build an object file
-dev/scheduler/engineer_elevator_skd.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_elevator_skd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/engineer_elevator_skd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/scheduler/engineer_elevator_skd.cpp.obj
-.PHONY : dev/scheduler/engineer_elevator_skd.cpp.obj
-
-dev/scheduler/engineer_elevator_skd.i: dev/scheduler/engineer_elevator_skd.cpp.i
-
-.PHONY : dev/scheduler/engineer_elevator_skd.i
-
-# target to preprocess a source file
-dev/scheduler/engineer_elevator_skd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_elevator_skd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/engineer_elevator_skd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/scheduler/engineer_elevator_skd.cpp.i
-.PHONY : dev/scheduler/engineer_elevator_skd.cpp.i
-
-dev/scheduler/engineer_elevator_skd.s: dev/scheduler/engineer_elevator_skd.cpp.s
-
-.PHONY : dev/scheduler/engineer_elevator_skd.s
-
-# target to generate assembly for a file
-dev/scheduler/engineer_elevator_skd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_elevator_skd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/engineer_elevator_skd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_elevator.dir/build.make CMakeFiles/pa_elevator.dir/dev/scheduler/engineer_elevator_skd.cpp.s
-.PHONY : dev/scheduler/engineer_elevator_skd.cpp.s
-
-dev/scheduler/engineer_rescue_skd.obj: dev/scheduler/engineer_rescue_skd.cpp.obj
-
-.PHONY : dev/scheduler/engineer_rescue_skd.obj
-
-# target to build an object file
-dev/scheduler/engineer_rescue_skd.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_rescue_skd.cpp.obj
-.PHONY : dev/scheduler/engineer_rescue_skd.cpp.obj
-
-dev/scheduler/engineer_rescue_skd.i: dev/scheduler/engineer_rescue_skd.cpp.i
-
-.PHONY : dev/scheduler/engineer_rescue_skd.i
-
-# target to preprocess a source file
-dev/scheduler/engineer_rescue_skd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_rescue_skd.cpp.i
-.PHONY : dev/scheduler/engineer_rescue_skd.cpp.i
-
-dev/scheduler/engineer_rescue_skd.s: dev/scheduler/engineer_rescue_skd.cpp.s
-
-.PHONY : dev/scheduler/engineer_rescue_skd.s
-
-# target to generate assembly for a file
-dev/scheduler/engineer_rescue_skd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/engineer_rescue_skd.cpp.s
-.PHONY : dev/scheduler/engineer_rescue_skd.cpp.s
 
 dev/scheduler/gimbal_scheduler.obj: dev/scheduler/gimbal_scheduler.cpp.obj
 
@@ -4122,13 +1711,7 @@ dev/scheduler/gimbal_scheduler.obj: dev/scheduler/gimbal_scheduler.cpp.obj
 
 # target to build an object file
 dev/scheduler/gimbal_scheduler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/scheduler/gimbal_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/scheduler/gimbal_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/scheduler/gimbal_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/gimbal_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/gimbal_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/scheduler/gimbal_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/gimbal_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/gimbal_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/gimbal_scheduler.cpp.obj
@@ -4140,13 +1723,7 @@ dev/scheduler/gimbal_scheduler.i: dev/scheduler/gimbal_scheduler.cpp.i
 
 # target to preprocess a source file
 dev/scheduler/gimbal_scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/scheduler/gimbal_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/scheduler/gimbal_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/scheduler/gimbal_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/gimbal_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/gimbal_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/scheduler/gimbal_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/gimbal_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/gimbal_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/gimbal_scheduler.cpp.i
@@ -4158,215 +1735,11 @@ dev/scheduler/gimbal_scheduler.s: dev/scheduler/gimbal_scheduler.cpp.s
 
 # target to generate assembly for a file
 dev/scheduler/gimbal_scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/scheduler/gimbal_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_hero_gimbal.dir/build.make CMakeFiles/pa_hero_gimbal.dir/dev/scheduler/gimbal_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/scheduler/gimbal_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_chassis.dir/build.make CMakeFiles/pa_chassis.dir/dev/scheduler/gimbal_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/gimbal_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/scheduler/gimbal_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/gimbal_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/gimbal_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/gimbal_scheduler.cpp.s
 .PHONY : dev/scheduler/gimbal_scheduler.cpp.s
-
-dev/scheduler/new_robotic_arm_skd.obj: dev/scheduler/new_robotic_arm_skd.cpp.obj
-
-.PHONY : dev/scheduler/new_robotic_arm_skd.obj
-
-# target to build an object file
-dev/scheduler/new_robotic_arm_skd.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/scheduler/new_robotic_arm_skd.cpp.obj
-.PHONY : dev/scheduler/new_robotic_arm_skd.cpp.obj
-
-dev/scheduler/new_robotic_arm_skd.i: dev/scheduler/new_robotic_arm_skd.cpp.i
-
-.PHONY : dev/scheduler/new_robotic_arm_skd.i
-
-# target to preprocess a source file
-dev/scheduler/new_robotic_arm_skd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/scheduler/new_robotic_arm_skd.cpp.i
-.PHONY : dev/scheduler/new_robotic_arm_skd.cpp.i
-
-dev/scheduler/new_robotic_arm_skd.s: dev/scheduler/new_robotic_arm_skd.cpp.s
-
-.PHONY : dev/scheduler/new_robotic_arm_skd.s
-
-# target to generate assembly for a file
-dev/scheduler/new_robotic_arm_skd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_auto_robotic_arm.dir/build.make CMakeFiles/ut_auto_robotic_arm.dir/dev/scheduler/new_robotic_arm_skd.cpp.s
-.PHONY : dev/scheduler/new_robotic_arm_skd.cpp.s
-
-dev/scheduler/new_sentry_chassis_scheduler.obj: dev/scheduler/new_sentry_chassis_scheduler.cpp.obj
-
-.PHONY : dev/scheduler/new_sentry_chassis_scheduler.obj
-
-# target to build an object file
-dev/scheduler/new_sentry_chassis_scheduler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/scheduler/new_sentry_chassis_scheduler.cpp.obj
-.PHONY : dev/scheduler/new_sentry_chassis_scheduler.cpp.obj
-
-dev/scheduler/new_sentry_chassis_scheduler.i: dev/scheduler/new_sentry_chassis_scheduler.cpp.i
-
-.PHONY : dev/scheduler/new_sentry_chassis_scheduler.i
-
-# target to preprocess a source file
-dev/scheduler/new_sentry_chassis_scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/scheduler/new_sentry_chassis_scheduler.cpp.i
-.PHONY : dev/scheduler/new_sentry_chassis_scheduler.cpp.i
-
-dev/scheduler/new_sentry_chassis_scheduler.s: dev/scheduler/new_sentry_chassis_scheduler.cpp.s
-
-.PHONY : dev/scheduler/new_sentry_chassis_scheduler.s
-
-# target to generate assembly for a file
-dev/scheduler/new_sentry_chassis_scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/scheduler/new_sentry_chassis_scheduler.cpp.s
-.PHONY : dev/scheduler/new_sentry_chassis_scheduler.cpp.s
-
-dev/scheduler/referee_UI_update_scheduler.obj: dev/scheduler/referee_UI_update_scheduler.cpp.obj
-
-.PHONY : dev/scheduler/referee_UI_update_scheduler.obj
-
-# target to build an object file
-dev/scheduler/referee_UI_update_scheduler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj
-.PHONY : dev/scheduler/referee_UI_update_scheduler.cpp.obj
-
-dev/scheduler/referee_UI_update_scheduler.i: dev/scheduler/referee_UI_update_scheduler.cpp.i
-
-.PHONY : dev/scheduler/referee_UI_update_scheduler.i
-
-# target to preprocess a source file
-dev/scheduler/referee_UI_update_scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/referee_UI_update_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/referee_UI_update_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/referee_UI_update_scheduler.cpp.i
-.PHONY : dev/scheduler/referee_UI_update_scheduler.cpp.i
-
-dev/scheduler/referee_UI_update_scheduler.s: dev/scheduler/referee_UI_update_scheduler.cpp.s
-
-.PHONY : dev/scheduler/referee_UI_update_scheduler.s
-
-# target to generate assembly for a file
-dev/scheduler/referee_UI_update_scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/referee_UI_update_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/referee_UI_update_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/referee_UI_update_scheduler.cpp.s
-.PHONY : dev/scheduler/referee_UI_update_scheduler.cpp.s
-
-dev/scheduler/robotic_arm_skd.obj: dev/scheduler/robotic_arm_skd.cpp.obj
-
-.PHONY : dev/scheduler/robotic_arm_skd.obj
-
-# target to build an object file
-dev/scheduler/robotic_arm_skd.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/scheduler/robotic_arm_skd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/robotic_arm_skd.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/robotic_arm_skd.cpp.obj
-.PHONY : dev/scheduler/robotic_arm_skd.cpp.obj
-
-dev/scheduler/robotic_arm_skd.i: dev/scheduler/robotic_arm_skd.cpp.i
-
-.PHONY : dev/scheduler/robotic_arm_skd.i
-
-# target to preprocess a source file
-dev/scheduler/robotic_arm_skd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/scheduler/robotic_arm_skd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/robotic_arm_skd.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/robotic_arm_skd.cpp.i
-.PHONY : dev/scheduler/robotic_arm_skd.cpp.i
-
-dev/scheduler/robotic_arm_skd.s: dev/scheduler/robotic_arm_skd.cpp.s
-
-.PHONY : dev/scheduler/robotic_arm_skd.s
-
-# target to generate assembly for a file
-dev/scheduler/robotic_arm_skd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_robotic_arm.dir/build.make CMakeFiles/ut_robotic_arm.dir/dev/scheduler/robotic_arm_skd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/scheduler/robotic_arm_skd.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ut_engineer.dir/build.make CMakeFiles/ut_engineer.dir/dev/scheduler/robotic_arm_skd.cpp.s
-.PHONY : dev/scheduler/robotic_arm_skd.cpp.s
-
-dev/scheduler/sentry_chassis_scheduler.obj: dev/scheduler/sentry_chassis_scheduler.cpp.obj
-
-.PHONY : dev/scheduler/sentry_chassis_scheduler.obj
-
-# target to build an object file
-dev/scheduler/sentry_chassis_scheduler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/scheduler/sentry_chassis_scheduler.cpp.obj
-.PHONY : dev/scheduler/sentry_chassis_scheduler.cpp.obj
-
-dev/scheduler/sentry_chassis_scheduler.i: dev/scheduler/sentry_chassis_scheduler.cpp.i
-
-.PHONY : dev/scheduler/sentry_chassis_scheduler.i
-
-# target to preprocess a source file
-dev/scheduler/sentry_chassis_scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/scheduler/sentry_chassis_scheduler.cpp.i
-.PHONY : dev/scheduler/sentry_chassis_scheduler.cpp.i
-
-dev/scheduler/sentry_chassis_scheduler.s: dev/scheduler/sentry_chassis_scheduler.cpp.s
-
-.PHONY : dev/scheduler/sentry_chassis_scheduler.s
-
-# target to generate assembly for a file
-dev/scheduler/sentry_chassis_scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_sentry_chassis.dir/build.make CMakeFiles/pa_sentry_chassis.dir/dev/scheduler/sentry_chassis_scheduler.cpp.s
-.PHONY : dev/scheduler/sentry_chassis_scheduler.cpp.s
-
-dev/scheduler/shoot_scheduler.obj: dev/scheduler/shoot_scheduler.cpp.obj
-
-.PHONY : dev/scheduler/shoot_scheduler.obj
-
-# target to build an object file
-dev/scheduler/shoot_scheduler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/scheduler/shoot_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/scheduler/shoot_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/shoot_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/scheduler/shoot_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/shoot_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/shoot_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/shoot_scheduler.cpp.obj
-.PHONY : dev/scheduler/shoot_scheduler.cpp.obj
-
-dev/scheduler/shoot_scheduler.i: dev/scheduler/shoot_scheduler.cpp.i
-
-.PHONY : dev/scheduler/shoot_scheduler.i
-
-# target to preprocess a source file
-dev/scheduler/shoot_scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/scheduler/shoot_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/scheduler/shoot_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/shoot_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/scheduler/shoot_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/shoot_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/shoot_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/shoot_scheduler.cpp.i
-.PHONY : dev/scheduler/shoot_scheduler.cpp.i
-
-dev/scheduler/shoot_scheduler.s: dev/scheduler/shoot_scheduler.cpp.s
-
-.PHONY : dev/scheduler/shoot_scheduler.s
-
-# target to generate assembly for a file
-dev/scheduler/shoot_scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_infantry_shoot.dir/build.make CMakeFiles/pa_infantry_shoot.dir/dev/scheduler/shoot_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_new_gimbal.dir/build.make CMakeFiles/pa_new_gimbal.dir/dev/scheduler/shoot_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/shoot_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pa_gimbal.dir/build.make CMakeFiles/pa_gimbal.dir/dev/scheduler/shoot_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/shoot_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/shoot_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/shoot_scheduler.cpp.s
-.PHONY : dev/scheduler/shoot_scheduler.cpp.s
 
 dev/scheduler/vision_scheduler.obj: dev/scheduler/vision_scheduler.cpp.obj
 
@@ -4374,8 +1747,6 @@ dev/scheduler/vision_scheduler.obj: dev/scheduler/vision_scheduler.cpp.obj
 
 # target to build an object file
 dev/scheduler/vision_scheduler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/vision_scheduler.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/vision_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/vision_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/vision_scheduler.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/vision_scheduler.cpp.obj
@@ -4387,8 +1758,6 @@ dev/scheduler/vision_scheduler.i: dev/scheduler/vision_scheduler.cpp.i
 
 # target to preprocess a source file
 dev/scheduler/vision_scheduler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/vision_scheduler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/vision_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/vision_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/vision_scheduler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/vision_scheduler.cpp.i
@@ -4400,309 +1769,10 @@ dev/scheduler/vision_scheduler.s: dev/scheduler/vision_scheduler.cpp.s
 
 # target to generate assembly for a file
 dev/scheduler/vision_scheduler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/scheduler/vision_scheduler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/scheduler/vision_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FIVE.dir/build.make CMakeFiles/INFANTRY_FIVE.dir/dev/scheduler/vision_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/vision_scheduler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/scheduler/vision_scheduler.cpp.s
 .PHONY : dev/scheduler/vision_scheduler.cpp.s
-
-dev/vehicle/aerial/inspector_aerial.obj: dev/vehicle/aerial/inspector_aerial.cpp.obj
-
-.PHONY : dev/vehicle/aerial/inspector_aerial.obj
-
-# target to build an object file
-dev/vehicle/aerial/inspector_aerial.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/inspector_aerial.cpp.obj
-.PHONY : dev/vehicle/aerial/inspector_aerial.cpp.obj
-
-dev/vehicle/aerial/inspector_aerial.i: dev/vehicle/aerial/inspector_aerial.cpp.i
-
-.PHONY : dev/vehicle/aerial/inspector_aerial.i
-
-# target to preprocess a source file
-dev/vehicle/aerial/inspector_aerial.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/inspector_aerial.cpp.i
-.PHONY : dev/vehicle/aerial/inspector_aerial.cpp.i
-
-dev/vehicle/aerial/inspector_aerial.s: dev/vehicle/aerial/inspector_aerial.cpp.s
-
-.PHONY : dev/vehicle/aerial/inspector_aerial.s
-
-# target to generate assembly for a file
-dev/vehicle/aerial/inspector_aerial.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/inspector_aerial.cpp.s
-.PHONY : dev/vehicle/aerial/inspector_aerial.cpp.s
-
-dev/vehicle/aerial/main_aerial.obj: dev/vehicle/aerial/main_aerial.cpp.obj
-
-.PHONY : dev/vehicle/aerial/main_aerial.obj
-
-# target to build an object file
-dev/vehicle/aerial/main_aerial.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/main_aerial.cpp.obj
-.PHONY : dev/vehicle/aerial/main_aerial.cpp.obj
-
-dev/vehicle/aerial/main_aerial.i: dev/vehicle/aerial/main_aerial.cpp.i
-
-.PHONY : dev/vehicle/aerial/main_aerial.i
-
-# target to preprocess a source file
-dev/vehicle/aerial/main_aerial.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/main_aerial.cpp.i
-.PHONY : dev/vehicle/aerial/main_aerial.cpp.i
-
-dev/vehicle/aerial/main_aerial.s: dev/vehicle/aerial/main_aerial.cpp.s
-
-.PHONY : dev/vehicle/aerial/main_aerial.s
-
-# target to generate assembly for a file
-dev/vehicle/aerial/main_aerial.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/main_aerial.cpp.s
-.PHONY : dev/vehicle/aerial/main_aerial.cpp.s
-
-dev/vehicle/aerial/settings_aerial.obj: dev/vehicle/aerial/settings_aerial.cpp.obj
-
-.PHONY : dev/vehicle/aerial/settings_aerial.obj
-
-# target to build an object file
-dev/vehicle/aerial/settings_aerial.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/settings_aerial.cpp.obj
-.PHONY : dev/vehicle/aerial/settings_aerial.cpp.obj
-
-dev/vehicle/aerial/settings_aerial.i: dev/vehicle/aerial/settings_aerial.cpp.i
-
-.PHONY : dev/vehicle/aerial/settings_aerial.i
-
-# target to preprocess a source file
-dev/vehicle/aerial/settings_aerial.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/settings_aerial.cpp.i
-.PHONY : dev/vehicle/aerial/settings_aerial.cpp.i
-
-dev/vehicle/aerial/settings_aerial.s: dev/vehicle/aerial/settings_aerial.cpp.s
-
-.PHONY : dev/vehicle/aerial/settings_aerial.s
-
-# target to generate assembly for a file
-dev/vehicle/aerial/settings_aerial.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/settings_aerial.cpp.s
-.PHONY : dev/vehicle/aerial/settings_aerial.cpp.s
-
-dev/vehicle/aerial/user_aerial.obj: dev/vehicle/aerial/user_aerial.cpp.obj
-
-.PHONY : dev/vehicle/aerial/user_aerial.obj
-
-# target to build an object file
-dev/vehicle/aerial/user_aerial.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/user_aerial.cpp.obj
-.PHONY : dev/vehicle/aerial/user_aerial.cpp.obj
-
-dev/vehicle/aerial/user_aerial.i: dev/vehicle/aerial/user_aerial.cpp.i
-
-.PHONY : dev/vehicle/aerial/user_aerial.i
-
-# target to preprocess a source file
-dev/vehicle/aerial/user_aerial.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/user_aerial.cpp.i
-.PHONY : dev/vehicle/aerial/user_aerial.cpp.i
-
-dev/vehicle/aerial/user_aerial.s: dev/vehicle/aerial/user_aerial.cpp.s
-
-.PHONY : dev/vehicle/aerial/user_aerial.s
-
-# target to generate assembly for a file
-dev/vehicle/aerial/user_aerial.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AERIAL.dir/build.make CMakeFiles/AERIAL.dir/dev/vehicle/aerial/user_aerial.cpp.s
-.PHONY : dev/vehicle/aerial/user_aerial.cpp.s
-
-dev/vehicle/engineer/inspector_engineer.obj: dev/vehicle/engineer/inspector_engineer.cpp.obj
-
-.PHONY : dev/vehicle/engineer/inspector_engineer.obj
-
-# target to build an object file
-dev/vehicle/engineer/inspector_engineer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/inspector_engineer.cpp.obj
-.PHONY : dev/vehicle/engineer/inspector_engineer.cpp.obj
-
-dev/vehicle/engineer/inspector_engineer.i: dev/vehicle/engineer/inspector_engineer.cpp.i
-
-.PHONY : dev/vehicle/engineer/inspector_engineer.i
-
-# target to preprocess a source file
-dev/vehicle/engineer/inspector_engineer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/inspector_engineer.cpp.i
-.PHONY : dev/vehicle/engineer/inspector_engineer.cpp.i
-
-dev/vehicle/engineer/inspector_engineer.s: dev/vehicle/engineer/inspector_engineer.cpp.s
-
-.PHONY : dev/vehicle/engineer/inspector_engineer.s
-
-# target to generate assembly for a file
-dev/vehicle/engineer/inspector_engineer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/inspector_engineer.cpp.s
-.PHONY : dev/vehicle/engineer/inspector_engineer.cpp.s
-
-dev/vehicle/engineer/main_engineer.obj: dev/vehicle/engineer/main_engineer.cpp.obj
-
-.PHONY : dev/vehicle/engineer/main_engineer.obj
-
-# target to build an object file
-dev/vehicle/engineer/main_engineer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/main_engineer.cpp.obj
-.PHONY : dev/vehicle/engineer/main_engineer.cpp.obj
-
-dev/vehicle/engineer/main_engineer.i: dev/vehicle/engineer/main_engineer.cpp.i
-
-.PHONY : dev/vehicle/engineer/main_engineer.i
-
-# target to preprocess a source file
-dev/vehicle/engineer/main_engineer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/main_engineer.cpp.i
-.PHONY : dev/vehicle/engineer/main_engineer.cpp.i
-
-dev/vehicle/engineer/main_engineer.s: dev/vehicle/engineer/main_engineer.cpp.s
-
-.PHONY : dev/vehicle/engineer/main_engineer.s
-
-# target to generate assembly for a file
-dev/vehicle/engineer/main_engineer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/main_engineer.cpp.s
-.PHONY : dev/vehicle/engineer/main_engineer.cpp.s
-
-dev/vehicle/engineer/settings_engineer.obj: dev/vehicle/engineer/settings_engineer.cpp.obj
-
-.PHONY : dev/vehicle/engineer/settings_engineer.obj
-
-# target to build an object file
-dev/vehicle/engineer/settings_engineer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/settings_engineer.cpp.obj
-.PHONY : dev/vehicle/engineer/settings_engineer.cpp.obj
-
-dev/vehicle/engineer/settings_engineer.i: dev/vehicle/engineer/settings_engineer.cpp.i
-
-.PHONY : dev/vehicle/engineer/settings_engineer.i
-
-# target to preprocess a source file
-dev/vehicle/engineer/settings_engineer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/settings_engineer.cpp.i
-.PHONY : dev/vehicle/engineer/settings_engineer.cpp.i
-
-dev/vehicle/engineer/settings_engineer.s: dev/vehicle/engineer/settings_engineer.cpp.s
-
-.PHONY : dev/vehicle/engineer/settings_engineer.s
-
-# target to generate assembly for a file
-dev/vehicle/engineer/settings_engineer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/settings_engineer.cpp.s
-.PHONY : dev/vehicle/engineer/settings_engineer.cpp.s
-
-dev/vehicle/engineer/user_engineer.obj: dev/vehicle/engineer/user_engineer.cpp.obj
-
-.PHONY : dev/vehicle/engineer/user_engineer.obj
-
-# target to build an object file
-dev/vehicle/engineer/user_engineer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/user_engineer.cpp.obj
-.PHONY : dev/vehicle/engineer/user_engineer.cpp.obj
-
-dev/vehicle/engineer/user_engineer.i: dev/vehicle/engineer/user_engineer.cpp.i
-
-.PHONY : dev/vehicle/engineer/user_engineer.i
-
-# target to preprocess a source file
-dev/vehicle/engineer/user_engineer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/user_engineer.cpp.i
-.PHONY : dev/vehicle/engineer/user_engineer.cpp.i
-
-dev/vehicle/engineer/user_engineer.s: dev/vehicle/engineer/user_engineer.cpp.s
-
-.PHONY : dev/vehicle/engineer/user_engineer.s
-
-# target to generate assembly for a file
-dev/vehicle/engineer/user_engineer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ENGINEER.dir/build.make CMakeFiles/ENGINEER.dir/dev/vehicle/engineer/user_engineer.cpp.s
-.PHONY : dev/vehicle/engineer/user_engineer.cpp.s
-
-dev/vehicle/hero/inspector_hero.obj: dev/vehicle/hero/inspector_hero.cpp.obj
-
-.PHONY : dev/vehicle/hero/inspector_hero.obj
-
-# target to build an object file
-dev/vehicle/hero/inspector_hero.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/vehicle/hero/inspector_hero.cpp.obj
-.PHONY : dev/vehicle/hero/inspector_hero.cpp.obj
-
-dev/vehicle/hero/inspector_hero.i: dev/vehicle/hero/inspector_hero.cpp.i
-
-.PHONY : dev/vehicle/hero/inspector_hero.i
-
-# target to preprocess a source file
-dev/vehicle/hero/inspector_hero.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/vehicle/hero/inspector_hero.cpp.i
-.PHONY : dev/vehicle/hero/inspector_hero.cpp.i
-
-dev/vehicle/hero/inspector_hero.s: dev/vehicle/hero/inspector_hero.cpp.s
-
-.PHONY : dev/vehicle/hero/inspector_hero.s
-
-# target to generate assembly for a file
-dev/vehicle/hero/inspector_hero.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/vehicle/hero/inspector_hero.cpp.s
-.PHONY : dev/vehicle/hero/inspector_hero.cpp.s
-
-dev/vehicle/hero/main_hero.obj: dev/vehicle/hero/main_hero.cpp.obj
-
-.PHONY : dev/vehicle/hero/main_hero.obj
-
-# target to build an object file
-dev/vehicle/hero/main_hero.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/vehicle/hero/main_hero.cpp.obj
-.PHONY : dev/vehicle/hero/main_hero.cpp.obj
-
-dev/vehicle/hero/main_hero.i: dev/vehicle/hero/main_hero.cpp.i
-
-.PHONY : dev/vehicle/hero/main_hero.i
-
-# target to preprocess a source file
-dev/vehicle/hero/main_hero.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/vehicle/hero/main_hero.cpp.i
-.PHONY : dev/vehicle/hero/main_hero.cpp.i
-
-dev/vehicle/hero/main_hero.s: dev/vehicle/hero/main_hero.cpp.s
-
-.PHONY : dev/vehicle/hero/main_hero.s
-
-# target to generate assembly for a file
-dev/vehicle/hero/main_hero.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/vehicle/hero/main_hero.cpp.s
-.PHONY : dev/vehicle/hero/main_hero.cpp.s
-
-dev/vehicle/hero/user_hero.obj: dev/vehicle/hero/user_hero.cpp.obj
-
-.PHONY : dev/vehicle/hero/user_hero.obj
-
-# target to build an object file
-dev/vehicle/hero/user_hero.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/vehicle/hero/user_hero.cpp.obj
-.PHONY : dev/vehicle/hero/user_hero.cpp.obj
-
-dev/vehicle/hero/user_hero.i: dev/vehicle/hero/user_hero.cpp.i
-
-.PHONY : dev/vehicle/hero/user_hero.i
-
-# target to preprocess a source file
-dev/vehicle/hero/user_hero.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/vehicle/hero/user_hero.cpp.i
-.PHONY : dev/vehicle/hero/user_hero.cpp.i
-
-dev/vehicle/hero/user_hero.s: dev/vehicle/hero/user_hero.cpp.s
-
-.PHONY : dev/vehicle/hero/user_hero.s
-
-# target to generate assembly for a file
-dev/vehicle/hero/user_hero.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HERO.dir/build.make CMakeFiles/HERO.dir/dev/vehicle/hero/user_hero.cpp.s
-.PHONY : dev/vehicle/hero/user_hero.cpp.s
 
 dev/vehicle/infantry/inspector_infantry.obj: dev/vehicle/infantry/inspector_infantry.cpp.obj
 
@@ -4802,60 +1872,6 @@ dev/vehicle/infantry/user_infantry.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_FOUR.dir/build.make CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/INFANTRY_THREE.dir/build.make CMakeFiles/INFANTRY_THREE.dir/dev/vehicle/infantry/user_infantry.cpp.s
 .PHONY : dev/vehicle/infantry/user_infantry.cpp.s
-
-dev/vehicle/sentry/main_sentry.obj: dev/vehicle/sentry/main_sentry.cpp.obj
-
-.PHONY : dev/vehicle/sentry/main_sentry.obj
-
-# target to build an object file
-dev/vehicle/sentry/main_sentry.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/vehicle/sentry/main_sentry.cpp.obj
-.PHONY : dev/vehicle/sentry/main_sentry.cpp.obj
-
-dev/vehicle/sentry/main_sentry.i: dev/vehicle/sentry/main_sentry.cpp.i
-
-.PHONY : dev/vehicle/sentry/main_sentry.i
-
-# target to preprocess a source file
-dev/vehicle/sentry/main_sentry.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/vehicle/sentry/main_sentry.cpp.i
-.PHONY : dev/vehicle/sentry/main_sentry.cpp.i
-
-dev/vehicle/sentry/main_sentry.s: dev/vehicle/sentry/main_sentry.cpp.s
-
-.PHONY : dev/vehicle/sentry/main_sentry.s
-
-# target to generate assembly for a file
-dev/vehicle/sentry/main_sentry.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/vehicle/sentry/main_sentry.cpp.s
-.PHONY : dev/vehicle/sentry/main_sentry.cpp.s
-
-dev/vehicle/sentry/user_sentry.obj: dev/vehicle/sentry/user_sentry.cpp.obj
-
-.PHONY : dev/vehicle/sentry/user_sentry.obj
-
-# target to build an object file
-dev/vehicle/sentry/user_sentry.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/vehicle/sentry/user_sentry.cpp.obj
-.PHONY : dev/vehicle/sentry/user_sentry.cpp.obj
-
-dev/vehicle/sentry/user_sentry.i: dev/vehicle/sentry/user_sentry.cpp.i
-
-.PHONY : dev/vehicle/sentry/user_sentry.i
-
-# target to preprocess a source file
-dev/vehicle/sentry/user_sentry.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/vehicle/sentry/user_sentry.cpp.i
-.PHONY : dev/vehicle/sentry/user_sentry.cpp.i
-
-dev/vehicle/sentry/user_sentry.s: dev/vehicle/sentry/user_sentry.cpp.s
-
-.PHONY : dev/vehicle/sentry/user_sentry.s
-
-# target to generate assembly for a file
-dev/vehicle/sentry/user_sentry.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SENTRY.dir/build.make CMakeFiles/SENTRY.dir/dev/vehicle/sentry/user_sentry.cpp.s
-.PHONY : dev/vehicle/sentry/user_sentry.cpp.s
 
 os/common/oslib/src/chfactory.obj: os/common/oslib/src/chfactory.c.obj
 
@@ -7025,48 +4041,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... AERIAL"
 	@echo "... CMSIS_DSP"
 	@echo "... ChibiOS"
-	@echo "... ENGINEER"
-	@echo "... HERO"
 	@echo "... INFANTRY_FIVE"
 	@echo "... INFANTRY_FOUR"
 	@echo "... INFANTRY_THREE"
-	@echo "... SENTRY"
-	@echo "... ca_ahrs_hero"
 	@echo "... ca_ahrs_infantry"
 	@echo "... pa_chassis"
-	@echo "... pa_elevator"
-	@echo "... pa_engineer_chassis"
-	@echo "... pa_gimbal"
-	@echo "... pa_hero_gimbal"
-	@echo "... pa_hero_shoot"
-	@echo "... pa_infantry_shoot"
-	@echo "... pa_new_gimbal"
-	@echo "... pa_sentry_chassis"
-	@echo "... pa_skywalker"
-	@echo "... ut_adc"
 	@echo "... ut_ahrs"
 	@echo "... ut_ahrs_ext"
-	@echo "... ut_auto_robotic_arm"
 	@echo "... ut_blink"
 	@echo "... ut_buzzer"
 	@echo "... ut_can"
-	@echo "... ut_elevator_interface"
-	@echo "... ut_engineer"
-	@echo "... ut_engineer_gimbal"
-	@echo "... ut_gimbal_interface"
 	@echo "... ut_imu"
 	@echo "... ut_ist8310"
 	@echo "... ut_mpu6500"
-	@echo "... ut_referee_interface"
 	@echo "... ut_remote_interpreter"
-	@echo "... ut_robotic_arm"
-	@echo "... ut_sd_card"
-	@echo "... ut_sensors_sound"
-	@echo "... ut_shoot"
-	@echo "... ut_super_capacitor"
 	@echo "... dev/board/rm_board_2018_a/board.obj"
 	@echo "... dev/board/rm_board_2018_a/board.i"
 	@echo "... dev/board/rm_board_2018_a/board.s"
@@ -7079,9 +4069,6 @@ help:
 	@echo "... dev/debug/Unit_Tests/ca_ahrs.obj"
 	@echo "... dev/debug/Unit_Tests/ca_ahrs.i"
 	@echo "... dev/debug/Unit_Tests/ca_ahrs.s"
-	@echo "... dev/debug/Unit_Tests/ut_adc.obj"
-	@echo "... dev/debug/Unit_Tests/ut_adc.i"
-	@echo "... dev/debug/Unit_Tests/ut_adc.s"
 	@echo "... dev/debug/Unit_Tests/ut_ahrs.obj"
 	@echo "... dev/debug/Unit_Tests/ut_ahrs.i"
 	@echo "... dev/debug/Unit_Tests/ut_ahrs.s"
@@ -7094,21 +4081,6 @@ help:
 	@echo "... dev/debug/Unit_Tests/ut_can_interface.obj"
 	@echo "... dev/debug/Unit_Tests/ut_can_interface.i"
 	@echo "... dev/debug/Unit_Tests/ut_can_interface.s"
-	@echo "... dev/debug/Unit_Tests/ut_elevator_IF.obj"
-	@echo "... dev/debug/Unit_Tests/ut_elevator_IF.i"
-	@echo "... dev/debug/Unit_Tests/ut_elevator_IF.s"
-	@echo "... dev/debug/Unit_Tests/ut_engineer.obj"
-	@echo "... dev/debug/Unit_Tests/ut_engineer.i"
-	@echo "... dev/debug/Unit_Tests/ut_engineer.s"
-	@echo "... dev/debug/Unit_Tests/ut_engineer_gimbal.obj"
-	@echo "... dev/debug/Unit_Tests/ut_engineer_gimbal.i"
-	@echo "... dev/debug/Unit_Tests/ut_engineer_gimbal.s"
-	@echo "... dev/debug/Unit_Tests/ut_engineer_robotic_arm.obj"
-	@echo "... dev/debug/Unit_Tests/ut_engineer_robotic_arm.i"
-	@echo "... dev/debug/Unit_Tests/ut_engineer_robotic_arm.s"
-	@echo "... dev/debug/Unit_Tests/ut_gimbalIF.obj"
-	@echo "... dev/debug/Unit_Tests/ut_gimbalIF.i"
-	@echo "... dev/debug/Unit_Tests/ut_gimbalIF.s"
 	@echo "... dev/debug/Unit_Tests/ut_ist8310.obj"
 	@echo "... dev/debug/Unit_Tests/ut_ist8310.i"
 	@echo "... dev/debug/Unit_Tests/ut_ist8310.s"
@@ -7118,54 +4090,12 @@ help:
 	@echo "... dev/debug/Unit_Tests/ut_mpu6500.obj"
 	@echo "... dev/debug/Unit_Tests/ut_mpu6500.i"
 	@echo "... dev/debug/Unit_Tests/ut_mpu6500.s"
-	@echo "... dev/debug/Unit_Tests/ut_refereeIF.obj"
-	@echo "... dev/debug/Unit_Tests/ut_refereeIF.i"
-	@echo "... dev/debug/Unit_Tests/ut_refereeIF.s"
 	@echo "... dev/debug/Unit_Tests/ut_remoteIF.obj"
 	@echo "... dev/debug/Unit_Tests/ut_remoteIF.i"
 	@echo "... dev/debug/Unit_Tests/ut_remoteIF.s"
-	@echo "... dev/debug/Unit_Tests/ut_sd_card.obj"
-	@echo "... dev/debug/Unit_Tests/ut_sd_card.i"
-	@echo "... dev/debug/Unit_Tests/ut_sd_card.s"
-	@echo "... dev/debug/Unit_Tests/ut_sensors_sound.obj"
-	@echo "... dev/debug/Unit_Tests/ut_sensors_sound.i"
-	@echo "... dev/debug/Unit_Tests/ut_sensors_sound.s"
-	@echo "... dev/debug/Unit_Tests/ut_shoot.obj"
-	@echo "... dev/debug/Unit_Tests/ut_shoot.i"
-	@echo "... dev/debug/Unit_Tests/ut_shoot.s"
-	@echo "... dev/debug/Unit_Tests/ut_super_capacitance.obj"
-	@echo "... dev/debug/Unit_Tests/ut_super_capacitance.i"
-	@echo "... dev/debug/Unit_Tests/ut_super_capacitance.s"
 	@echo "... dev/debug/param_adjusts/pa_chassis.obj"
 	@echo "... dev/debug/param_adjusts/pa_chassis.i"
 	@echo "... dev/debug/param_adjusts/pa_chassis.s"
-	@echo "... dev/debug/param_adjusts/pa_engineer_chassis.obj"
-	@echo "... dev/debug/param_adjusts/pa_engineer_chassis.i"
-	@echo "... dev/debug/param_adjusts/pa_engineer_chassis.s"
-	@echo "... dev/debug/param_adjusts/pa_engineer_elevator.obj"
-	@echo "... dev/debug/param_adjusts/pa_engineer_elevator.i"
-	@echo "... dev/debug/param_adjusts/pa_engineer_elevator.s"
-	@echo "... dev/debug/param_adjusts/pa_gimbal.obj"
-	@echo "... dev/debug/param_adjusts/pa_gimbal.i"
-	@echo "... dev/debug/param_adjusts/pa_gimbal.s"
-	@echo "... dev/debug/param_adjusts/pa_hero_shoot.obj"
-	@echo "... dev/debug/param_adjusts/pa_hero_shoot.i"
-	@echo "... dev/debug/param_adjusts/pa_hero_shoot.s"
-	@echo "... dev/debug/param_adjusts/pa_infantry_shoot.obj"
-	@echo "... dev/debug/param_adjusts/pa_infantry_shoot.i"
-	@echo "... dev/debug/param_adjusts/pa_infantry_shoot.s"
-	@echo "... dev/debug/param_adjusts/pa_new_gimbal.obj"
-	@echo "... dev/debug/param_adjusts/pa_new_gimbal.i"
-	@echo "... dev/debug/param_adjusts/pa_new_gimbal.s"
-	@echo "... dev/debug/param_adjusts/pa_sentry_chassis.obj"
-	@echo "... dev/debug/param_adjusts/pa_sentry_chassis.i"
-	@echo "... dev/debug/param_adjusts/pa_sentry_chassis.s"
-	@echo "... dev/debug/param_adjusts/pa_skywalker.obj"
-	@echo "... dev/debug/param_adjusts/pa_skywalker.i"
-	@echo "... dev/debug/param_adjusts/pa_skywalker.s"
-	@echo "... dev/debug/param_adjusts/pa_user_gimbal.obj"
-	@echo "... dev/debug/param_adjusts/pa_user_gimbal.i"
-	@echo "... dev/debug/param_adjusts/pa_user_gimbal.s"
 	@echo "... dev/debug/shell/printf.obj"
 	@echo "... dev/debug/shell/printf.i"
 	@echo "... dev/debug/shell/printf.s"
@@ -7193,9 +4123,6 @@ help:
 	@echo "... dev/interface/ahrs/imu_on_board.obj"
 	@echo "... dev/interface/ahrs/imu_on_board.i"
 	@echo "... dev/interface/ahrs/imu_on_board.s"
-	@echo "... dev/interface/air_tank_interface.obj"
-	@echo "... dev/interface/air_tank_interface.i"
-	@echo "... dev/interface/air_tank_interface.s"
 	@echo "... dev/interface/buzzer_interface.obj"
 	@echo "... dev/interface/buzzer_interface.i"
 	@echo "... dev/interface/buzzer_interface.s"
@@ -7205,69 +4132,24 @@ help:
 	@echo "... dev/interface/chassis_interface.obj"
 	@echo "... dev/interface/chassis_interface.i"
 	@echo "... dev/interface/chassis_interface.s"
-	@echo "... dev/interface/dms_interface.obj"
-	@echo "... dev/interface/dms_interface.i"
-	@echo "... dev/interface/dms_interface.s"
-	@echo "... dev/interface/engineer_elevator_interface.obj"
-	@echo "... dev/interface/engineer_elevator_interface.i"
-	@echo "... dev/interface/engineer_elevator_interface.s"
-	@echo "... dev/interface/engineer_gimbal.obj"
-	@echo "... dev/interface/engineer_gimbal.i"
-	@echo "... dev/interface/engineer_gimbal.s"
-	@echo "... dev/interface/engineer_interface.obj"
-	@echo "... dev/interface/engineer_interface.i"
-	@echo "... dev/interface/engineer_interface.s"
 	@echo "... dev/interface/gimbal_interface.obj"
 	@echo "... dev/interface/gimbal_interface.i"
 	@echo "... dev/interface/gimbal_interface.s"
 	@echo "... dev/interface/led.obj"
 	@echo "... dev/interface/led.i"
 	@echo "... dev/interface/led.s"
-	@echo "... dev/interface/new_sentry_chassis_interface.obj"
-	@echo "... dev/interface/new_sentry_chassis_interface.i"
-	@echo "... dev/interface/new_sentry_chassis_interface.s"
-	@echo "... dev/interface/referee_interface.obj"
-	@echo "... dev/interface/referee_interface.i"
-	@echo "... dev/interface/referee_interface.s"
 	@echo "... dev/interface/remote_interpreter.obj"
 	@echo "... dev/interface/remote_interpreter.i"
 	@echo "... dev/interface/remote_interpreter.s"
-	@echo "... dev/interface/robotic_arm_interface.obj"
-	@echo "... dev/interface/robotic_arm_interface.i"
-	@echo "... dev/interface/robotic_arm_interface.s"
 	@echo "... dev/interface/sd_card_interface.obj"
 	@echo "... dev/interface/sd_card_interface.i"
 	@echo "... dev/interface/sd_card_interface.s"
-	@echo "... dev/interface/sentry_chassis_interface.obj"
-	@echo "... dev/interface/sentry_chassis_interface.i"
-	@echo "... dev/interface/sentry_chassis_interface.s"
-	@echo "... dev/interface/super_capacitor_port.obj"
-	@echo "... dev/interface/super_capacitor_port.i"
-	@echo "... dev/interface/super_capacitor_port.s"
 	@echo "... dev/interface/vision_interface.obj"
 	@echo "... dev/interface/vision_interface.i"
 	@echo "... dev/interface/vision_interface.s"
 	@echo "... dev/logic/chassis_logic.obj"
 	@echo "... dev/logic/chassis_logic.i"
 	@echo "... dev/logic/chassis_logic.s"
-	@echo "... dev/logic/engineer_elevator_logic.obj"
-	@echo "... dev/logic/engineer_elevator_logic.i"
-	@echo "... dev/logic/engineer_elevator_logic.s"
-	@echo "... dev/logic/gimbal_logic.obj"
-	@echo "... dev/logic/gimbal_logic.i"
-	@echo "... dev/logic/gimbal_logic.s"
-	@echo "... dev/logic/new_sentry_chassis_logic.obj"
-	@echo "... dev/logic/new_sentry_chassis_logic.i"
-	@echo "... dev/logic/new_sentry_chassis_logic.s"
-	@echo "... dev/logic/referee_UI_logic.obj"
-	@echo "... dev/logic/referee_UI_logic.i"
-	@echo "... dev/logic/referee_UI_logic.s"
-	@echo "... dev/logic/robotic_arm_logic.obj"
-	@echo "... dev/logic/robotic_arm_logic.i"
-	@echo "... dev/logic/robotic_arm_logic.s"
-	@echo "... dev/logic/shoot_logic.obj"
-	@echo "... dev/logic/shoot_logic.i"
-	@echo "... dev/logic/shoot_logic.s"
 	@echo "... dev/module/button_monitor.obj"
 	@echo "... dev/module/button_monitor.i"
 	@echo "... dev/module/button_monitor.s"
@@ -7277,72 +4159,12 @@ help:
 	@echo "... dev/scheduler/chassis_scheduler.obj"
 	@echo "... dev/scheduler/chassis_scheduler.i"
 	@echo "... dev/scheduler/chassis_scheduler.s"
-	@echo "... dev/scheduler/engineer_chassis_skd.obj"
-	@echo "... dev/scheduler/engineer_chassis_skd.i"
-	@echo "... dev/scheduler/engineer_chassis_skd.s"
-	@echo "... dev/scheduler/engineer_elevator_skd.obj"
-	@echo "... dev/scheduler/engineer_elevator_skd.i"
-	@echo "... dev/scheduler/engineer_elevator_skd.s"
-	@echo "... dev/scheduler/engineer_rescue_skd.obj"
-	@echo "... dev/scheduler/engineer_rescue_skd.i"
-	@echo "... dev/scheduler/engineer_rescue_skd.s"
 	@echo "... dev/scheduler/gimbal_scheduler.obj"
 	@echo "... dev/scheduler/gimbal_scheduler.i"
 	@echo "... dev/scheduler/gimbal_scheduler.s"
-	@echo "... dev/scheduler/new_robotic_arm_skd.obj"
-	@echo "... dev/scheduler/new_robotic_arm_skd.i"
-	@echo "... dev/scheduler/new_robotic_arm_skd.s"
-	@echo "... dev/scheduler/new_sentry_chassis_scheduler.obj"
-	@echo "... dev/scheduler/new_sentry_chassis_scheduler.i"
-	@echo "... dev/scheduler/new_sentry_chassis_scheduler.s"
-	@echo "... dev/scheduler/referee_UI_update_scheduler.obj"
-	@echo "... dev/scheduler/referee_UI_update_scheduler.i"
-	@echo "... dev/scheduler/referee_UI_update_scheduler.s"
-	@echo "... dev/scheduler/robotic_arm_skd.obj"
-	@echo "... dev/scheduler/robotic_arm_skd.i"
-	@echo "... dev/scheduler/robotic_arm_skd.s"
-	@echo "... dev/scheduler/sentry_chassis_scheduler.obj"
-	@echo "... dev/scheduler/sentry_chassis_scheduler.i"
-	@echo "... dev/scheduler/sentry_chassis_scheduler.s"
-	@echo "... dev/scheduler/shoot_scheduler.obj"
-	@echo "... dev/scheduler/shoot_scheduler.i"
-	@echo "... dev/scheduler/shoot_scheduler.s"
 	@echo "... dev/scheduler/vision_scheduler.obj"
 	@echo "... dev/scheduler/vision_scheduler.i"
 	@echo "... dev/scheduler/vision_scheduler.s"
-	@echo "... dev/vehicle/aerial/inspector_aerial.obj"
-	@echo "... dev/vehicle/aerial/inspector_aerial.i"
-	@echo "... dev/vehicle/aerial/inspector_aerial.s"
-	@echo "... dev/vehicle/aerial/main_aerial.obj"
-	@echo "... dev/vehicle/aerial/main_aerial.i"
-	@echo "... dev/vehicle/aerial/main_aerial.s"
-	@echo "... dev/vehicle/aerial/settings_aerial.obj"
-	@echo "... dev/vehicle/aerial/settings_aerial.i"
-	@echo "... dev/vehicle/aerial/settings_aerial.s"
-	@echo "... dev/vehicle/aerial/user_aerial.obj"
-	@echo "... dev/vehicle/aerial/user_aerial.i"
-	@echo "... dev/vehicle/aerial/user_aerial.s"
-	@echo "... dev/vehicle/engineer/inspector_engineer.obj"
-	@echo "... dev/vehicle/engineer/inspector_engineer.i"
-	@echo "... dev/vehicle/engineer/inspector_engineer.s"
-	@echo "... dev/vehicle/engineer/main_engineer.obj"
-	@echo "... dev/vehicle/engineer/main_engineer.i"
-	@echo "... dev/vehicle/engineer/main_engineer.s"
-	@echo "... dev/vehicle/engineer/settings_engineer.obj"
-	@echo "... dev/vehicle/engineer/settings_engineer.i"
-	@echo "... dev/vehicle/engineer/settings_engineer.s"
-	@echo "... dev/vehicle/engineer/user_engineer.obj"
-	@echo "... dev/vehicle/engineer/user_engineer.i"
-	@echo "... dev/vehicle/engineer/user_engineer.s"
-	@echo "... dev/vehicle/hero/inspector_hero.obj"
-	@echo "... dev/vehicle/hero/inspector_hero.i"
-	@echo "... dev/vehicle/hero/inspector_hero.s"
-	@echo "... dev/vehicle/hero/main_hero.obj"
-	@echo "... dev/vehicle/hero/main_hero.i"
-	@echo "... dev/vehicle/hero/main_hero.s"
-	@echo "... dev/vehicle/hero/user_hero.obj"
-	@echo "... dev/vehicle/hero/user_hero.i"
-	@echo "... dev/vehicle/hero/user_hero.s"
 	@echo "... dev/vehicle/infantry/inspector_infantry.obj"
 	@echo "... dev/vehicle/infantry/inspector_infantry.i"
 	@echo "... dev/vehicle/infantry/inspector_infantry.s"
@@ -7352,12 +4174,6 @@ help:
 	@echo "... dev/vehicle/infantry/user_infantry.obj"
 	@echo "... dev/vehicle/infantry/user_infantry.i"
 	@echo "... dev/vehicle/infantry/user_infantry.s"
-	@echo "... dev/vehicle/sentry/main_sentry.obj"
-	@echo "... dev/vehicle/sentry/main_sentry.i"
-	@echo "... dev/vehicle/sentry/main_sentry.s"
-	@echo "... dev/vehicle/sentry/user_sentry.obj"
-	@echo "... dev/vehicle/sentry/user_sentry.i"
-	@echo "... dev/vehicle/sentry/user_sentry.s"
 	@echo "... os/common/oslib/src/chfactory.obj"
 	@echo "... os/common/oslib/src/chfactory.i"
 	@echo "... os/common/oslib/src/chfactory.s"

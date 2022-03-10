@@ -65,7 +65,7 @@ public:
      * @param can2_            Initialized CANInterface for chassis motors
      * @param motor_can_config A group that contains ***ALL*** gimbal motor's info, include (can_channel, motor_can_id, motor_type)
      */
-    static void init(CANInterface* can1_interface, CANInterface *can2_interface,
+    static void init(CANInterface* can1_interface,
                      motor_can_config_t motor_can_config[MOTOR_COUNT]);
 
     /** Structure for each motor */

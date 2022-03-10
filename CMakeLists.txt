@@ -90,10 +90,7 @@ set(VISION_SRC
 #        dev/interface/vision.cpp
         )
 
-set(REFEREE_SRC
-        dev/interface/referee_interface.cpp
-        dev/scheduler/referee_UI_update_scheduler.cpp
-        dev/logic/referee_UI_logic.cpp)
+set(REFEREE_SRC)
 
 include_directories(dev/board/${BOARD_NAME})  # include board configs
 
@@ -117,14 +114,10 @@ set(INFANTRY_SRC
         # Infantry gimbal
         dev/interface/gimbal_interface.cpp
         dev/scheduler/gimbal_scheduler.cpp
-        dev/logic/gimbal_logic.cpp
 
         # Infantry shoot
-        dev/scheduler/shoot_scheduler.cpp
-        dev/logic/shoot_logic.cpp
 
         # Infantry has super capacitor
-        dev/interface/super_capacitor_port.cpp
 
         # Main
         dev/vehicle/infantry/inspector_infantry.cpp
@@ -159,151 +152,11 @@ target_include_directories(INFANTRY_FIVE PRIVATE dev/vehicle/infantry)
 target_compile_definitions(INFANTRY_FIVE PRIVATE ${INFANTRY_DEFS} INFANTRY_FIVE)
 target_link_libraries(INFANTRY_FIVE ${INFANTRY_LIBS})
 
-# Main Program -- Hero
-add_executable(HERO
-        ${VEHICLE_COMMON_SRC}
-        ${AHRS_SRC}
-        ${CHASSIS_SRC}
-        ${VISION_SRC}
-        ${REFEREE_SRC}
-
-        # Hero gimbal
-        dev/interface/gimbal_interface.cpp
-        dev/scheduler/gimbal_scheduler.cpp
-        dev/logic/gimbal_logic.cpp
-
-        # Hero shoot
-        dev/scheduler/shoot_scheduler.cpp
-        dev/logic/shoot_logic.cpp
-
-        # Hero has super capacitor
-        dev/interface/super_capacitor_port.cpp
-
-        # Main
-        dev/vehicle/hero/inspector_hero.cpp
-        dev/vehicle/hero/user_hero.cpp
-        dev/vehicle/hero/main_hero.cpp)
-target_include_directories(HERO PRIVATE dev/vehicle/hero)
-target_compile_definitions(HERO PRIVATE HERO)
-target_link_libraries(HERO ${AHRS_LIB})
-
-# Main Program -- Sentry
-add_executable(SENTRY
-        dev/interface/can_interface.cpp
-        dev/interface/remote_interpreter.cpp
-#        dev/interface/referee_interface.cpp
-        dev/interface/sd_card_interface.cpp
-#        ${VISION_SRC}
-#        ${AHRS_SRC}
-        dev/common/CRC8.cpp
-        dev/common/CRC16.cpp
-
-        dev/interface/new_sentry_chassis_interface.cpp
-        dev/scheduler/new_sentry_chassis_scheduler.cpp
-        dev/logic/new_sentry_chassis_logic.cpp
-
-#        dev/interface/gimbal_interface.cpp
-#        dev/scheduler/gimbal_scheduler.cpp
-#        dev/logic/gimbal_logic.cpp
-
-#        dev/scheduler/shoot_scheduler.cpp
-#        dev/logic/shoot_logic.cpp
-
-        dev/vehicle/sentry/main_sentry.cpp
-#        dev/vehicle/sentry/inspector_sentry.cpp
-#        dev/vehicle/sentry/settings_sentry.cpp
-        dev/vehicle/sentry/user_sentry.cpp
-
-        )
-target_include_directories(SENTRY PRIVATE dev/vehicle/sentry)
-target_compile_definitions(SENTRY PRIVATE SENTRY)
-
-#Main Program -- Aerial
-add_executable(AERIAL
-        dev/module/pid_controller.hpp
-        dev/interface/can_interface.cpp
-        dev/interface/remote_interpreter.cpp
-        dev/interface/sd_card_interface.cpp
-
-        dev/interface/gimbal_interface.cpp
-        dev/scheduler/gimbal_scheduler.cpp
-        dev/logic/gimbal_logic.cpp
-
-        dev/interface/referee_interface.cpp
-        dev/common/CRC8.cpp
-        dev/common/CRC16.cpp
-        ${VISION_SRC}
-
-        dev/interface/ahrs/ahrs_ext.cpp
-
-        dev/scheduler/shoot_scheduler.cpp
-        dev/logic/shoot_logic.cpp
-
-        dev/vehicle/aerial/main_aerial.cpp
-        dev/vehicle/aerial/user_aerial.cpp
-        dev/vehicle/aerial/inspector_aerial.cpp
-        dev/vehicle/aerial/settings_aerial.cpp
-        )
-target_include_directories(AERIAL PRIVATE dev/vehicle/aerial)
-target_compile_definitions(AERIAL PRIVATE AERIAL)
-
-# Main Program -- Engineer
-add_executable(ENGINEER
-        dev/interface/can_interface.cpp
-        dev/interface/remote_interpreter.cpp
-        dev/interface/referee_interface.cpp
-        dev/interface/sd_card_interface.cpp
-        dev/common/CRC8.cpp
-        dev/common/CRC16.cpp
-
-        dev/interface/chassis_interface.cpp
-        dev/interface/dms_interface.cpp
-        dev/interface/engineer_elevator_interface.cpp
-        dev/interface/engineer_gimbal.cpp
-        dev/interface/robotic_arm_interface.cpp
-        dev/scheduler/engineer_chassis_skd.cpp
-        dev/scheduler/engineer_elevator_skd.cpp
-        dev/scheduler/robotic_arm_skd.cpp
-        dev/logic/engineer_elevator_logic.cpp
-        dev/vehicle/engineer/main_engineer.cpp
-        dev/vehicle/engineer/user_engineer.cpp
-        dev/vehicle/engineer/inspector_engineer.cpp
-        dev/vehicle/engineer/settings_engineer.cpp
-        dev/interface/engineer_interface.cpp
-        dev/interface/engineer_interface.h
-        dev/interface/air_tank_interface.cpp
-        dev/interface/air_tank_interface.h
-        dev/scheduler/engineer_rescue_skd.cpp
-        dev/scheduler/engineer_rescue_skd.h
-        dev/logic/robotic_arm_logic.cpp
-        dev/logic/robotic_arm_logic.h)
-target_include_directories(ENGINEER PRIVATE dev/vehicle/engineer)
-target_compile_definitions(ENGINEER PRIVATE ENGINEER)
-
 
 # ======================================= Unit Tests Programs =======================================
 
 # Includes Unit Tests and Param Adjust programs
 
-# --------------------------------------- Unit Tests ---------------------------------------
-add_executable(ut_shoot
-        dev/debug/Unit_Tests/ut_shoot.cpp
-        dev/interface/can_interface.cpp
-        dev/module/pid_controller.hpp
-        dev/interface/remote_interpreter.cpp)
-
-add_executable(ut_engineer
-        dev/debug/Unit_Tests/ut_engineer.cpp
-        dev/scheduler/engineer_chassis_skd.cpp
-        dev/logic/engineer_elevator_logic.cpp
-        dev/scheduler/engineer_elevator_skd.cpp
-        dev/interface/engineer_elevator_interface.cpp
-        dev/scheduler/robotic_arm_skd.cpp
-        dev/interface/chassis_interface.cpp
-        dev/interface/robotic_arm_interface.cpp
-        dev/interface/dms_interface.cpp
-        dev/interface/referee_interface.cpp
-        dev/interface/can_interface.cpp)
 
 # Blink
 add_executable(ut_blink
@@ -361,97 +214,7 @@ add_executable(ut_can
         dev/interface/led.cpp
         dev/debug/Unit_Tests/ut_can_interface.cpp)
 
-# Elevator Interface: include CANInterface, ElevatorInterface, and the unit test modules.
-add_executable(ut_elevator_interface
-        dev/interface/can_interface.cpp
-        dev/debug/Unit_Tests/ut_elevator_IF.cpp)
-
-# Engineer Gimbal Unit tests.
-add_executable(ut_engineer_gimbal
-        dev/interface/engineer_gimbal.cpp
-        dev/interface/remote_interpreter.cpp
-        dev/debug/Unit_Tests/ut_engineer_gimbal.cpp)
-
-# Gimbal Interface
-add_executable(ut_gimbal_interface
-        dev/interface/gimbal_interface.cpp
-        dev/interface/can_interface.cpp
-        dev/scheduler/buzzer_scheduler.cpp
-        dev/debug/Unit_Tests/ut_gimbalIF.cpp)
-
-# Robotic Arm
-add_executable(ut_robotic_arm
-        dev/debug/Unit_Tests/ut_engineer_robotic_arm.cpp
-        dev/interface/can_interface.cpp
-        dev/interface/robotic_arm_interface.cpp
-        dev/scheduler/robotic_arm_skd.cpp)
-
-# Auto Robotic Arm
-add_executable(ut_auto_robotic_arm
-        dev/scheduler/new_robotic_arm_skd.cpp)
-
-# Referee
-add_executable(ut_referee_interface
-        dev/common/CRC8.cpp
-        dev/common/CRC16.cpp
-        dev/interface/referee_interface.cpp
-        dev/debug/Unit_Tests/ut_refereeIF.cpp)
-
-add_executable(ut_sd_card
-        dev/interface/sd_card_interface.cpp
-        dev/common/CRC16.cpp
-        dev/debug/Unit_Tests/ut_sd_card.cpp)
-
-add_executable(ut_super_capacitor
-        dev/interface/super_capacitor_port.cpp
-        dev/interface/can_interface.cpp
-        dev/debug/shell/shell.cpp
-        dev/debug/Unit_Tests/ut_super_capacitance.cpp
-        dev/scheduler/buzzer_scheduler.cpp
-        dev/interface/led.cpp
-        dev/interface/referee_interface.cpp
-        dev/common/CRC8.cpp
-        dev/common/CRC16.cpp)
-
-add_executable(ut_adc
-        dev/debug/Unit_Tests/ut_adc.cpp
-        dev/interface/dms_interface.cpp)
-
-add_executable(ut_sensors_sound
-        dev/debug/Unit_Tests/ut_sensors_sound.cpp
-        )
-
 # --------------------------------------- Param Adjusts ---------------------------------------
-
-add_executable(pa_hero_gimbal
-        ${VEHICLE_COMMON_SRC}
-        ${AHRS_SRC}
-
-        # Hero gimbal
-        dev/interface/gimbal_interface.cpp
-        dev/scheduler/gimbal_scheduler.cpp
-
-        # PAUser
-        dev/debug/param_adjusts/pa_user_gimbal.cpp
-        )
-target_include_directories(pa_hero_gimbal PRIVATE dev/vehicle/hero)
-target_compile_definitions(pa_hero_gimbal PRIVATE
-        PARAM_ADJUST
-        PARAM_ADJUST_INCLUDE="debug/param_adjusts/pa_user_gimbal.h"
-        PARAM_ADJUST_CLASS=PAUserGimbal
-        HERO
-        HERO_GIMBAL_ENABLE=1
-        HERO_SHOOT_ENABLE=0
-        HERO_CHASSIS_ENABLE=0
-        HERO_VISION_ENABLE=0)
-target_link_libraries(pa_hero_gimbal ${AHRS_LIB})
-
-# Hero Shoot
-add_executable(pa_hero_shoot
-        dev/interface/can_interface.cpp
-        dev/interface/gimbal_interface.cpp
-        dev/debug/param_adjusts/pa_hero_shoot.cpp)
-target_compile_definitions(pa_hero_shoot PUBLIC HERO)
 
 # Chassis
 add_executable(pa_chassis
@@ -463,87 +226,6 @@ add_executable(pa_chassis
         dev/debug/param_adjusts/pa_chassis.cpp)
 target_compile_definitions(pa_chassis PUBLIC INFANTRY)
 
-# Shoot: include CANInterface, GimbalIF, GimbalController, GimbalFeedbackThread and adjustment modules.
-add_executable(pa_infantry_shoot
-        dev/common/CRC16.cpp
-        dev/interface/sd_card_interface.cpp
-        dev/interface/remote_interpreter.cpp
-        ${AHRS_SRC}
-        dev/interface/can_interface.cpp
-        dev/interface/gimbal_interface.cpp
-        dev/module/pid_controller.hpp
-        dev/scheduler/gimbal_scheduler.cpp
-        dev/scheduler/shoot_scheduler.cpp
-        dev/scheduler/buzzer_scheduler.cpp
-        dev/interface/ahrs/ahrs.cpp
-        dev/debug/param_adjusts/pa_infantry_shoot.cpp)
-target_compile_definitions(pa_infantry_shoot PRIVATE SHELL_NO_ECHO_MODE)
-target_link_libraries(pa_infantry_shoot ${AHRS_LIB})
-
-# Gimbal: include CANInterface, GimbalInterface, GimbalController, GimbalFeedbackThread and adjustment modules.
-add_executable(pa_gimbal
-        dev/common/CRC16.cpp
-        dev/interface/sd_card_interface.cpp
-        ${AHRS_SRC}
-        dev/interface/can_interface.cpp
-        dev/interface/gimbal_interface.cpp
-        dev/module/pid_controller.hpp
-        dev/scheduler/gimbal_scheduler.cpp
-        dev/scheduler/shoot_scheduler.cpp
-        dev/scheduler/buzzer_scheduler.cpp
-        dev/interface/remote_interpreter.cpp
-        dev/interface/ahrs/ahrs.cpp
-        dev/debug/param_adjusts/pa_gimbal.cpp)
-target_compile_definitions(pa_gimbal PRIVATE SHELL_NO_ECHO_MODE)
-target_link_libraries(pa_gimbal ${AHRS_LIB})
-
-add_executable(pa_new_gimbal
-        dev/common/CRC16.cpp
-        dev/interface/sd_card_interface.cpp
-        dev/interface/remote_interpreter.cpp
-        ${AHRS_SRC}
-        dev/interface/can_interface.cpp
-        dev/interface/gimbal_interface.cpp
-        dev/module/pid_controller.hpp
-        dev/scheduler/gimbal_scheduler.cpp
-        dev/scheduler/shoot_scheduler.cpp
-        dev/scheduler/buzzer_scheduler.cpp
-        dev/interface/ahrs/ahrs.cpp
-        dev/debug/param_adjusts/pa_new_gimbal.cpp)
-target_link_libraries(pa_new_gimbal ${AHRS_LIB})
-
-# Elevator: include CANInterface, ElevatorInterface, ElevatorController, and the unit test modules.
-add_executable(pa_elevator
-        dev/interface/can_interface.cpp
-        dev/module/pid_controller.hpp
-        dev/logic/engineer_elevator_logic.cpp
-        dev/scheduler/engineer_elevator_skd.cpp
-        dev/interface/engineer_elevator_interface.cpp
-        dev/debug/param_adjusts/pa_engineer_elevator.cpp)
-
-add_executable(pa_engineer_chassis
-        dev/interface/can_interface.cpp
-        dev/module/pid_controller.hpp
-        dev/scheduler/engineer_chassis_skd.cpp
-        dev/debug/param_adjusts/pa_engineer_chassis.cpp)
-
-# Adjust Params of Skywalker-20A for friction wheels
-add_executable(pa_skywalker
-        dev/debug/param_adjusts/pa_skywalker.cpp
-        dev/interface/remote_interpreter.cpp
-        dev/scheduler/buzzer_scheduler.cpp)
-
-
-# Adjust Params of Sentry Chassis
-add_executable(pa_sentry_chassis
-        dev/interface/can_interface.cpp
-        dev/module/pid_controller.hpp
-        dev/interface/sentry_chassis_interface.cpp
-        dev/scheduler/sentry_chassis_scheduler.cpp
-        dev/debug/param_adjusts/pa_sentry_chassis.cpp
-        dev/interface/referee_interface.cpp
-        dev/common/CRC8.cpp
-        dev/common/CRC16.cpp)
 
 add_executable(ca_ahrs_infantry
         ${AHRS_SRC}
@@ -553,15 +235,6 @@ add_executable(ca_ahrs_infantry
 target_link_libraries(ca_ahrs_infantry ${AHRS_LIB})
 target_include_directories(ca_ahrs_infantry PRIVATE dev/vehicle/infantry)
 target_compile_definitions(ca_ahrs_infantry PRIVATE INFANTRY)
-
-add_executable(ca_ahrs_hero
-        ${AHRS_SRC}
-        dev/common/CRC16.cpp
-        dev/interface/sd_card_interface.cpp
-        dev/debug/Unit_Tests/ca_ahrs.cpp)
-target_link_libraries(ca_ahrs_hero ${AHRS_LIB})
-target_include_directories(ca_ahrs_hero PRIVATE dev/vehicle/hero)
-target_compile_definitions(ca_ahrs_hero PRIVATE HERO)
 
 # ================================= Post Configurations for all targets =================================
 

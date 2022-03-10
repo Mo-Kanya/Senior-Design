@@ -16,9 +16,6 @@
 #include "ch.hpp"
 #include "math.h"
 
-#include "referee_interface.h"
-#include "referee_UI_logic.h"
-#include "super_capacitor_port.h"
 #include "pid_controller.hpp"
 
 #if defined(INFANTRY)
@@ -47,12 +44,11 @@ public:
      * @param cap_power_set_thread_prio_ Thread priority for the capacitor power set thread
      * @param dodge_mode_max_omega     Max Rotation angular speed (omega) in DODGE_MODE [degree/s]
      */
-    static void init(tprio_t dodge_thread_prio_, tprio_t cap_power_set_thread_prio_, float dodge_mode_max_omega, float biased_angle, PIDController::pid_params_t omega_power_pid);
+    static void init();
 
     enum action_t {
         FORCED_RELAX_MODE,
         FOLLOW_MODE,
-        DODGE_MODE,
     };
 
     /**
@@ -75,7 +71,6 @@ public:
     static void set_target(float vx, float vy);
 
 private:
-    static PIDController dodge_omega_power_pid;
 
     static action_t action;
     static float target_vx;
@@ -84,36 +79,6 @@ private:
     static float target_omega;
 
     static void apply_target();  // helper function to apply target values to ChassisSKD
-    static float dodge_mode_max_omega_;  // rotation speed (omega) in DODGE_MODE [degree/s]
-    static float dodge_mode_min_omega_;
-    static int dodge_mode_randomize_max_time_;  // [ms]
-    static int dodge_mode_randomize_min_time_;  // [ms]
-    static float biased_angle_;    // gimbal angle in dodge mode set up for Hero
-
-    static tprio_t dodge_thread_prio;
-
-    class DodgeModeSwitchThread : public chibios_rt::BaseStaticThread<512> {
-    public:
-
-        bool started = false;
-
-    private:
-
-        static constexpr unsigned DODGE_MODE_SWITCH_INTERVAL = CHASSIS_DODGE_MODE_INTERVAL;  // interval to switch direction in DODGE_MODE [ms]
-
-        void main() final;
-    };
-
-    class CapacitorPowerSetThread : public chibios_rt::BaseStaticThread<512> {
-    public:
-    private:
-        static constexpr unsigned CAP_POWER_SET_INTERVAL = 100; //[ms]
-        void main() final;
-    };
-
-    static CapacitorPowerSetThread capacitorPowerSetThread;
-    static DodgeModeSwitchThread dodgeModeSwitchThread;
-    static chibios_rt::ThreadReference dodgeThreadReference;
 };
 
 

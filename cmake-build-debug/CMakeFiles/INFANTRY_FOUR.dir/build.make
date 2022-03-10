@@ -245,48 +245,9 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/vision_scheduler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/vision_scheduler.cpp.s"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kanya/Projects/Senior-Design/dev/scheduler/vision_scheduler.cpp -o CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/vision_scheduler.cpp.s
 
-CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
-CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.obj: ../dev/interface/referee_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/interface/referee_interface.cpp
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kanya/Projects/Senior-Design/dev/interface/referee_interface.cpp > CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.i
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kanya/Projects/Senior-Design/dev/interface/referee_interface.cpp -o CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.s
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
-CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj: ../dev/scheduler/referee_UI_update_scheduler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/scheduler/referee_UI_update_scheduler.cpp
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kanya/Projects/Senior-Design/dev/scheduler/referee_UI_update_scheduler.cpp > CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.i
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kanya/Projects/Senior-Design/dev/scheduler/referee_UI_update_scheduler.cpp -o CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.s
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.obj: ../dev/logic/referee_UI_logic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/logic/referee_UI_logic.cpp
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kanya/Projects/Senior-Design/dev/logic/referee_UI_logic.cpp > CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.i
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kanya/Projects/Senior-Design/dev/logic/referee_UI_logic.cpp -o CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.s
-
 CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.obj: ../dev/interface/gimbal_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/interface/gimbal_interface.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.i: cmake_force
@@ -299,7 +260,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.s: cmake_force
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.obj: ../dev/scheduler/gimbal_scheduler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/scheduler/gimbal_scheduler.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.i: cmake_force
@@ -310,61 +271,9 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.s"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kanya/Projects/Senior-Design/dev/scheduler/gimbal_scheduler.cpp -o CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.s
 
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.obj: ../dev/logic/gimbal_logic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/logic/gimbal_logic.cpp
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kanya/Projects/Senior-Design/dev/logic/gimbal_logic.cpp > CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.i
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kanya/Projects/Senior-Design/dev/logic/gimbal_logic.cpp -o CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.s
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
-CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.obj: ../dev/scheduler/shoot_scheduler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/scheduler/shoot_scheduler.cpp
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kanya/Projects/Senior-Design/dev/scheduler/shoot_scheduler.cpp > CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.i
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kanya/Projects/Senior-Design/dev/scheduler/shoot_scheduler.cpp -o CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.s
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.obj: ../dev/logic/shoot_logic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/logic/shoot_logic.cpp
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kanya/Projects/Senior-Design/dev/logic/shoot_logic.cpp > CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.i
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kanya/Projects/Senior-Design/dev/logic/shoot_logic.cpp -o CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.s
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
-CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.obj: ../dev/interface/super_capacitor_port.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.obj"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/interface/super_capacitor_port.cpp
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.i"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kanya/Projects/Senior-Design/dev/interface/super_capacitor_port.cpp > CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.i
-
-CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.s"
-	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kanya/Projects/Senior-Design/dev/interface/super_capacitor_port.cpp -o CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.s
-
 CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/inspector_infantry.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/inspector_infantry.cpp.obj: ../dev/vehicle/infantry/inspector_infantry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/inspector_infantry.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/inspector_infantry.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/inspector_infantry.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/vehicle/infantry/inspector_infantry.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/inspector_infantry.cpp.i: cmake_force
@@ -377,7 +286,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/inspector_infantry.cpp.s: cmak
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.obj: ../dev/vehicle/infantry/user_infantry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/vehicle/infantry/user_infantry.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.i: cmake_force
@@ -390,7 +299,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.s: cmake_for
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/main_infantry.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/main_infantry.cpp.obj: ../dev/vehicle/infantry/main_infantry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/main_infantry.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/main_infantry.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/main_infantry.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/vehicle/infantry/main_infantry.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/main_infantry.cpp.i: cmake_force
@@ -403,7 +312,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/main_infantry.cpp.s: cmake_for
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.obj: ../dev/debug/shell/shell.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/debug/shell/shell.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.i: cmake_force
@@ -416,7 +325,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell.cpp.s: cmake_force
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.obj: ../dev/debug/shell/shell_base.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.obj -c /Users/kanya/Projects/Senior-Design/dev/debug/shell/shell_base.c
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.i: cmake_force
@@ -429,7 +338,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base.c.s: cmake_force
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.obj: ../dev/debug/shell/shell_base_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.obj -c /Users/kanya/Projects/Senior-Design/dev/debug/shell/shell_base_cmd.c
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.i: cmake_force
@@ -442,7 +351,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_base_cmd.c.s: cmake_force
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj: ../dev/debug/shell/shell_dbg_cmd.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/debug/shell/shell_dbg_cmd.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.i: cmake_force
@@ -455,7 +364,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/shell_dbg_cmd.cpp.s: cmake_force
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.obj: ../dev/debug/shell/printf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.obj -c /Users/kanya/Projects/Senior-Design/dev/debug/shell/printf.c
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.i: cmake_force
@@ -468,7 +377,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/debug/shell/printf.c.s: cmake_force
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.obj: ../dev/interface/led.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/interface/led.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.i: cmake_force
@@ -481,7 +390,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/interface/led.cpp.s: cmake_force
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.obj: ../dev/interface/buzzer_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/interface/buzzer_interface.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.i: cmake_force
@@ -494,7 +403,7 @@ CMakeFiles/INFANTRY_FOUR.dir/dev/interface/buzzer_interface.cpp.s: cmake_force
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.obj: CMakeFiles/INFANTRY_FOUR.dir/flags.make
 CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.obj: ../dev/scheduler/buzzer_scheduler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.obj"
 	/usr/local/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.obj -c /Users/kanya/Projects/Senior-Design/dev/scheduler/buzzer_scheduler.cpp
 
 CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/buzzer_scheduler.cpp.i: cmake_force
@@ -520,15 +429,8 @@ INFANTRY_FOUR_OBJECTS = \
 "CMakeFiles/INFANTRY_FOUR.dir/dev/logic/chassis_logic.cpp.obj" \
 "CMakeFiles/INFANTRY_FOUR.dir/dev/interface/vision_interface.cpp.obj" \
 "CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/vision_scheduler.cpp.obj" \
-"CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.obj" \
-"CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj" \
-"CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.obj" \
 "CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.obj" \
 "CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.obj" \
-"CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.obj" \
-"CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.obj" \
-"CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.obj" \
-"CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.obj" \
 "CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/inspector_infantry.cpp.obj" \
 "CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.obj" \
 "CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/main_infantry.cpp.obj" \
@@ -652,15 +554,8 @@ INFANTRY_FOUR_EXTERNAL_OBJECTS = \
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/logic/chassis_logic.cpp.obj
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/interface/vision_interface.cpp.obj
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/vision_scheduler.cpp.obj
-../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/interface/referee_interface.cpp.obj
-../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/referee_UI_update_scheduler.cpp.obj
-../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/logic/referee_UI_logic.cpp.obj
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/interface/gimbal_interface.cpp.obj
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/gimbal_scheduler.cpp.obj
-../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/logic/gimbal_logic.cpp.obj
-../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/scheduler/shoot_scheduler.cpp.obj
-../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/logic/shoot_logic.cpp.obj
-../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/interface/super_capacitor_port.cpp.obj
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/inspector_infantry.cpp.obj
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/user_infantry.cpp.obj
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/dev/vehicle/infantry/main_infantry.cpp.obj
@@ -770,7 +665,7 @@ INFANTRY_FOUR_EXTERNAL_OBJECTS = \
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/build.make
 ../build/meta.elf: ../dev/interface/ahrs/ahrs_lib.lib
 ../build/meta.elf: CMakeFiles/INFANTRY_FOUR.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Linking CXX executable ../build/meta.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kanya/Projects/Senior-Design/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable ../build/meta.elf"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Build for rm_board_2018_a"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/INFANTRY_FOUR.dir/link.txt --verbose=$(VERBOSE)
 	echo
