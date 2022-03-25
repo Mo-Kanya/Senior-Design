@@ -3,6 +3,7 @@
 //
 
 #include "user_infantry.h"
+#include "hardware_conf.h"
 
 // FIXME: change as input parameter from main()
 

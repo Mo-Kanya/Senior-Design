@@ -59,6 +59,7 @@
  */
 #define STM32F427xx
 
+#define BOARD_OTG_NOVBUSSENS
 /*
  * IO pins assignments.
  */

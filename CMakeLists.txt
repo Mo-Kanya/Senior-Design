@@ -66,6 +66,7 @@ set(VEHICLE_COMMON_SRC
         dev/module/pid_controller.hpp
         dev/interface/can_interface.cpp
         dev/interface/remote_interpreter.cpp
+        dev/interface/usb_serial_interface.cpp
         dev/common/CRC8.cpp
         dev/common/CRC16.cpp
         dev/interface/sd_card_interface.cpp)
