@@ -15,6 +15,8 @@
 
 ChassisSKD::mode_t ChassisSKD::mode = FORCED_RELAX_MODE;
 
+Matrix33 ChassisSKD::ahrs_angle_rotation;
+
 float ChassisSKD::target_vx = 0;
 float ChassisSKD::target_vy = 0;
 float ChassisSKD::target_theta = 0;
@@ -38,13 +40,21 @@ ChassisSKD::install_mode_t ChassisSKD::install_mode_;
 GimbalSKD::install_direction_t ChassisSKD::gimbal_yaw_install;
 
 ChassisSKD::SKDThread ChassisSKD::skd_thread;
+AbstractAHRS *ChassisSKD::gimbal_ahrs = nullptr;
 
 bool ChassisSKD::motor_enabled = true;
 
-void ChassisSKD::start(float wheel_base, float wheel_tread, float wheel_circumference, install_mode_t install_mode,
+void ChassisSKD::start(AbstractAHRS *gimbal_ahrs_, const Matrix33 ahrs_angle_rotation_,
+                       float wheel_base, float wheel_tread, float wheel_circumference, install_mode_t install_mode,
                        GimbalSKD::install_direction_t gimbal_yaw_install_, float chassis_gimbal_offset,
                        tprio_t thread_prio) {
-
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            ahrs_angle_rotation[i][j] = ahrs_angle_rotation_[i][j];
+        }
+    }
+    //// TODO here
+    gimbal_ahrs = gimbal_ahrs_;
     wheel_base_ = wheel_base;
     wheel_tread_ = wheel_tread;
     wheel_circumference_ = wheel_circumference;
@@ -82,15 +92,6 @@ void ChassisSKD::set_target(float vx, float vy, float theta) {
     target_theta = theta;
 }
 
-void ChassisSKD::set_dodge_target(float vx, float vy, float omega) {
-    target_vx = vx;
-    target_vy = vy;
-    target_w = omega;
-}
-
-float ChassisSKD::get_actual_theta() {
-    return actual_theta;
-}
 
 float ChassisSKD::get_target_theta() {
     return target_theta;
@@ -131,11 +132,10 @@ void ChassisSKD::SKDThread::main() {
                 actual_theta = GimbalIF::feedback[GimbalIF::YAW]->actual_angle * (float) gimbal_yaw_install;
 
                 if (mode == GIMBAL_COORDINATE_MODE) {
-                    if (ABS(actual_theta - target_theta) < THETA_DEAD_ZONE) {
-                        target_w = 0;
-                    } else {
-                        target_w = a2v_pid.calc(actual_theta, target_theta);
-                    }
+//                    if (ABS(actual_theta - target_theta) < THETA_DEAD_ZONE) {
+//                        target_w = 0;
+//                    } else {
+                    target_w = a2v_pid.calc(actual_theta, target_theta);
                 }
 
                 velocity_decompose(

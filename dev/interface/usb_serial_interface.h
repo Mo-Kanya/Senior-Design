@@ -1,6 +1,3 @@
-//
-// Created by 钱晨 on 11/21/21.
-//
 /*  Configuration file parameters sourced by ChibiOS Demo  */
 /*
     ChibiOS - Copyright (C) 2006..2018 Giovanni Di Sirio
@@ -31,24 +28,13 @@
  * @usage Please first define "BOARD_OTG_NOVBUSSENS" in board.h, to establish the appropriate communication with PC.
  * @code
  * 1. Enable HAL_USE_USB in halconf.h
- * 2. Call init() to initialize the virtual COM port.
- * 3. Use the SDU serial usb driver to communicate.
- * 3.a You can use it as shell
+ * 2. Call init function to initialize the VirtualCOMPort.
  * @endcode
  * */
 
-class USBSerialIF {
+class usbconf {
 public:
-    /**
-     * @brief Serial USB driver.
-     */
-    static SerialUSBDriver SDU;
-    /**
-     * @brief Initialize the virtual COM port.
-     */
-    static void init();
-
-private:
+    static SerialUSBDriver *SDU;
     /**
      * @brief VCOM Device descriptor data, from ChibiOS STM32F429 Discovery Board Example.
      * @details Detailed information for each parameter
@@ -170,6 +156,7 @@ private:
      */
     static SerialUSBConfig serusbcfg;
 
+// friend Shell;
 };
 
 

@@ -58,7 +58,7 @@
  * @note    The default is @p FALSE
  */
 #if !defined(STM32_USB_USE_OTG1) || defined(__DOXYGEN__)
-#define STM32_USB_USE_OTG1                  FALSE
+#define STM32_USB_USE_OTG1                  TRUE
 #endif
 
 /**
@@ -67,7 +67,7 @@
  * @note    The default is @p FALSE.
  */
 #if !defined(STM32_USB_USE_OTG2) || defined(__DOXYGEN__)
-#define STM32_USB_USE_OTG2                  FALSE
+#define STM32_USB_USE_OTG2                  TRUE
 #endif
 
 /**

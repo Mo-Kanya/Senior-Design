@@ -28,12 +28,10 @@ Shell::FeedbackThread Shell::feedbackThread;
 THD_WORKING_AREA(wa, SHELL_RX_WORK_AREA_SIZE);  // the working area for the shell rx thread
 
 static ShellConfig shellConfig;
-#if ENABLE_USB_SHELL == FALSE
 static constexpr SerialConfig SHELL_SERIAL_CONFIG = {115200,
                                                      0,
                                                      USART_CR2_STOP1_BITS,
                                                      0};
-#endif
 
 /**
  * Function to start the thread.
@@ -48,7 +46,7 @@ bool Shell::start(tprio_t prio) {
 
     // Configure shell
     shellConfig = ShellConfig{
-            (BaseSequentialStream *) &SerialDriver,
+            (BaseSequentialStream *) &SD6,
             (ShellCommand *) shellCommands,
             &printfMutex,
 #if (SHELL_USE_HISTORY == TRUE)
@@ -59,11 +57,8 @@ bool Shell::start(tprio_t prio) {
             , (char **) completion
 #endif
     };
-#if ENABLE_USB_SHELL == TRUE
-    USBSerialIF::init();
-#else
-    sdStart(&SerialDriver, &SHELL_SERIAL_CONFIG);
-#endif
+
+    sdStart(&SD6, &SHELL_SERIAL_CONFIG);
     // Call init provided by shell
     shellInit();
 
@@ -110,7 +105,7 @@ int Shell::printf(const char *fmt, ...) {
     va_start(ap, fmt);
     chMtxLock(&printfMutex);
     {
-        formatted_bytes = chvprintf((BaseSequentialStream *) &SerialDriver, fmt, ap);
+        formatted_bytes = chvprintf((BaseSequentialStream *) &SD6, fmt, ap);
     }
     chMtxUnlock(&printfMutex);
     va_end(ap);
@@ -123,7 +118,7 @@ int Shell::printfI(const char *fmt, ...) {
     int formatted_bytes;
 
     va_start(ap, fmt);
-    formatted_bytes = chvprintfI((BaseSequentialStream *) &SerialDriver, fmt, ap);
+    formatted_bytes = chvprintfI((BaseSequentialStream *) &SD6, fmt, ap);
     va_end(ap);
 
     return formatted_bytes;

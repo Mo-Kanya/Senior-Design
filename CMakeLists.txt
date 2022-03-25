@@ -65,6 +65,8 @@ set(BASE_SRC  # common cpp sources, which are included to every target at post c
 set(VEHICLE_COMMON_SRC
         dev/module/pid_controller.hpp
         dev/interface/can_interface.cpp
+        dev/interface/usb_serial_interface.cpp
+        dev/interface/VirtualCOMPort.cpp
         dev/interface/remote_interpreter.cpp
         dev/common/CRC8.cpp
         dev/common/CRC16.cpp
@@ -120,6 +122,7 @@ set(INFANTRY_SRC
         # Infantry has super capacitor
 
         # Main
+        dev/vehicle/infantry/Communicator.cpp
         dev/vehicle/infantry/inspector_infantry.cpp
         dev/vehicle/infantry/user_infantry.cpp
         dev/vehicle/infantry/main_infantry.cpp)

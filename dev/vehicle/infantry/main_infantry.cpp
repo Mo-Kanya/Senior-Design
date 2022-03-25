@@ -27,6 +27,9 @@
 #include "user_infantry.h"
 #include "thread_priorities.h"
 
+#include "VirtualCOMPort.h"
+#include "Communicator.h"
+
 /// Vehicle Specific Configurations
 #if defined(INFANTRY_THREE)                                                 /** Infantry #3 **/
 #include "vehicle_infantry_three.h"
@@ -46,6 +49,7 @@
 
 /// Instances
 CANInterface can1(&CAND1);
+SerialUSBDriver SDU1;
 // CANInterface can2(&CAND2);
 AHRSOnBoard ahrs;
 
@@ -62,6 +66,9 @@ int main() {
 
     halInit();
     chibios_rt::System::init();
+
+    ////
+    VirtualCOMPort::init(&SDU1, THREAD_VIRTUAL_COM_PRIO);
 
     // Enable power of bullet loader motor
 //    palSetPadMode(GPIOH, GPIOH_POWER1_CTRL, PAL_MODE_OUTPUT_PUSHPULL);
@@ -127,7 +134,7 @@ int main() {
 
     /// Setup Remote
     Remote::start();
-    InspectorI::startup_check_remote();  // check Remote has signal. Block for 50 ms
+    // InspectorI::startup_check_remote();  // check Remote has signal. Block for 50 ms
     LED::led_on(DEV_BOARD_LED_REMOTE);  // LED 4 on now
 
 
@@ -140,13 +147,17 @@ int main() {
     // InspectorI::startup_check_chassis_feedback();  // check chassis motors has continuous feedback. Block for 20 ms
     LED::led_on(DEV_BOARD_LED_CHASSIS);  // LED 6 on now
 
+    ////
+
+    Communicator::init(THREAD_VISION_SKD_PRIO);
 
     /// Setup Red Spot Laser
     palSetPad(GPIOG, GPIOG_RED_SPOT_LASER);  // enable the red spot laser
 
     /*** ------------ Period 2. Calibration and Start Logic Control Thread ----------- ***/
 
-    ChassisSKD::start(CHASSIS_WHEEL_BASE, CHASSIS_WHEEL_TREAD, CHASSIS_WHEEL_CIRCUMFERENCE, ChassisSKD::POSITIVE,
+    ChassisSKD::start(&ahrs,  GIMBAL_ANGLE_INSTALLATION_MATRIX_,
+                      CHASSIS_WHEEL_BASE, CHASSIS_WHEEL_TREAD, CHASSIS_WHEEL_CIRCUMFERENCE, ChassisSKD::POSITIVE,
                       GIMBAL_YAW_INSTALL_DIRECTION, 0, THREAD_CHASSIS_SKD_PRIO);
     ChassisSKD::load_pid_params(CHASSIS_FOLLOW_PID_THETA2V_PARAMS, CHASSIS_PID_V2I_PARAMS);
     Shell::addCommands(ChassisSKD::shellCommands);

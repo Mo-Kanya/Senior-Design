@@ -19,6 +19,7 @@
 #include "gimbal_scheduler.h"
 
 #include "pid_controller.hpp"
+#include "ahrs_abstract.h"
 
 /**
  * @name ChassisSKD
@@ -57,7 +58,8 @@ public:
      * @param chassis_gimbal_offset   Distance between gimbal and chassis [mm, + for gimbal at "front"]
      * @param thread_prio             Priority of PID calculation thread
      */
-    static void start(float wheel_base, float wheel_tread, float wheel_circumference, install_mode_t install_mode,
+    static void start(AbstractAHRS *gimbal_ahrs_, const Matrix33 ahrs_angle_rotation_,
+                      float wheel_base, float wheel_tread, float wheel_circumference, install_mode_t install_mode,
                       GimbalSKD::install_direction_t gimbal_yaw_install, float chassis_gimbal_offset, tprio_t thread_prio);
 
     /**
@@ -81,13 +83,6 @@ public:
      */
     static void set_target(float vx, float vy, float theta);
 
-    /**
-     * Set dodge_mode target
-     * @param vx    Target velocity along the x axis (right) with respect to gimbal coordinate [mm/s]
-     * @param vy    @param vy     Target velocity along the y axis (up) with respect to gimbal coordinate [mm/s]
-     * @param omega  Target angle difference between gimbal coordinate and chassis coordinate [degree]
-     */
-     static void set_dodge_target(float vx, float vy, float omega);
 
      /**
       * Get target theta
@@ -95,11 +90,6 @@ public:
       */
      static float get_target_theta();
 
-    /**
-     * Get actual angle difference between gimbal coordinate and chassis coordinate [degree]
-     * @return Theta value
-     */
-    static float get_actual_theta();
 
     /**
      * Get actual velocity involved in the PID calculation
@@ -121,6 +111,10 @@ public:
 private:
 
     // Local storage
+    static AbstractAHRS *gimbal_ahrs;
+    static Matrix33 ahrs_angle_rotation;
+    // static Matrix33 ahrs_gyro_rotation; now use motor feedback
+
     static mode_t mode;
     static float target_vx;
     static float target_vy;
