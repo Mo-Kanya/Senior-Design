@@ -28,7 +28,9 @@ public:
 
     static time_msecs_t last_update_time;
 
-    static int16_t target_torque[2];
+    static int16_t target_theta;
+    static int16_t target_vx;
+    static int16_t target_vy;
 
     static void send_data(uint8_t *data, unsigned int size);
 

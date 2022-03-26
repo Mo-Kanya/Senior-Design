@@ -14,11 +14,14 @@
 
 #include "inspector_infantry.h"
 
+#include "VirtualCOMPort.h"
+
 class UserI {
 
 public:
 
     static void start(tprio_t user_thd_prio, tprio_t user_action_thd_prio);
+    static int get_mode();
 
 private:
 
@@ -30,6 +33,10 @@ private:
     static  float Base_left_right;      // [mm/s]
     static float chassis_v_forward;     // [mm/s]
     static float chassis_v_backward;    // [mm/s]
+
+    static int control_mode; // 0=vision; 1=rc; 2=programming
+
+    static float target_angle_;
 
     static bool mag_status;
 

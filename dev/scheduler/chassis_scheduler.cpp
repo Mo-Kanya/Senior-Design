@@ -21,6 +21,7 @@ float ChassisSKD::target_vx = 0;
 float ChassisSKD::target_vy = 0;
 float ChassisSKD::target_theta = 0;
 float ChassisSKD::actual_theta = 0;
+float ChassisSKD::last_angle = 0;
 
 PIDController ChassisSKD::a2v_pid;
 PIDController ChassisSKD::v2i_pid[MOTOR_COUNT];
@@ -48,12 +49,7 @@ void ChassisSKD::start(AbstractAHRS *gimbal_ahrs_, const Matrix33 ahrs_angle_rot
                        float wheel_base, float wheel_tread, float wheel_circumference, install_mode_t install_mode,
                        GimbalSKD::install_direction_t gimbal_yaw_install_, float chassis_gimbal_offset,
                        tprio_t thread_prio) {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            ahrs_angle_rotation[i][j] = ahrs_angle_rotation_[i][j];
-        }
-    }
-    //// TODO here
+
     gimbal_ahrs = gimbal_ahrs_;
     wheel_base_ = wheel_base;
     wheel_tread_ = wheel_tread;
@@ -70,6 +66,15 @@ void ChassisSKD::start(AbstractAHRS *gimbal_ahrs_, const Matrix33 ahrs_angle_rot
     v_to_wheel_angular_velocity_ = (360.0f / wheel_circumference_);
     chassis_gimbal_offset_ = chassis_gimbal_offset;
     install_mode_ = install_mode;
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            ahrs_angle_rotation[i][j] = ahrs_angle_rotation_[i][j];
+        }
+    }
+
+    Vector3D ahrs_angle = ahrs_angle_rotation * gimbal_ahrs->get_angle();
+    last_angle = ahrs_angle.x;
 
     skd_thread.start(thread_prio);
 }
@@ -89,7 +94,7 @@ void ChassisSKD::set_mode(ChassisSKD::mode_t skd_mode) {
 void ChassisSKD::set_target(float vx, float vy, float theta) {
     target_vx = vx;
     target_vy = vy;
-    target_theta = theta;
+    target_theta = theta + last_angle * (float) gimbal_yaw_install;
 }
 
 
@@ -121,21 +126,28 @@ float ChassisSKD::get_actual_velocity(ChassisBase::motor_id_t motor_id) {
     return ChassisIF::feedback[motor_id]->actual_velocity;
 }
 
+float ChassisSKD::get_last_angle() {
+    return last_angle;
+}
+
 void ChassisSKD::SKDThread::main() {
     setName("ChassisSKD");
     while (!shouldTerminate()) {
 
         chSysLock();  /// --- ENTER S-Locked state. DO NOT use LOG, printf, non S/I-Class functions or return ---
         {
+            Vector3D ahrs_angle = ahrs_angle_rotation * gimbal_ahrs->get_angle();
+            last_angle = ahrs_angle.x;
             if ((mode == GIMBAL_COORDINATE_MODE) || (mode == ANGULAR_VELOCITY_DODGE_MODE)) {
 
-                actual_theta = GimbalIF::feedback[GimbalIF::YAW]->actual_angle * (float) gimbal_yaw_install;
+                actual_theta = last_angle * (float) gimbal_yaw_install;
 
                 if (mode == GIMBAL_COORDINATE_MODE) {
-//                    if (ABS(actual_theta - target_theta) < THETA_DEAD_ZONE) {
-//                        target_w = 0;
-//                    } else {
-                    target_w = a2v_pid.calc(actual_theta, target_theta);
+                    if (ABS(actual_theta - target_theta) < THETA_DEAD_ZONE) {
+                        target_w = 0;
+                    } else {
+                        target_w = a2v_pid.calc(actual_theta, target_theta);
+                    }
                 }
 
                 velocity_decompose(

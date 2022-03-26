@@ -41,10 +41,12 @@ void ChassisLG::set_action(ChassisLG::action_t value) {
     // Sending client data will be complete by higher level thread
 }
 
-void ChassisLG::set_target(float vx, float vy) {
+void ChassisLG::set_target(float vx, float vy, float theta) {
     target_vx = vx;
     target_vy = vy;
     if (action == FOLLOW_MODE) {
+        target_theta = theta;
+    } else {
         target_theta = 0.0f;
     }
     // For DODGE_MODE keep current target_theta unchanged

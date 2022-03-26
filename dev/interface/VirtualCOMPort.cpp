@@ -7,7 +7,9 @@
 uint8_t VirtualCOMPort::rxbuffer[100];
 uint8_t VirtualCOMPort::txbuffer[100];
 uint8_t VirtualCOMPort::rxmode=0;
-int16_t VirtualCOMPort::target_torque[2];
+int16_t VirtualCOMPort::target_theta=0;
+int16_t VirtualCOMPort::target_vx = 0;
+int16_t VirtualCOMPort::target_vy = 0;
 VirtualCOMPort::DataReceiveThread VirtualCOMPort::data_receive_thd;
 time_msecs_t VirtualCOMPort::last_update_time = 0;
 
@@ -32,11 +34,13 @@ void VirtualCOMPort::DataReceiveThread::main() {
     setName("vcom_rx_thd");
     while (!shouldTerminate()) {
 
-        chnReadTimeout(SDU, rxbuffer, 5, TIME_INFINITE);
+        chnReadTimeout(SDU, rxbuffer, 8, TIME_INFINITE);
 
-        target_torque[0] = (int16_t)(rxbuffer[1] << 8 | rxbuffer[0]);
-        target_torque[1] = (int16_t)(rxbuffer[3] << 8 | rxbuffer[2]);
-        rxmode = rxbuffer[4];
+        target_vx = (int16_t)(rxbuffer[0] << 8 | rxbuffer[1]);
+        target_vy = (int16_t)(rxbuffer[2] << 8 | rxbuffer[3]);
+        target_theta = (int16_t)(rxbuffer[4] << 8 | rxbuffer[5]);
+        rxmode = rxbuffer[6];
+        // err_msg
 
         last_update_time = SYSTIME;
 

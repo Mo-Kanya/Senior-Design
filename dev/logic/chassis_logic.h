@@ -68,7 +68,7 @@ public:
      * @param vx     Target velocity along the x axis (right) with respect to gimbal coordinate [mm/s]
      * @param vy     Target velocity along the y axis (up) with respect to gimbal coordinate [mm/s]
      */
-    static void set_target(float vx, float vy);
+    static void set_target(float vx, float vy, float theta);
 
 private:
 

@@ -6,6 +6,8 @@
 #define META_INFANTRY_COMMUNICATOR_H
 
 #include "VirtualCOMPort.h"
+#include "chassis_scheduler.h"
+#include "user_infantry.h"
 
 using namespace chibios_rt;
 class Communicator {
@@ -19,7 +21,7 @@ public:
     /**
      * @brief send_angles
      */
-    static uint8_t tx_angles[5];
+    static uint8_t tx_angles[13];
 
     /**
      * @brief TxRxThread for CDC
