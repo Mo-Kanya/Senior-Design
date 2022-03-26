@@ -34,7 +34,7 @@ static bool cmd_erase(BaseSequentialStream *chp, int argc, char *argv[]) {
     }
     last_bias = bias_sum = Vector3D();
     bias_count = 0;
-    Shell::printf("SDCard::erase() = %d" SHELL_NEWLINE_STR, SDCard::erase());
+    // Shell::printf("SDCard::erase() = %d" SHELL_NEWLINE_STR, SDCard::erase());
     return true;
 }
 
@@ -59,7 +59,8 @@ private:
     void main() final {
         setName("mpu6500_ca");
         while (!shouldTerminate()) {
-            if (last_bias != ahrs.imu.gyro_bias) {
+            // last_bias != ahrs.imu.gyro_bias
+            if (1) {
 
                 Shell::printf("New bias (%f, %f, %f)" SHELL_NEWLINE_STR, ahrs.imu.gyro_bias.x, ahrs.imu.gyro_bias.y, ahrs.imu.gyro_bias.z);
 
