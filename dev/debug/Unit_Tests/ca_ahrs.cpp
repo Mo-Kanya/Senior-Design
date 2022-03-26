@@ -44,10 +44,10 @@ static bool cmd_sd_echo(BaseSequentialStream *chp, int argc, char *argv[]) {
         Shell::usage("sd_echo");
         return false;
     }
-    Shell::printf("SDCard::read_all() = %d" SHELL_NEWLINE_STR, SDCard::read_all());
+    // Shell::printf("SDCard::read_all() = %d" SHELL_NEWLINE_STR, SDCard::read_all());
 
     Vector3D bias;
-    Shell::printf("SDCard::get_data() = %d" SHELL_NEWLINE_STR, SDCard::get_data(MPU6500_BIAS_DATA_ID, &bias, sizeof(bias)));
+    // Shell::printf("SDCard::get_data() = %d" SHELL_NEWLINE_STR, SDCard::get_data(MPU6500_BIAS_DATA_ID, &bias, sizeof(bias)));
     Shell::printf("bias.x = %f" SHELL_NEWLINE_STR, bias.x);
     Shell::printf("bias.y = %f" SHELL_NEWLINE_STR, bias.y);
     Shell::printf("bias.z = %f" SHELL_NEWLINE_STR, bias.z);
@@ -61,15 +61,15 @@ private:
         while (!shouldTerminate()) {
             if (last_bias != ahrs.imu.gyro_bias) {
 
-                LOG("New bias (%f, %f, %f)", ahrs.imu.gyro_bias.x, ahrs.imu.gyro_bias.y, ahrs.imu.gyro_bias.z);
+                Shell::printf("New bias (%f, %f, %f)" SHELL_NEWLINE_STR, ahrs.imu.gyro_bias.x, ahrs.imu.gyro_bias.y, ahrs.imu.gyro_bias.z);
 
                 bias_sum = bias_sum + ahrs.imu.gyro_bias;
                 bias_count++;
 
                 Vector3D avg_bias = bias_sum / bias_count;
-                LOG("Avg bias (%f, %f, %f) for %d samples", avg_bias.x, avg_bias.y, avg_bias.z, bias_count);
+                Shell::printf("Avg bias (%f, %f, %f) for %d samples" SHELL_NEWLINE_STR, avg_bias.x, avg_bias.y, avg_bias.z, bias_count);
 
-                LOG("SDCard::write_data() = %d" SHELL_NEWLINE_STR, SDCard::write_data(MPU6500_BIAS_DATA_ID, &avg_bias, sizeof(avg_bias)));
+                // LOG("SDCard::write_data() = %d" SHELL_NEWLINE_STR, SDCard::write_data(MPU6500_BIAS_DATA_ID, &avg_bias, sizeof(avg_bias)));
 
                 last_bias = ahrs.imu.gyro_bias;
             }
@@ -96,9 +96,9 @@ int main(void) {
     Shell::start(HIGHPRIO);
     Shell::addCommands(sdCommands);
 
-    LOG("SDCard::init() = %d", SDCard::init());
-    SDCard::read_all();
-
+    // LOG("SDCard::init() = %d", SDCard::init());
+    // SDCard::read_all();
+    ahrs.load_calibration_data({0.118284292, -1.176999688, 0.167857602});
     ahrs.start(ON_BOARD_AHRS_MATRIX_, HIGHPRIO - 2);
     BuzzerSKD::play_sound(BuzzerSKD::sound_startup);
 

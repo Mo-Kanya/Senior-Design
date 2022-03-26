@@ -192,6 +192,9 @@ add_executable(ut_ahrs
         dev/interface/ahrs/imu_on_board.cpp
         dev/interface/ahrs/ahrs_lib_middleware.c
         dev/interface/ahrs/ahrs.cpp
+        dev/interface/usb_serial_interface.cpp
+        dev/common/CRC16.cpp
+        dev/interface/sd_card_interface.cpp
         dev/debug/Unit_Tests/ut_ahrs.cpp)
 target_link_libraries(ut_ahrs ${AHRS_LIB})
 
@@ -230,6 +233,7 @@ target_compile_definitions(pa_chassis PUBLIC INFANTRY)
 
 add_executable(ca_ahrs_infantry
         ${AHRS_SRC}
+        dev/interface/usb_serial_interface.cpp
         dev/common/CRC16.cpp
         dev/interface/sd_card_interface.cpp
         dev/debug/Unit_Tests/ca_ahrs.cpp)
