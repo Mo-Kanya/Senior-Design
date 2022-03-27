@@ -74,7 +74,7 @@ void ChassisSKD::start(AbstractAHRS *gimbal_ahrs_, const Matrix33 ahrs_angle_rot
     }
 
     Vector3D ahrs_angle = ahrs_angle_rotation * gimbal_ahrs->get_angle();
-    last_angle = ahrs_angle.x;
+    actual_theta = ahrs_angle.x * (float) gimbal_yaw_install;
 
     skd_thread.start(thread_prio);
 }
@@ -94,12 +94,20 @@ void ChassisSKD::set_mode(ChassisSKD::mode_t skd_mode) {
 void ChassisSKD::set_target(float vx, float vy, float theta) {
     target_vx = vx;
     target_vy = vy;
-    target_theta = theta + last_angle * (float) gimbal_yaw_install;
+    target_theta = theta;
 }
 
 
 float ChassisSKD::get_target_theta() {
     return target_theta;
+}
+
+float ChassisSKD::get_last_angle() {
+    return actual_theta;
+}
+
+float ChassisSKD::get_target_w() {
+    return target_w;
 }
 
 void ChassisSKD::velocity_decompose(float vx, float vy, float w) {
@@ -126,10 +134,6 @@ float ChassisSKD::get_actual_velocity(ChassisBase::motor_id_t motor_id) {
     return ChassisIF::feedback[motor_id]->actual_velocity;
 }
 
-float ChassisSKD::get_last_angle() {
-    return last_angle;
-}
-
 void ChassisSKD::SKDThread::main() {
     setName("ChassisSKD");
     while (!shouldTerminate()) {
@@ -137,26 +141,26 @@ void ChassisSKD::SKDThread::main() {
         chSysLock();  /// --- ENTER S-Locked state. DO NOT use LOG, printf, non S/I-Class functions or return ---
         {
             Vector3D ahrs_angle = ahrs_angle_rotation * gimbal_ahrs->get_angle();
-            last_angle = ahrs_angle.x;
             if ((mode == GIMBAL_COORDINATE_MODE) || (mode == ANGULAR_VELOCITY_DODGE_MODE)) {
 
-                actual_theta = last_angle * (float) gimbal_yaw_install;
+                actual_theta = ahrs_angle.x * (float) gimbal_yaw_install;
 
                 if (mode == GIMBAL_COORDINATE_MODE) {
-                    if (ABS(actual_theta - target_theta) < THETA_DEAD_ZONE) {
+                    if (ABS(target_theta) < THETA_DEAD_ZONE) {
                         target_w = 0;
                     } else {
-                        target_w = a2v_pid.calc(actual_theta, target_theta);
+                        target_w = a2v_pid.calc(target_theta, 0);
                     }
                 }
+                velocity_decompose(target_vx, target_vy, target_w);
 
-                velocity_decompose(
-                        target_vx * cosf(actual_theta / 180.0f * PI) - target_vy * sinf(actual_theta / 180.0f * PI)
-                        - target_w / 180.0f * PI * chassis_gimbal_offset_,
-
-                        target_vx * sinf(actual_theta / 180.0f * PI) + target_vy * cosf(actual_theta / 180.0f * PI),
-
-                        target_w);
+//                velocity_decompose(
+//                        target_vx * cosf(actual_theta / 180.0f * PI) - target_vy * sinf(actual_theta / 180.0f * PI)
+//                        - target_w / 180.0f * PI * chassis_gimbal_offset_,
+//
+//                        target_vx * sinf(actual_theta / 180.0f * PI) + target_vy * cosf(actual_theta / 180.0f * PI),
+//
+//                        target_w);
 
             } else if (mode == FORCED_RELAX_MODE) {
 

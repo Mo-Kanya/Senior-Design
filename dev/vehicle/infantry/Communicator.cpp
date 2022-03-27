@@ -20,14 +20,22 @@ void Communicator::CommunicatorThd::main() {
         float motor_v3 = ChassisSKD::get_actual_velocity(ChassisSKD::BL);
         float motor_v4 = ChassisSKD::get_actual_velocity(ChassisSKD::BR);
         float direction = ChassisSKD::get_last_angle() + 180.0f; // 0-360
+        float tar = ChassisSKD::get_target_theta() + 360.0f;
+        float w = ChassisSKD::get_target_w() + 720.0f;
         tx_angles[1] = (uint8_t)(((int16_t)motor_v1) >> 8);
         tx_angles[2] = (uint8_t)((int16_t)(motor_v1));
         tx_angles[3] = (uint8_t)(((int16_t)motor_v2) >> 8);
         tx_angles[4] = (uint8_t)((int16_t)(motor_v2));
-        tx_angles[5] = (uint8_t)(((int16_t)motor_v3) >> 8);
-        tx_angles[6] = (uint8_t)((int16_t)(motor_v3));
-        tx_angles[7] = (uint8_t)(((int16_t)motor_v4) >> 8);
-        tx_angles[8] = (uint8_t)((int16_t)(motor_v4));
+//        tx_angles[5] = (uint8_t)(((int16_t)motor_v3) >> 8);
+//        tx_angles[6] = (uint8_t)((int16_t)(motor_v3));
+//        tx_angles[7] = (uint8_t)(((int16_t)motor_v4) >> 8);
+//        tx_angles[8] = (uint8_t)((int16_t)(motor_v4));
+
+        tx_angles[5] = (uint8_t)(((int16_t)(w / 360.0f * 8192.0f)) >> 8);
+        tx_angles[6] = (uint8_t)((int16_t)(w / 360.0f * 8192.0f));
+
+        tx_angles[7] = (uint8_t)(((int16_t)(tar / 360.0f * 8192.0f)) >> 8);
+        tx_angles[8] = (uint8_t)((int16_t)(tar / 360.0f * 8192.0f));
 
         tx_angles[9] = (uint8_t)(((int16_t)(direction / 360.0f * 8192.0f)) >> 8);
         tx_angles[10] = (uint8_t)((int16_t)(direction / 360.0f * 8192.0f));
@@ -42,6 +50,6 @@ void Communicator::CommunicatorThd::main() {
 //        }
 //        Shell::printf(SHELL_NEWLINE_STR);
 
-        sleep(TIME_MS2I(500)); //5
+        sleep(TIME_MS2I(100)); //5
     }
 }

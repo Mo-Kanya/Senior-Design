@@ -13,9 +13,7 @@
 #define THREAD_AHRS_PRIO                    (HIGHPRIO - 5)
 #define THREAD_GIMBAL_SKD_PRIO              (HIGHPRIO - 6)
 #define THREAD_COMMUNICATOR                 (HIGHPRIO - 7)
-#define THREAD_VIRTUAL_COM_PRIO             (HIGHPRIO - 8)
 #define THREAD_CHASSIS_SKD_PRIO             (HIGHPRIO - 9)
-#define THREAD_VISION_SKD_PRIO              (HIGHPRIO - 10)
 #define THREAD_GIMBAL_LG_VISION_PRIO        (HIGHPRIO - 11)
 #define THREAD_SHOOT_LG_VISION_PRIO         (HIGHPRIO - 12)
 #define THREAD_REFEREE_SENDING_PRIO         (NORMALPRIO + 3)
@@ -29,8 +27,10 @@
 #define THREAD_SUPERCAP_INIT_PRIO           (NORMALPRIO - 5)
 #define THREAD_REFEREE_LD_PRIO              (NORMALPRIO - 6)
 #define THREAD_INSPECTOR_PRIO               (LOWPRIO + 10)
+#define THREAD_BUZZER_SKD_PRIO              (LOWPRIO + 9)
+#define THREAD_VIRTUAL_COM_PRIO             (LOWPRIO + 8)
+#define THREAD_VISION_SKD_PRIO              (LOWPRIO + 7)
 #define THREAD_SHOOT_BULLET_COUNTER_PRIO    (LOWPRIO + 2)
 #define THREAD_SHELL_PRIO                   (LOWPRIO + 1)
-#define THREAD_BUZZER_SKD_PRIO              (LOWPRIO)
 
 #endif //META_INFANTRY_THREAD_PRIORITIES_H

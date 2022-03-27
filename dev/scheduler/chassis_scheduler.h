@@ -88,10 +88,12 @@ public:
       * Get target theta
       * @return Target theta value
       */
-     static float get_target_theta();
+    static float get_target_theta();
 
 
     static float get_last_angle();
+
+    static float get_target_w();
 
 
     /**
