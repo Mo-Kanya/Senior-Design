@@ -8,8 +8,8 @@ uint8_t VirtualCOMPort::rxbuffer[100];
 uint8_t VirtualCOMPort::txbuffer[100];
 uint8_t VirtualCOMPort::rxmode=0;
 int16_t VirtualCOMPort::target_theta=4096;
-int16_t VirtualCOMPort::target_vx = 0;
-int16_t VirtualCOMPort::target_vy = 0;
+int16_t VirtualCOMPort::target_vx = 3000;
+int16_t VirtualCOMPort::target_vy = 3000;
 VirtualCOMPort::DataReceiveThread VirtualCOMPort::data_receive_thd;
 time_msecs_t VirtualCOMPort::last_update_time = 0;
 
@@ -35,10 +35,11 @@ void VirtualCOMPort::DataReceiveThread::main() {
     while (!shouldTerminate()) {
 
         if (chnReadTimeout(SDU, rxbuffer, 8, TIME_INFINITE) == 8) {
+            rxmode = rxbuffer[6]; // to check
             target_vx = (int16_t)(rxbuffer[0] << 8 | rxbuffer[1]);
             target_vy = (int16_t)(rxbuffer[2] << 8 | rxbuffer[3]);
             target_theta = (int16_t)(rxbuffer[4] << 8 | rxbuffer[5]);
-            rxmode = rxbuffer[6]; // to check
+
             // err_msg
             last_update_time = SYSTIME;
         }

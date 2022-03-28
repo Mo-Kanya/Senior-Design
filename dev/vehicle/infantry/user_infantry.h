@@ -37,6 +37,8 @@ private:
     static int control_mode; // 0=vision; 1=rc; 2=programming
 
     static float target_angle_;
+    static float target_vx_;
+    static float target_vy_;
 
     static bool mag_status;
 

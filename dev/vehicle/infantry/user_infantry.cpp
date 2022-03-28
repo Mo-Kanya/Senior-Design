@@ -25,6 +25,8 @@ float UserI::chassis_v_forward = 1500.0f;     // [mm/s]
 float UserI::chassis_v_backward = 1500.0f;    // [mm/s]
 int UserI::control_mode = 1;
 float UserI::target_angle_ = 0.0f;
+float UserI::target_vx_ = 0.0f;
+float UserI::target_vy_ = 0.0f;
 
 /// Variables
 
@@ -47,7 +49,6 @@ void UserI::UserThread::main() {
             if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_UP) {
                 control_mode = 1;
                 // rc; not programming
-                // target_angle_ += -Remote::rc.ch0 * (90 * USER_THREAD_INTERVAL / 1000.0f);
                 ChassisLG::set_action(ChassisLG::FOLLOW_MODE);
                 ChassisLG::set_target(Remote::rc.ch2 * chassis_v_left_right,  // Both use right as positive direction
                                       (Remote::rc.ch3 > 0 ?
@@ -71,13 +72,15 @@ void UserI::UserThread::main() {
 
                 // Vision
                 control_mode = 0;
-                // target_angle_ = ;
-                float vx_ = VirtualCOMPort::target_vx;
-                float vy_ = VirtualCOMPort::target_vy;
-                float theta_ = ((float) VirtualCOMPort::target_theta)*360.0f/8192.0f - 180.0f;
+                if (VirtualCOMPort::rxmode == 0) {
+                    target_vx_ = (float) VirtualCOMPort::target_vx - 3000.0f;
+                    target_vy_ = (float) VirtualCOMPort::target_vy - 3000.0f;
+                    target_angle_ = ((float) VirtualCOMPort::target_theta)*360.0f/8192.0f - 180.0f;
+                }
+
                 // ChassisLG::set_action(GimbalLG::VISION_MODE);
                 ChassisLG::set_action(ChassisLG::FOLLOW_MODE);
-                ChassisLG::set_target(vx_,vy_,theta_); // theta_
+                ChassisLG::set_target(target_vx_,target_vy_,target_angle_); // theta_
                 ////
 
             } else {

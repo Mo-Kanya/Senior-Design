@@ -15,11 +15,12 @@ void Communicator::CommunicatorThd::main() {
     setName("Communicator");
     while(!shouldTerminate()) {
 // / 360.0f * 8192.0f
-        float motor_v1 = ChassisSKD::get_actual_velocity(ChassisSKD::FR); // degree/s
-        float motor_v2 = ChassisSKD::get_actual_velocity(ChassisSKD::FL);
-        float motor_v3 = ChassisSKD::get_actual_velocity(ChassisSKD::BL);
-        float motor_v4 = ChassisSKD::get_actual_velocity(ChassisSKD::BR);
+        float motor_v1 = ChassisSKD::get_actual_velocity(ChassisSKD::FR)+2500.0f; // degree/s
+        float motor_v2 = ChassisSKD::get_actual_velocity(ChassisSKD::FL)+2500.0f;
+        float motor_v3 = ChassisSKD::get_actual_velocity(ChassisSKD::BL)+2500.0f;
+        float motor_v4 = ChassisSKD::get_actual_velocity(ChassisSKD::BR)+2500.0f;
         float direction = ChassisSKD::get_last_angle() + 180.0f; // 0-360
+        int16_t update_time = VirtualCOMPort::last_update_time;
 //        float tar = ChassisSKD::get_target_theta() + 360.0f;
 //        float w = ChassisSKD::get_target_w() + 720.0f;
         tx_angles[1] = (uint8_t)(((int16_t)motor_v1) >> 8);
@@ -31,10 +32,16 @@ void Communicator::CommunicatorThd::main() {
         tx_angles[7] = (uint8_t)(((int16_t)motor_v4) >> 8);
         tx_angles[8] = (uint8_t)((int16_t)(motor_v4));
 
-//        tx_angles[5] = (uint8_t)(((int16_t)(w / 360.0f * 8192.0f)) >> 8);
-//        tx_angles[6] = (uint8_t)((int16_t)(w / 360.0f * 8192.0f));
-//        tx_angles[7] = (uint8_t)(((int16_t)(tar / 360.0f * 8192.0f)) >> 8);
-//        tx_angles[8] = (uint8_t)((int16_t)(tar / 360.0f * 8192.0f));
+//        tx_angles[3] = (uint8_t)(((int16_t)VirtualCOMPort::target_vy) >> 8);
+//        tx_angles[4] = (uint8_t)((int16_t)VirtualCOMPort::target_vy);
+//        tx_angles[5] = (uint8_t)(((int16_t)VirtualCOMPort::target_vx) >> 8);
+//        tx_angles[6] = (uint8_t)((int16_t)VirtualCOMPort::target_vx);
+
+//        tx_angles[7] = (uint8_t)((update_time) >> 8);
+//        tx_angles[8] = (uint8_t)(update_time);
+
+//        tx_angles[9] = (uint8_t)(((int16_t)(VirtualCOMPort::target_theta)) >> 8);
+//        tx_angles[10] = (uint8_t)((int16_t)(VirtualCOMPort::target_theta));
 
         tx_angles[9] = (uint8_t)(((int16_t)(direction / 360.0f * 8192.0f)) >> 8);
         tx_angles[10] = (uint8_t)((int16_t)(direction / 360.0f * 8192.0f));
