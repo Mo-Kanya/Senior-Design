@@ -20,11 +20,9 @@ CANInterface::motor_feedback_t *ChassisIF::feedback[ChassisIF::MOTOR_COUNT];
 int *ChassisIF::target_current[ChassisIF::MOTOR_COUNT];
 
 void ChassisIF::clip_chassis_current() {
-
-#if CHASSIS_INTERFACE_ENABLE_CLIP
-        ABS_CROP(*target_current[i], CHASSIS_INTERFACE_MAX_CURRENT);
-#endif
-
+    for (auto & i : target_current) {
+        ABS_CROP(*i, CHASSIS_INTERFACE_MAX_CURRENT);
+    }
 }
 
 void ChassisIF::init(CANInterface *can1_interface, motor_can_config_t motor_can_config[MOTOR_COUNT]) {

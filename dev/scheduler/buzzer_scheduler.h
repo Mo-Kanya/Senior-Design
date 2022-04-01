@@ -41,7 +41,7 @@
 #error "BuzzerSKD interface has not been defined for selected board"
 #endif
 
-#define BUZZER_SKD_INTERVAL 10
+#define BUZZER_SKD_INTERVAL 15
 
 
 class BuzzerSKD {

@@ -31,7 +31,7 @@ void InspectorI::startup_check_can() {
 //        if (WITHIN_RECENT_TIME(can2->last_error_time, 5)) {  // can error occurs
 //            t = SYSTIME;  // reset the counter
 //        }
-        chThdSleepMilliseconds(5);
+        chThdSleepMilliseconds(10);
     }
 }
 
@@ -42,7 +42,7 @@ void InspectorI::startup_check_mpu() {
             // No signal in last 5 ms (normal interval 1 ms for on-board MPU)
             t = SYSTIME;  // reset the counter
         }
-        chThdSleepMilliseconds(5);
+        chThdSleepMilliseconds(10);
     }
 }
 
@@ -53,7 +53,7 @@ void InspectorI::startup_check_ist() {
             // No signal in last 5 ms (normal interval 1 ms for on-board MPU)
             t = SYSTIME;  // reset the counter
         }
-        chThdSleepMilliseconds(5);
+        chThdSleepMilliseconds(10);
     }
 }
 
@@ -90,7 +90,7 @@ void InspectorI::startup_check_chassis_feedback() {
             LOG_ERR("Startup - Chassis BR offline.");
             t = SYSTIME;  // reset the counter
         }
-        chThdSleepMilliseconds(5);
+        chThdSleepMilliseconds(10);
     }
 }
 

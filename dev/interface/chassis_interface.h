@@ -26,11 +26,9 @@
  * Enable clip at the moment of sending current.
  * Only for safety. There is NO signal for clipping. Be sure to eliminate it if more current is needed.
  */
-#define CHASSIS_INTERFACE_ENABLE_CLIP   FALSE
+#define CHASSIS_INTERFACE_ENABLE_CLIP   TRUE
 
-#if CHASSIS_INTERFACE_ENABLE_CLIP
-#define CHASSIS_INTERFACE_MAX_CURRENT 5000  // mA
-#endif
+#define CHASSIS_INTERFACE_MAX_CURRENT 2500  // mA
 
 class ChassisBase {
 public:

@@ -32,7 +32,7 @@ public:
     static int16_t target_vx;
     static int16_t target_vy;
 
-    static void send_data(uint8_t *data, unsigned int size);
+    static int send_data(uint8_t *data, unsigned int size);
 
     class DataReceiveThread : public BaseStaticThread<512> {
         void main() final;

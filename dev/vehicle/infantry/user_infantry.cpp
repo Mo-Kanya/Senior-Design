@@ -71,11 +71,23 @@ void UserI::UserThread::main() {
             } else if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_DOWN) {
 
                 // Vision
-                control_mode = 0;
-                if ( (VirtualCOMPort::rxmode == 0) && (SYSTIME-VirtualCOMPort::last_update_time <= 5)) {
-                    target_vx_ = (float) VirtualCOMPort::target_vx - 3000.0f;
-                    target_vy_ = (float) VirtualCOMPort::target_vy - 3000.0f;
-                    target_angle_ = ((float) VirtualCOMPort::target_theta)*360.0f/8192.0f - 180.0f;
+                if (control_mode != 0) {
+                    control_mode = 0;
+                    target_angle_ = 0.0f;
+                    target_vx_ = 0.0f;
+                    target_vy_ = 0.0f;
+                }
+
+                if ( SYSTIME-VirtualCOMPort::last_update_time <= 2000 ) {
+                    if (VirtualCOMPort::rxmode == 0) {
+                        target_vx_ = (float) VirtualCOMPort::target_vx - 3000.0f;
+                        target_vy_ = (float) VirtualCOMPort::target_vy - 3000.0f;
+                        target_angle_ = ((float) VirtualCOMPort::target_theta)*360.0f/8192.0f - 180.0f;
+                    }
+                } else {
+                    target_angle_ = 0.0f;
+                    target_vx_ = 0.0f;
+                    target_vy_ = 0.0f;
                 }
 
                 // ChassisLG::set_action(GimbalLG::VISION_MODE);

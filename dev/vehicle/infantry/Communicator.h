@@ -17,6 +17,8 @@ public:
      * @brief Initiate the communicator.
      */
     static void init(tprio_t communicator_prio_);
+//    static time_msecs_t last_send_time;
+//    static int last_transferred;
 
     /**
      * @brief send_angles

@@ -6,6 +6,8 @@
 
 Communicator::CommunicatorThd Communicator::communicator_thd;
 uint8_t Communicator::tx_angles[13];
+//time_msecs_t Communicator::last_send_time = 0;
+//int Communicator::last_transferred = 0;
 
 void Communicator::init(tprio_t communicator_prio_) {
     communicator_thd.start(communicator_prio_);
@@ -23,8 +25,15 @@ void Communicator::CommunicatorThd::main() {
 //        int16_t update_time = VirtualCOMPort::last_update_time;
 //        float tar = ChassisSKD::get_target_theta() + 360.0f;
 //        float w = ChassisSKD::get_target_w() + 720.0f;
+
         tx_angles[1] = (uint8_t)(((int16_t)motor_v1) >> 8);
         tx_angles[2] = (uint8_t)((int16_t)(motor_v1));
+
+//        tx_angles[1] = (uint8_t)(((int16_t)(SYSTIME-last_send_time)) >> 8);
+//        tx_angles[2] = (uint8_t)((int16_t)(SYSTIME-last_send_time));
+//        tx_angles[3] = (uint8_t)(((int16_t)last_transferred) >> 8);
+//        tx_angles[4] = (uint8_t)((int16_t)last_transferred);
+
         tx_angles[3] = (uint8_t)(((int16_t)motor_v2) >> 8);
         tx_angles[4] = (uint8_t)((int16_t)(motor_v2));
         tx_angles[5] = (uint8_t)(((int16_t)motor_v3) >> 8);
@@ -49,6 +58,11 @@ void Communicator::CommunicatorThd::main() {
         tx_angles[11] = (uint8_t) UserI::get_mode();
         tx_angles[12] = (uint8_t) 0;
         VirtualCOMPort::send_data(tx_angles, 13);
+//        last_transferred =  VirtualCOMPort::send_data(tx_angles, 13);
+//        if (last_transferred == 13) {
+//            last_send_time = SYSTIME;
+//        }
+
 //        Shell::printf("torque:   %d %d, mode: %d" SHELL_NEWLINE_STR, VirtualCOMPort::target_torque[0], VirtualCOMPort::target_torque[1], VirtualCOMPort::rxmode);
 //        Shell::printf("rxbuffer:");
 //        for (int i = 0; i  < 5; i++) {
