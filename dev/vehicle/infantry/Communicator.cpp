@@ -21,7 +21,6 @@ void Communicator::CommunicatorThd::main() {
         float motor_v2 = ChassisSKD::get_actual_velocity(ChassisSKD::FL)+2500.0f;
         float motor_v3 = ChassisSKD::get_actual_velocity(ChassisSKD::BL)+2500.0f;
         float motor_v4 = ChassisSKD::get_actual_velocity(ChassisSKD::BR)+2500.0f;
-        float direction = ChassisSKD::get_last_angle() + 180.0f; // 0-360
 //        int16_t update_time = VirtualCOMPort::last_update_time;
 //        float tar = ChassisSKD::get_target_theta() + 360.0f;
 //        float w = ChassisSKD::get_target_w() + 720.0f;
@@ -51,13 +50,14 @@ void Communicator::CommunicatorThd::main() {
 
 //        tx_angles[9] = (uint8_t)(((int16_t)(VirtualCOMPort::target_theta)) >> 8);
 //        tx_angles[10] = (uint8_t)((int16_t)(VirtualCOMPort::target_theta));
-
+        chSysLockFromISR();  ///
+        float direction = ChassisSKD::get_last_angle() + 180.0f; // 0-360
         tx_angles[9] = (uint8_t)(((int16_t)(direction / 360.0f * 8192.0f)) >> 8);
         tx_angles[10] = (uint8_t)((int16_t)(direction / 360.0f * 8192.0f));
-
         tx_angles[11] = (uint8_t) UserI::get_mode();
         tx_angles[12] = (uint8_t) 0;
         VirtualCOMPort::send_data(tx_angles, 13);
+        chSysUnlockFromISR(); ///
 //        last_transferred =  VirtualCOMPort::send_data(tx_angles, 13);
 //        if (last_transferred == 13) {
 //            last_send_time = SYSTIME;
@@ -70,6 +70,6 @@ void Communicator::CommunicatorThd::main() {
 //        }
 //        Shell::printf(SHELL_NEWLINE_STR);
 
-        sleep(TIME_MS2I(2)); //5
+        chThdSleepMilliseconds(10); //5
     }
 }

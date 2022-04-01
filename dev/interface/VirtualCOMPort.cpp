@@ -27,14 +27,20 @@ void VirtualCOMPort::init(SerialUSBDriver *SDU_, tprio_t rx_thd_prio) {
 }
 
 int VirtualCOMPort::send_data(uint8_t *data, unsigned int size) {
-    return chnWriteTimeout(SDU, data,  size, TIME_INFINITE);
+    return chnWriteTimeout(SDU, data,  size, TIME_MS2I(3));
 }
 
 void VirtualCOMPort::DataReceiveThread::main() {
     setName("vcom_rx_thd");
     while (!shouldTerminate()) {
 
-        if (chnReadTimeout(SDU, rxbuffer, 8, TIME_INFINITE) == 8) {
+        int bytes_received = 0;
+
+        chSysLockFromISR();  ///
+        bytes_received = chnReadTimeout(SDU, rxbuffer, 8, 2);
+        chSysUnlockFromISR(); ///
+
+        if (bytes_received == 8) {
             rxmode = rxbuffer[6]; // to check
             target_vx = (int16_t)(rxbuffer[0] << 8 | rxbuffer[1]);
             target_vy = (int16_t)(rxbuffer[2] << 8 | rxbuffer[3]);
