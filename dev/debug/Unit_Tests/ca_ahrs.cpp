@@ -99,7 +99,7 @@ int main(void) {
 
     // LOG("SDCard::init() = %d", SDCard::init());
     // SDCard::read_all();
-    ahrs.load_calibration_data({0.118284292, -1.176999688, 0.167857602});
+    ahrs.load_calibration_data({0.051433671, -1.002954959, 0.430268436});
     ahrs.start(ON_BOARD_AHRS_MATRIX_, HIGHPRIO - 2);
     BuzzerSKD::play_sound(BuzzerSKD::sound_startup);
 
