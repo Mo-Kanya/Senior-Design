@@ -72,7 +72,7 @@ void UserI::UserThread::main() {
 
                 // Vision
                 control_mode = 0;
-                if (VirtualCOMPort::rxmode == 0) {
+                if ( (VirtualCOMPort::rxmode == 0) && (SYSTIME-VirtualCOMPort::last_update_time <= 5)) {
                     target_vx_ = (float) VirtualCOMPort::target_vx - 3000.0f;
                     target_vy_ = (float) VirtualCOMPort::target_vy - 3000.0f;
                     target_angle_ = ((float) VirtualCOMPort::target_theta)*360.0f/8192.0f - 180.0f;

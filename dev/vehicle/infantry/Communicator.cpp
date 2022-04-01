@@ -20,7 +20,7 @@ void Communicator::CommunicatorThd::main() {
         float motor_v3 = ChassisSKD::get_actual_velocity(ChassisSKD::BL)+2500.0f;
         float motor_v4 = ChassisSKD::get_actual_velocity(ChassisSKD::BR)+2500.0f;
         float direction = ChassisSKD::get_last_angle() + 180.0f; // 0-360
-        int16_t update_time = VirtualCOMPort::last_update_time;
+//        int16_t update_time = VirtualCOMPort::last_update_time;
 //        float tar = ChassisSKD::get_target_theta() + 360.0f;
 //        float w = ChassisSKD::get_target_w() + 720.0f;
         tx_angles[1] = (uint8_t)(((int16_t)motor_v1) >> 8);
@@ -56,6 +56,6 @@ void Communicator::CommunicatorThd::main() {
 //        }
 //        Shell::printf(SHELL_NEWLINE_STR);
 
-        sleep(TIME_MS2I(5)); //5
+        sleep(TIME_MS2I(2)); //5
     }
 }
