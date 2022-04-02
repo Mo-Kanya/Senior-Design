@@ -36,9 +36,9 @@ void VirtualCOMPort::DataReceiveThread::main() {
 
         int bytes_received = 0;
 
-        chSysLockFromISR();  ///
+        chSysLock();  ///
         bytes_received = chnReadTimeout(SDU, rxbuffer, 8, 2);
-        chSysUnlockFromISR(); ///
+        chSysUnlock(); ///
 
         if (bytes_received == 8) {
             rxmode = rxbuffer[6]; // to check
@@ -49,6 +49,8 @@ void VirtualCOMPort::DataReceiveThread::main() {
             // err_msg
             last_update_time = SYSTIME;
         }
+
+        chThdSleepMilliseconds(15);
 
     }
 }
