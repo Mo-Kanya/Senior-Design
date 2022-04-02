@@ -51,6 +51,5 @@ void VirtualCOMPort::DataReceiveThread::main() {
         }
 
         chThdSleepMilliseconds(15);
-
     }
 }
