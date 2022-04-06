@@ -27,7 +27,7 @@ void VirtualCOMPort::init(SerialUSBDriver *SDU_, tprio_t rx_thd_prio) {
 }
 
 int VirtualCOMPort::send_data(uint8_t *data, unsigned int size) {
-    return chnWriteTimeout(SDU, data,  size, TIME_MS2I(3));
+    return chnWriteTimeout(SDU, data,  size, 3);
 }
 
 void VirtualCOMPort::DataReceiveThread::main() {
@@ -36,9 +36,7 @@ void VirtualCOMPort::DataReceiveThread::main() {
 
         int bytes_received = 0;
 
-        chSysLock();  ///
         bytes_received = chnReadTimeout(SDU, rxbuffer, 8, 2);
-        chSysUnlock(); ///
 
         if (bytes_received == 8) {
             rxmode = rxbuffer[6]; // to check
@@ -50,7 +48,7 @@ void VirtualCOMPort::DataReceiveThread::main() {
             last_update_time = SYSTIME;
         }
 
-        chThdSleepMilliseconds(15);
+        chThdSleepMilliseconds(10);
 
     }
 }
