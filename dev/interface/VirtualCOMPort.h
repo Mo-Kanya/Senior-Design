@@ -27,6 +27,7 @@ public:
     static uint8_t rxmode;
 
     static time_msecs_t last_update_time;
+    static time_msecs_t cur_update_time;
 
     static int16_t target_theta;
     static int16_t target_vx;

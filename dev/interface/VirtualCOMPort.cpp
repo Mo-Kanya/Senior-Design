@@ -12,6 +12,7 @@ int16_t VirtualCOMPort::target_vx = 3000;
 int16_t VirtualCOMPort::target_vy = 3000;
 VirtualCOMPort::DataReceiveThread VirtualCOMPort::data_receive_thd;
 time_msecs_t VirtualCOMPort::last_update_time = 0;
+time_msecs_t VirtualCOMPort::cur_update_time = 0;
 
 void VirtualCOMPort::init(SerialUSBDriver *SDU_, tprio_t rx_thd_prio) {
     SDU = SDU_;
@@ -45,10 +46,11 @@ void VirtualCOMPort::DataReceiveThread::main() {
             target_theta = (int16_t)(rxbuffer[4] << 8 | rxbuffer[5]);
 
             // err_msg
-            last_update_time = SYSTIME;
+            last_update_time = cur_update_time;
+            cur_update_time = SYSTIME;
         }
 
-        chThdSleepMilliseconds(10);
+        chThdSleepMilliseconds(8);
 
     }
 }

@@ -134,7 +134,7 @@ int main() {
 
     /// Setup Remote
     Remote::start();
-//    InspectorI::startup_check_remote();  // check Remote has signal. Block for 50 ms
+    InspectorI::startup_check_remote();  // check Remote has signal. Block for 50 ms
     LED::led_on(DEV_BOARD_LED_REMOTE);  // LED 4 on now
 
 
@@ -144,7 +144,7 @@ int main() {
     /// Setup ChassisIF
     ChassisIF::init(&can1, CHASSIS_MOTOR_CONFIG_);
     chThdSleepMilliseconds(10);
-//    InspectorI::startup_check_chassis_feedback();  // check chassis motors has continuous feedback. Block for 20 ms
+    InspectorI::startup_check_chassis_feedback();  // check chassis motors has continuous feedback. Block for 20 ms
     LED::led_on(DEV_BOARD_LED_CHASSIS);  // LED 6 on now
 
 
