@@ -28,7 +28,7 @@ void VirtualCOMPort::init(SerialUSBDriver *SDU_, tprio_t rx_thd_prio) {
 }
 
 int VirtualCOMPort::send_data(uint8_t *data, unsigned int size) {
-    return chnWriteTimeout(SDU, data,  size, 3);
+    return chnWriteTimeout(SDU, data,  size, 2);
 }
 
 void VirtualCOMPort::DataReceiveThread::main() {

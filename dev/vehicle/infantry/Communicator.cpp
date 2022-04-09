@@ -59,9 +59,6 @@ void Communicator::CommunicatorThd::main() {
             cur_send_time = SYSTIME;
         }
 
-//        Shell::printf("torque:   %d %d, mode: %d" SHELL_NEWLINE_STR, VirtualCOMPort::target_torque[0], VirtualCOMPort::target_torque[1], VirtualCOMPort::rxmode);
-//        Shell::printf(SHELL_NEWLINE_STR);
-
         chThdSleepMilliseconds(8); //5
     }
 }
