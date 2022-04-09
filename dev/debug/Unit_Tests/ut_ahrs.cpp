@@ -37,7 +37,7 @@ static constexpr Matrix33 ANGLE_INSTALLATION_MATRIX = {{1.0f, 0.0f, 0.0f},
 
 static constexpr Matrix33 GYRO_INSTALLATION_MATRIX = {{0.0f,  1.0f, 0.0f},
                                                              {0.0f,  0.0f,  -1.0f},
-                                                             {-1.0f, 0.0f,  1.0f}};
+                                                             {-1.0f, 0.0f,  0.0f}};
 AHRSOnBoard ahrs;
 
 class AHRSFeedbackThread : public BaseStaticThread<1024> {
@@ -51,7 +51,7 @@ protected:
             Shell::printf("Use AHRS bias in SD Card");
             Shell::printf("%.4f,%.4f,%.4f" SHELL_NEWLINE_STR, ahrs_bias.x, ahrs_bias.y, ahrs_bias.z);
         } else {
-            ahrs.load_calibration_data({0.051433663, -1.002955079, 0.430268496}); //{0.136242627, -1.2080826357, 0.1428485357}
+            ahrs.load_calibration_data({0.135951459, -1.207195401, 0.213372603}); //{0.136242627, -1.2080826357, 0.1428485357}
             Shell::printf("Use default AHRS bias");
         }
         sleep(TIME_MS2I(2000));
@@ -59,18 +59,18 @@ protected:
         BuzzerSKD::init(LOWPRIO);
         BuzzerSKD::play_sound(BuzzerSKD::sound_startup);
         while (!shouldTerminate()) {
-//            Vector3D angle =  ANGLE_INSTALLATION_MATRIX * ahrs.get_angle();
-//            Shell::printf("!a,%.4f,%.4f,%.4f" SHELL_NEWLINE_STR,
-//                          angle.x,
-//                          angle.y,
-//                          angle.z);
-            Vector3D accs = ANGLE_INSTALLATION_MATRIX *ahrs.get_accel();
-            Vector3D gyro = GYRO_INSTALLATION_MATRIX*ahrs.get_gyro();
-            momentum = momentum*0.75 + gyro.x*0.25;
-            Shell::printf("acc ,%.4f,%.4f,%.4f,%.4f" SHELL_NEWLINE_STR,
-                          accs.x, // R fw
-                          accs.y, // R lr
-                          accs.z, momentum); // R up down
+            Vector3D angle =  ANGLE_INSTALLATION_MATRIX * ahrs.get_angle();
+            Shell::printf("!a,%.4f,%.4f,%.4f" SHELL_NEWLINE_STR,
+                          angle.x,
+                          angle.y,
+                          angle.z);
+//            Vector3D accs = ANGLE_INSTALLATION_MATRIX *ahrs.get_accel();
+//            Vector3D gyro = GYRO_INSTALLATION_MATRIX*ahrs.get_gyro();
+//            momentum = momentum*0.75 + gyro.x*0.25;
+//            Shell::printf("acc ,%.4f,%.4f,%.4f,%.4f" SHELL_NEWLINE_STR,
+//                          accs.x, // R fw
+//                          accs.y, // R lr
+//                          accs.z, momentum); // R up down
 
 //            Shell::printf("gyro ,%.4f,%.4f,%.4f" SHELL_NEWLINE_STR,
 //                          gyro.x,
