@@ -17,13 +17,12 @@ void Communicator::init(tprio_t communicator_prio_) {
 void Communicator::CommunicatorThd::main() {
     setName("Communicator");
     while(!shouldTerminate()) {
-// / 360.0f * 8192.0f
         float motor_v1 = ChassisSKD::get_actual_velocity(ChassisSKD::FR)+2500.0f; // degree/s
         float motor_v2 = ChassisSKD::get_actual_velocity(ChassisSKD::FL)+2500.0f;
         float motor_v3 = ChassisSKD::get_actual_velocity(ChassisSKD::BL)+2500.0f;
         float motor_v4 = ChassisSKD::get_actual_velocity(ChassisSKD::BR)+2500.0f;
-        int16_t update_diff = VirtualCOMPort::cur_update_time - VirtualCOMPort::last_update_time;
-        int16_t send_diff = cur_send_time - last_send_time;
+//        int16_t update_diff = VirtualCOMPort::cur_update_time - VirtualCOMPort::last_update_time;
+//        int16_t send_diff = cur_send_time - last_send_time;
 //        float tar = ChassisSKD::get_target_theta() + 360.0f;
 //        float w = ChassisSKD::get_target_w() + 720.0f;
 
@@ -47,8 +46,7 @@ void Communicator::CommunicatorThd::main() {
         tx_angles[9] = (uint8_t)(((int16_t)(direction / 360.0f * 8192.0f)) >> 8);
         tx_angles[10] = (uint8_t)((int16_t)(direction / 360.0f * 8192.0f));
         tx_angles[11] = (uint8_t) UserI::get_mode();
-        tx_angles[12] = (uint8_t) 0;
-
+        tx_angles[12] = (uint8_t) UserI::get_command();
 
         last_transferred =  VirtualCOMPort::send_data(tx_angles, 13);
         if (last_transferred != 13) {

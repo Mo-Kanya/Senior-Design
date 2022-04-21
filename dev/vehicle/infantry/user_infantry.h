@@ -22,6 +22,7 @@ public:
 
     static void start(tprio_t user_thd_prio, tprio_t user_action_thd_prio);
     static int get_mode();
+    static int get_command();
 
 private:
 
@@ -35,7 +36,7 @@ private:
     static float chassis_v_backward;    // [mm/s]
 
     static int control_mode; // 0=vision; 1=rc; 2=programming
-
+    static int motion_mode; // 0=undef; 1=translation; 2=turning;
     static float target_angle_;
     static float target_vx_;
     static float target_vy_;

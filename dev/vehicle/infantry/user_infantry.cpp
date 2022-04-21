@@ -27,6 +27,7 @@ int UserI::control_mode = 1;
 float UserI::target_angle_ = 0.0f;
 float UserI::target_vx_ = 0.0f;
 float UserI::target_vy_ = 0.0f;
+int UserI::motion_mode = 0;
 
 /// Variables
 
@@ -40,6 +41,10 @@ int UserI::get_mode() {
     return control_mode;
 }
 
+int UserI::get_command() {
+    return motion_mode;
+}
+
 void UserI::UserThread::main() {
     setName("UserI");
     while (!shouldTerminate()) {
@@ -48,6 +53,8 @@ void UserI::UserThread::main() {
         if (!InspectorI::remote_failure() && !InspectorI::chassis_failure()) {
             if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_UP) {
                 control_mode = 1;
+                if (motion_mode != 0) motion_mode = 0;
+
                 // rc; not programming
                 ChassisLG::set_action(ChassisLG::FOLLOW_MODE);
                 ChassisLG::set_target(Remote::rc.ch2 * chassis_v_left_right,  // Both use right as positive direction
@@ -59,14 +66,26 @@ void UserI::UserThread::main() {
 
             } else if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_MIDDLE) {
                 // programming
-                control_mode = 2;
+                control_mode = 0;
                 ChassisLG::set_action(ChassisLG::FOLLOW_MODE);
-                ChassisLG::set_target(Remote::rc.ch2 * chassis_v_left_right,  // Both use right as positive direction
-                                      (Remote::rc.ch3 > 0 ?
-                                       Remote::rc.ch3 * 1000 :
-                                       Remote::rc.ch3 * 800),   // Both use up as positive direction
-                                       0.0f
-                );
+                if (ABS(-Remote::rc.ch0 * 45) > 2.0f) {
+                    motion_mode = 2;
+                    ChassisLG::set_target(0,  // Both use right as positive direction
+                                          0,   // Both use up as positive direction
+                                          -Remote::rc.ch0 * 45);
+                } else if (ABS(Remote::rc.ch3)>0) {
+                    motion_mode = 1;
+                    ChassisLG::set_target(0,  // Both use right as positive direction
+                                          (Remote::rc.ch3 > 0 ?
+                                           Remote::rc.ch3 * 1000 :
+                                           Remote::rc.ch3 * 800),   // Both use up as positive direction
+                                          0);
+                } else {
+                    motion_mode = 0;
+                    ChassisLG::set_target(0,  // Both use right as positive direction
+                                          0,   // Both use up as positive direction
+                                          0);
+                }
 
             } else if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_DOWN) {
 
@@ -77,6 +96,7 @@ void UserI::UserThread::main() {
                     target_vx_ = 0.0f;
                     target_vy_ = 0.0f;
                 }
+                motion_mode= 0;
 
                 if ( SYSTIME-VirtualCOMPort::last_update_time <= 2000 ) {
                     if (VirtualCOMPort::rxmode == 0) {
@@ -97,6 +117,7 @@ void UserI::UserThread::main() {
 
             } else {
                 control_mode = 1;
+                motion_mode = 0;
                 /// Safe Mode
                 ChassisLG::set_action(ChassisLG::FORCED_RELAX_MODE);
             }
