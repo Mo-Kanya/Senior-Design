@@ -150,7 +150,7 @@ private:
     // Helper function to convert chassis velocity to velocities of each wheel and perform PID calculation once
     static void velocity_decompose(float vx, float vy, float w);
 
-    static constexpr float THETA_DEAD_ZONE = 2;  // ignore theta difference if less than [deg]
+    static constexpr float THETA_DEAD_ZONE = 1;  // ignore theta difference if less than [deg]
     static constexpr unsigned int SKD_THREAD_INTERVAL = 3; // PID calculation interval [ms]
 
     class SKDThread : public chibios_rt::BaseStaticThread<512> {

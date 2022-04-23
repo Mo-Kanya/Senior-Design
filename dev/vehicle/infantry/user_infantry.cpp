@@ -66,7 +66,7 @@ void UserI::UserThread::main() {
 
             } else if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_MIDDLE) {
                 // programming
-                control_mode = 0;
+                control_mode = 2;
                 ChassisLG::set_action(ChassisLG::FOLLOW_MODE);
                 if (ABS(-Remote::rc.ch0 * 45) > 2.0f) {
                     motion_mode = 2;
