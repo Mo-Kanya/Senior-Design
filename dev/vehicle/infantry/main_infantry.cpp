@@ -60,6 +60,8 @@ static const Matrix33 GIMBAL_GYRO_INSTALLATION_MATRIX_ = GIMBAL_GYRO_INSTALLATIO
 
 static ChassisIF::motor_can_config_t CHASSIS_MOTOR_CONFIG_[ChassisIF::MOTOR_COUNT] = CHASSIS_MOTOR_CONFIG;
 
+
+
 int main() {
 
     /*** --------------------------- Period 0. Fundamental Setup --------------------------- ***/
@@ -101,7 +103,7 @@ int main() {
     /// Setup CAN1
     can1.start(THREAD_CAN1_RX_PRIO, THREAD_CAN1_TX_PRIO);
     chThdSleepMilliseconds(5);
-    InspectorI::startup_check_can();  // check no persistent CAN Error. Block for 100 ms
+//    InspectorI::startup_check_can();  // check no persistent CAN Error. Block for 100 ms
     LED::led_on(DEV_BOARD_LED_CAN);  // LED 2 on now
 
     /// Setup SuperCapacitor Port
@@ -134,7 +136,7 @@ int main() {
 
     /// Setup Remote
     Remote::start();
-    InspectorI::startup_check_remote();  // check Remote has signal. Block for 50 ms
+ //   InspectorI::startup_check_remote();  // check Remote has signal. Block for 50 ms
     LED::led_on(DEV_BOARD_LED_REMOTE);  // LED 4 on now
 
 
@@ -144,7 +146,7 @@ int main() {
     /// Setup ChassisIF
     ChassisIF::init(&can1, CHASSIS_MOTOR_CONFIG_);
     chThdSleepMilliseconds(10);
-    InspectorI::startup_check_chassis_feedback();  // check chassis motors has continuous feedback. Block for 20 ms
+//    InspectorI::startup_check_chassis_feedback();  // check chassis motors has continuous feedback. Block for 20 ms
     LED::led_on(DEV_BOARD_LED_CHASSIS);  // LED 6 on now
 
 
@@ -179,6 +181,31 @@ int main() {
 
     /// Complete Period 2
     BuzzerSKD::play_sound(BuzzerSKD::sound_startup_intel);  // Now play the startup sound
+
+    static constexpr PWMConfig FRICTION_WHEELS_PWM_CFG = {
+            50000,   // frequency
+            1000,    // period
+            nullptr, // callback
+            {
+                    {PWM_OUTPUT_ACTIVE_HIGH, nullptr}, // CH0
+                    {PWM_OUTPUT_ACTIVE_HIGH, nullptr}, // CH1
+                    {PWM_OUTPUT_DISABLED, nullptr},    // CH2
+                    {PWM_OUTPUT_DISABLED, nullptr}     // CH3
+            },
+            0,
+            0
+    };
+
+    static constexpr PWMDriver *FRICTION_WHEEL_PWM_DRIVER = &PWMD8;
+
+    chThdSleepMilliseconds(1000);
+
+    pwmStart(FRICTION_WHEEL_PWM_DRIVER, &FRICTION_WHEELS_PWM_CFG);
+
+    pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                     PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 0 * 500 + 500));
+    pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 1,
+                     PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 0 * 500 + 500));
 
 
     /*** ------------------------ Period 3. End of main thread ----------------------- ***/
