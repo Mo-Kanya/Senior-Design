@@ -7,6 +7,7 @@
 uint8_t VirtualCOMPort::rxbuffer[100];
 uint8_t VirtualCOMPort::txbuffer[100];
 uint8_t VirtualCOMPort::rxmode=0;
+uint8_t VirtualCOMPort::sector=0;
 int16_t VirtualCOMPort::target_theta=4096;
 int16_t VirtualCOMPort::target_vx = 3000;
 int16_t VirtualCOMPort::target_vy = 3000;
@@ -41,6 +42,7 @@ void VirtualCOMPort::DataReceiveThread::main() {
 
         if (bytes_received == 8) {
             rxmode = rxbuffer[6]; // to check
+            sector = rxbuffer[7];
             target_vx = (int16_t)(rxbuffer[0] << 8 | rxbuffer[1]);
             target_vy = (int16_t)(rxbuffer[2] << 8 | rxbuffer[3]);
             target_theta = (int16_t)(rxbuffer[4] << 8 | rxbuffer[5]);

@@ -28,7 +28,7 @@
  */
 #define CHASSIS_INTERFACE_ENABLE_CLIP   TRUE
 
-#define CHASSIS_INTERFACE_MAX_CURRENT 1500  // mA
+#define CHASSIS_INTERFACE_MAX_CURRENT 2000  // mA
 
 class ChassisBase {
 public:

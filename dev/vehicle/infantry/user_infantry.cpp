@@ -28,6 +28,7 @@ float UserI::target_angle_ = 0.0f;
 float UserI::target_vx_ = 0.0f;
 float UserI::target_vy_ = 0.0f;
 int UserI::motion_mode = 0;
+int UserI::sector_ = 0;
 
 /// Variables
 
@@ -47,11 +48,38 @@ int UserI::get_command() {
 
 void UserI::UserThread::main() {
     setName("UserI");
+    static constexpr PWMConfig FRICTION_WHEELS_PWM_CFG = {
+            50000,   // frequency
+            1000,    // period
+            nullptr, // callback
+            {
+                    {PWM_OUTPUT_ACTIVE_HIGH, nullptr}, // CH0
+                    {PWM_OUTPUT_ACTIVE_HIGH, nullptr}, // CH1
+                    {PWM_OUTPUT_DISABLED, nullptr},    // CH2
+                    {PWM_OUTPUT_DISABLED, nullptr}     // CH3
+            },
+            0,
+            0
+    };
+    static constexpr PWMDriver *FRICTION_WHEEL_PWM_DRIVER = &PWMD8;
+
+    pwmStart(FRICTION_WHEEL_PWM_DRIVER, &FRICTION_WHEELS_PWM_CFG);
+    pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 1,
+                     PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 0));
+
     while (!shouldTerminate()) {
 
         /*** ---------------------------------- Chassis --------------------------------- ***/
         if (!InspectorI::remote_failure() && !InspectorI::chassis_failure()) {
-            if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_UP) {
+            if (Remote::rc.s1 == Remote::S_UP && Remote::rc.s2 == Remote::S_UP) {
+                if (VirtualCOMPort::rxmode == 1) {
+                    if ( ((int) VirtualCOMPort::sector) != sector_ && VirtualCOMPort::sector < 3 ) {
+                        sector_ = (int) VirtualCOMPort::sector;
+                        pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                         PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 250+ sector_ * 500 ));
+                    }
+                }
+            } else if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_UP) {
                 control_mode = 1;
                 if (motion_mode != 0) motion_mode = 0;
 
@@ -103,6 +131,11 @@ void UserI::UserThread::main() {
                         target_vx_ = (float) VirtualCOMPort::target_vx - 3000.0f;
                         target_vy_ = (float) VirtualCOMPort::target_vy - 3000.0f;
                         target_angle_ = ((float) VirtualCOMPort::target_theta)*360.0f/8192.0f - 180.0f;
+                        if ( ((int) VirtualCOMPort::sector) != sector_ && VirtualCOMPort::sector < 3 ) {
+                            sector_ = (int) VirtualCOMPort::sector;
+                            pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                             PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 250+ sector_ * 500 ));
+                        }
                     }
                 } else {
                     target_angle_ = 0.0f;

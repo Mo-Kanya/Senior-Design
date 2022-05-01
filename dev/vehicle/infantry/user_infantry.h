@@ -40,6 +40,7 @@ private:
     static float target_angle_;
     static float target_vx_;
     static float target_vy_;
+    static int sector_;
 
     static bool mag_status;
 

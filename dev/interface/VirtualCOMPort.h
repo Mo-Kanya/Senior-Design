@@ -26,6 +26,8 @@ public:
 
     static uint8_t rxmode;
 
+    static uint8_t sector;
+
     static time_msecs_t last_update_time;
     static time_msecs_t cur_update_time;
 
