@@ -5,7 +5,7 @@
 #include "Communicator.h"
 
 Communicator::CommunicatorThd Communicator::communicator_thd;
-uint8_t Communicator::tx_angles[13];
+uint8_t Communicator::tx_angles[16];
 time_msecs_t Communicator::last_send_time = 0;
 time_msecs_t Communicator::cur_send_time = 0;
 int Communicator::last_transferred = 0;
@@ -47,16 +47,19 @@ void Communicator::CommunicatorThd::main() {
         tx_angles[10] = (uint8_t)((int16_t)(direction / 360.0f * 8192.0f));
         tx_angles[11] = (uint8_t) UserI::get_mode();
         tx_angles[12] = (uint8_t) UserI::get_command();
+        tx_angles[13] = (uint8_t) cur_send_time-last_send_time;
+        tx_angles[14] = (uint8_t) VirtualCOMPort::cur_update_time - VirtualCOMPort::last_update_time;
+        tx_angles[15] = 0;
 
-        last_transferred =  VirtualCOMPort::send_data(tx_angles, 13);
-        if (last_transferred != 13) {
-            last_transferred = VirtualCOMPort::send_data(tx_angles, 13);
+        last_transferred =  VirtualCOMPort::send_data(tx_angles, 16);
+        if (last_transferred != 16) {
+            last_transferred = VirtualCOMPort::send_data(tx_angles, 16);
         }
-        if (last_transferred == 13) {
+        if (last_transferred == 16) {
             last_send_time = cur_send_time;
             cur_send_time = SYSTIME;
         }
 
-        chThdSleepMilliseconds(8); //5
+        chThdSleepMilliseconds(5); //5
     }
 }

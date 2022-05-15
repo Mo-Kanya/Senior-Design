@@ -73,10 +73,22 @@ void UserI::UserThread::main() {
         if (!InspectorI::remote_failure() && !InspectorI::chassis_failure()) {
             if (Remote::rc.s1 == Remote::S_UP && Remote::rc.s2 == Remote::S_UP) {
                 if (VirtualCOMPort::rxmode == 1) {
-                    if ( ((int) VirtualCOMPort::sector) != sector_ && VirtualCOMPort::sector < 3 ) {
+                    if ( ((int) VirtualCOMPort::sector) != sector_ && VirtualCOMPort::sector < 4) {
                         sector_ = (int) VirtualCOMPort::sector;
-                        pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
-                                         PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 250+ sector_ * 500 ));
+                        if (sector_ == 0) {
+                            pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                             PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 250 ));
+                        } else if (sector_ == 1) {
+                            pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                             PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 600 ));
+                        } else if (sector_ == 3) {
+                            pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                             PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 900 ));
+                        } else {
+                            pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                             PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 1250 ));
+                        }
+
                     }
                 }
             } else if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_UP) {
@@ -131,10 +143,22 @@ void UserI::UserThread::main() {
                         target_vx_ = (float) VirtualCOMPort::target_vx - 3000.0f;
                         target_vy_ = (float) VirtualCOMPort::target_vy - 3000.0f;
                         target_angle_ = ((float) VirtualCOMPort::target_theta)*360.0f/8192.0f - 180.0f;
-                        if ( ((int) VirtualCOMPort::sector) != sector_ && VirtualCOMPort::sector < 3 ) {
+                        if ( ((int) VirtualCOMPort::sector) != sector_ && VirtualCOMPort::sector < 4) {
                             sector_ = (int) VirtualCOMPort::sector;
-                            pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
-                                             PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 250+ sector_ * 500 ));
+                            if (sector_ == 0) {
+                                pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                                 PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 250 ));
+                            } else if (sector_ == 1) {
+                                pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                                 PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 600 ));
+                            } else if (sector_ == 3) {
+                                pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                                 PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 900 ));
+                            } else {
+                                pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                                 PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 1250 ));
+                            }
+
                         }
                     }
                 } else {

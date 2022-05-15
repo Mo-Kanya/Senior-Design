@@ -24,7 +24,7 @@ public:
     /**
      * @brief send_angles
      */
-    static uint8_t tx_angles[13];
+    static uint8_t tx_angles[16];
 
     /**
      * @brief TxRxThread for CDC

@@ -52,7 +52,7 @@ void VirtualCOMPort::DataReceiveThread::main() {
             cur_update_time = SYSTIME;
         }
 
-        chThdSleepMilliseconds(8);
+        chThdSleepMilliseconds(5);
 
     }
 }

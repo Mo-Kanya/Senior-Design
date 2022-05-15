@@ -116,10 +116,10 @@ void ChassisSKD::velocity_decompose(float vx, float vy, float w) {
     // FL, +vx, +vy, +w, since the motor is installed in the opposite direction
     // BL, -vx, +vy, +w, since the motor is installed in the opposite direction
     // BR, -vx, -vy, +w
-    if (vx > 100) vx = 100;
-    if (vx < -100) vx = -100;
-    if (vy > 100) vy = 100;
-    if (vy < -100) vy = -100;
+    if (vx > 200) vx = 200;
+    if (vx < -200) vx = -200;
+    if (vy > 200) vy = 200;
+    if (vy < -200) vy = -200;
 
     target_velocity[FR] = install_mode_ * (+vx - vy + w * w_to_v_ratio_) * v_to_wheel_angular_velocity_;
     target_current[FR] = (int) v2i_pid[FR].calc(ChassisIF::feedback[FR]->actual_velocity, target_velocity[FR]);
