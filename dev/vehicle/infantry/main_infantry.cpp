@@ -180,7 +180,7 @@ int main() {
 
 
     /// Complete Period 2
-    BuzzerSKD::play_sound(BuzzerSKD::sound_startup_intel);  // Now play the startup sound
+    BuzzerSKD::play_sound(BuzzerSKD::sound_startup);  // Now play the startup sound
 
 
     /*** ------------------------ Period 3. End of main thread ----------------------- ***/

@@ -103,7 +103,8 @@ void UserI::UserThread::main() {
                                        Remote::rc.ch3 * 800) ,  // Both use up as positive direction
                                       -Remote::rc.ch0 * 45
                 );
-
+                pwmEnableChannel(FRICTION_WHEEL_PWM_DRIVER, 0,
+                                 PWM_PERCENTAGE_TO_WIDTH(FRICTION_WHEEL_PWM_DRIVER, 750+500*Remote::rc.ch1));
             } else if (Remote::rc.s1 == Remote::S_MIDDLE && Remote::rc.s2 == Remote::S_MIDDLE) {
                 // programming
                 control_mode = 2;
@@ -138,7 +139,7 @@ void UserI::UserThread::main() {
                 }
                 motion_mode= 0;
 
-                if ( SYSTIME-VirtualCOMPort::last_update_time <= 2000 ) {
+                if ( SYSTIME-VirtualCOMPort::last_update_time <= 1000 ) {
                     if (VirtualCOMPort::rxmode == 0) {
                         target_vx_ = (float) VirtualCOMPort::target_vx - 3000.0f;
                         target_vy_ = (float) VirtualCOMPort::target_vy - 3000.0f;
@@ -165,6 +166,7 @@ void UserI::UserThread::main() {
                     target_angle_ = 0.0f;
                     target_vx_ = 0.0f;
                     target_vy_ = 0.0f;
+                    BuzzerSKD::play_sound(BuzzerSKD::sound_alert);
                 }
 
                 // ChassisLG::set_action(GimbalLG::VISION_MODE);
