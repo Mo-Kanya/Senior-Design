@@ -139,7 +139,7 @@ void UserI::UserThread::main() {
                 }
                 motion_mode= 0;
 
-                if ( SYSTIME-VirtualCOMPort::last_update_time <= 1000 ) {
+                if ( SYSTIME-VirtualCOMPort::last_update_time <= 500 ) {
                     if (VirtualCOMPort::rxmode == 0) {
                         target_vx_ = (float) VirtualCOMPort::target_vx - 3000.0f;
                         target_vy_ = (float) VirtualCOMPort::target_vy - 3000.0f;
